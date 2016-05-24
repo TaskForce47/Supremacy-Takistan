@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8274.5635,298.17368,2116.3887};
-		dir[]={-0.71940112,-0.17882381,0.67132497};
-		up[]={-0.13083124,0.98385668,0.12208708};
-		aside[]={0.68232173,6.0349703e-007,0.73118526};
+		pos[]={8215.4922,308.35944,2082.7512};
+		dir[]={0.3352828,-0.53052306,-0.77867013};
+		up[]={0.20983966,0.84762466,-0.48733532};
+		aside[]={-0.91856658,4.3329783e-007,-0.39552033};
 	};
 };
 binarizationWanted=0;
@@ -23831,7 +23831,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="equipmentarea = [this,""mortarbox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""medictrunk""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=2033;
 			type="ACE_medicalSupplyCrate_advanced";

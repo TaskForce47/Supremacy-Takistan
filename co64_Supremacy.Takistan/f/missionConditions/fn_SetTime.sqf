@@ -22,7 +22,7 @@ _timeOfDay = _this select 0;
 // SET DEFAULT VALUES
 // The default values that together form the in-game date are set.
 
-_year = 1995;
+_year = 2011;
 _month = 8;
 _day = 18;
 _hour = 0;

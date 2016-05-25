@@ -41,6 +41,7 @@ switch (_mkrtext) do  {
 		spawnveh = [_veh, _timeondestructionsmall,_timeondesertionsmall, "Towing Tractor", "mil_dot", "ColorBLUFOR", WEST, "", 1] execVM "tf47CoreScripts\vehicleRespawn.sqf"; 
 		//[_veh] execVM "tf47CoreScripts\towingTractor\initTowingTractor.sqf";
 		_veh setVariable ["R3F_LOG_disabled", true];
+		createVehicleCrew _veh;
 		};
 	case "_hmmwv_transport" : {
 		_veh = [_mkrpos,_mkrdir,_hmmwv_transport] call TF47_VehicleReplacement_fnc_replaceVehicle;

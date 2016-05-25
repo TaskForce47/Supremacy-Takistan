@@ -8,7 +8,7 @@ class EditorData
 	toggles=66;
 	class ItemIDProvider
 	{
-		nextID=3529;
+		nextID=3530;
 	};
 	class MarkerIDProvider
 	{
@@ -150,7 +150,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1530;
+		items=1531;
 		class Item0
 		{
 			dataType="Marker";
@@ -24008,7 +24008,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -29821,7 +29821,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal\arsenal_us.paa']; equipmentarea = [this,""table_usarmy""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 				description="SABER 5 (German Special Forces - Rifleman)";
 			};
 			id=3306;
@@ -32607,6 +32607,47 @@ class Mission
 			name="cleanup_base";
 			type="Empty";
 			id=3527;
+		};
+		class Item1530
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8266.7715,296.62027,2116.2461};
+				angles[]={0,3.503993,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=1;
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal\arsenal_baf.paa']; equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+			};
+			id=3529;
+			type="Infostand_2_EP1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

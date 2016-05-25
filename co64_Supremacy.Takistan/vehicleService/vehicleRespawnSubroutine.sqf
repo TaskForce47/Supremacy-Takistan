@@ -19,7 +19,7 @@ if (_veh == _drv) then {
 	_dmg = getDammage _veh;
 
 	if (_dmg > 0.1) then {
-		_veh vehicleChat "Das Fahrzeug kann nicht respawnen da es besch‰digt ist - This Vehicle can't respawn because it is damaged.";
+		_veh vehicleChat "Das Fahrzeug kann nicht respawnen da es besch√§digt ist - This Vehicle can't respawn because it is damaged.";
 
 		} else {
 			_veh setVariable ["vehServiceActive", true, true];
@@ -27,7 +27,9 @@ if (_veh == _drv) then {
 			
 			// Pull out Units, remove Fuel and lock Vehicle
 			_veh vehicleChat "Das Fahrzeug wird in 5 Minuten respawnen - This Vehicle will respawn in 5 Minutes.";
-		
+			sleep 5;
+			_veh vehicleChat "Bitte das Fahrzeug verlassen. - Please leave the Vehicle.";
+			sleep 5;
 			_veh setFuel 0;
 		
 			_crw = crew _veh;

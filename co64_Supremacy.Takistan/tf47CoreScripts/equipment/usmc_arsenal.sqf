@@ -58,5 +58,5 @@ if (isnil "XLA_fnc_addVirtualItemCargo") then {
     [_arsenal, _magazines, true, false] call XLA_fnc_addVirtualMagazineCargo; 
         
     // Start the arsenal on it
-    ["AmmoboxInit",[_arsenal,false,{true},"<t color='#45B6EA'>Arsenal",false]] spawn XLA_fnc_arsenal;
+    ["AmmoboxInit",[_arsenal,false,{true},"<t color='#45B6EA'>USMC",false]] spawn XLA_fnc_arsenal;
 };

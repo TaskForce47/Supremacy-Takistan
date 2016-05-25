@@ -5874,7 +5874,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_usmc.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 				description="SABER 5 (German Special Forces - Rifleman)";
 			};
 			id=430;
@@ -5958,7 +5958,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_usmc.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=432;
 			type="Infostand_2_EP1";
@@ -11930,7 +11930,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_baf.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=848;
 			type="Infostand_2_EP1";
@@ -29905,7 +29905,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\radio_arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3308;
 			type="Infostand_2_EP1";
@@ -31661,7 +31661,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_us.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3396;
 			type="Infostand_2_EP1";
@@ -31742,7 +31742,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -31839,7 +31839,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -31936,7 +31936,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};

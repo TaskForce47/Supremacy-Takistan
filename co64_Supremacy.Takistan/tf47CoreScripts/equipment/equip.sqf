@@ -141,10 +141,10 @@ if (isNil{_type}) then {} else {
 						_object addBackpackCargoGlobal ["B_Mortar_01_weapon_F",1];
 						_object addBackpackCargoGlobal ["B_Mortar_01_support_F",1];
 						if(tf47_param_vehiclemod == 2) then { 
-							_object addBackpackCargoGlobal ["RHS_Mk19_Tripod_Bag",5];
-							_object addBackpackCargoGlobal ["RHS_Mk19_Gun_Bag",5];
-							_object addBackpackCargoGlobal ["RHS_M2_Gun_Bag", 5];
-							_object addBackpackCargoGlobal ["RHS_M2_Tripod_Bag", 5];
+							_object addBackpackCargoGlobal ["RHS_Mk19_Tripod_Bag",1];
+							_object addBackpackCargoGlobal ["RHS_Mk19_Gun_Bag",1];
+							_object addBackpackCargoGlobal ["RHS_M2_Gun_Bag", 1];
+							_object addBackpackCargoGlobal ["RHS_M2_Tripod_Bag", 1];
 						};
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_HE",20];
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_Smoke",20];
@@ -157,6 +157,9 @@ if (isNil{_type}) then {} else {
 						_object addItemCargoGlobal ["ACE_RangeCard",10];
 						_object addItemCargoGlobal ["ACE_Vector",10];
 						sleep 7200;
+						if (f_var_debugMode == 1) then {
+						 	[ "Static Items added to Mortar Box", "cba_network", [true, true, true] ] call CBA_fnc_debug;
+						 };
 					};
 				};
 			};

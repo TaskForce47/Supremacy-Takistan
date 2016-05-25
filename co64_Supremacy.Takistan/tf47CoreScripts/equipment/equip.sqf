@@ -119,6 +119,12 @@ if (isNil{_type}) then {} else {
 						clearBackpackCargoGlobal _object;
 						_object addBackpackCargoGlobal ["B_Mortar_01_weapon_F",1];
 						_object addBackpackCargoGlobal ["B_Mortar_01_support_F",1];
+						if(tf47_param_vehiclemod == 2) then { 
+							_object addBackpackCargoGlobal ["RHS_Mk19_Tripod_Bag",5];
+							_object addBackpackCargoGlobal ["RHS_Mk19_Gun_Bag",5];
+							_object addBackpackCargoGlobal ["RHS_M2_Gun_Bag", 5];
+							_object addBackpackCargoGlobal ["RHS_M2_Tripod_Bag", 5];
+						};
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_HE",20];
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_Smoke",20];
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_Illum",20];

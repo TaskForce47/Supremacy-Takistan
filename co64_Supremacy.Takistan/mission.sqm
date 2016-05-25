@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8215.4922,308.35944,2082.7512};
-		dir[]={0.3352828,-0.53052306,-0.77867013};
-		up[]={0.20983966,0.84762466,-0.48733532};
-		aside[]={-0.91856658,4.3329783e-007,-0.39552033};
+		pos[]={8268.6416,299.24179,2122.241};
+		dir[]={-0.35964677,-0.31502193,-0.87842524};
+		up[]={-0.1194042,0.94903606,-0.291641};
+		aside[]={-0.92553842,1.3707904e-008,0.37893802};
 	};
 };
 binarizationWanted=0;
@@ -129,8 +129,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="co64_community_project.Takistan";
-		overviewText="[TF47] Community Project";
+		briefingName="co64_Supremacy_v112.Takistan";
+		overviewText="[TF47] SUPREMACY";
 		resistanceWest=0;
 		resistanceEast=1;
 		startWeather=0.39999998;

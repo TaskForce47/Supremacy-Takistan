@@ -8,7 +8,7 @@ class EditorData
 	toggles=66;
 	class ItemIDProvider
 	{
-		nextID=3529;
+		nextID=3530;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8268.6416,299.24179,2122.241};
-		dir[]={-0.35964677,-0.31502193,-0.87842524};
-		up[]={-0.1194042,0.94903606,-0.291641};
-		aside[]={-0.92553842,1.3707904e-008,0.37893802};
+		pos[]={8271.9072,298.78522,2122.2461};
+		dir[]={-0.45464784,-0.34680349,-0.8205232};
+		up[]={-0.16813995,0.93787903,-0.30344585};
+		aside[]={-0.87480104,-6.6413486e-007,0.48472524};
 	};
 };
 binarizationWanted=0;
@@ -5867,7 +5867,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8248.6982,296.62347,2165.7993};
+				position[]={8248.6982,296.62347,2165.7991};
 				angles[]={6.2815971,6.0441103,0.0015882496};
 			};
 			side="Empty";
@@ -5959,8 +5959,8 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				ammo=0.36124957;
 				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal\arsenal_baf.paa']; equipmentarea = [this,""table_baf""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
-
 			};
 			id=432;
 			type="Infostand_2_EP1";
@@ -15546,7 +15546,7 @@ class Mission
 			};
 			id=1086;
 			type="Land_Cargo40_sand_F";
-			atlOffset=0.0075073242;
+			atlOffset=0.0075378418;
 		};
 		class Item866
 		{
@@ -15564,7 +15564,7 @@ class Mission
 			};
 			id=1087;
 			type="Land_Cargo40_sand_F";
-			atlOffset=0.0083007813;
+			atlOffset=0.0083312988;
 		};
 		class Item867
 		{
@@ -29840,7 +29840,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8273.3135,296.62027,2113.7393};
+				position[]={8273.3135,296.62027,2113.739};
 				angles[]={0,3.5240464,0};
 			};
 			side="Empty";
@@ -29895,7 +29895,6 @@ class Mission
 			};
 			id=3307;
 			type="Infostand_2_EP1";
-			atlOffset=0.17230225;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29933,11 +29932,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-<<<<<<< Updated upstream
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\radio_arsenal.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
-=======
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal\arsenal.paa']; equipmentarea = [this,""table_usarmy""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
->>>>>>> Stashed changes
+				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal\arsenal_us.paa']; equipmentarea = [this,""table_usarmy""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
 			};
 			id=3308;
 			type="Infostand_2_EP1";
@@ -31693,11 +31688,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
-<<<<<<< Updated upstream
-				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal_us.paa']; equipmentarea = [this,""table""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
-=======
 				init="this setObjectTexture [0,'tf47_supremacy_signs\data\arsenal\arsenal_usmc.paa']; equipmentarea = [this,""table_usmc""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
->>>>>>> Stashed changes
 			};
 			id=3396;
 			type="Infostand_2_EP1";
@@ -31778,7 +31769,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -31875,7 +31866,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -31972,7 +31963,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};

@@ -3,7 +3,7 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_range","_groups","_debug"];
+private ["_range","_groups","_debug","_message"];
 
 _range = _this select 0;
 _groups = allGroups;
@@ -17,12 +17,18 @@ While {f_var_cacheRun} do {
         {
                 _groups = allGroups;
 
-                if (_debug) then{player globalchat format ["f_fnc_cache DBG: Tracking %1 groups",count _groups]};
+                if (_debug) then{
+                        _message =  format ["f_fnc_cache DBG: Tracking %1 groups",count _groups];
+                        [_message] call TF47_Helper_fnc_debugCase;
+                };
 
                 if (isnull _x) then {
                         _groups = _groups - [_x];
 
-                        if (_debug) then{player globalchat format ["f_fnc_cache DBG: Group is null, deleting: %1",_x,count _groups]};
+                        if (_debug) then{
+                                _message =  format ["f_fnc_cache DBG: Group is null, deleting: %1",_x,count _groups];
+                                [_message] call TF47_Helper_fnc_debugCase;
+                        };
 
                 } else {
                         _exclude = _x getvariable ["f_cacheExcl",false];
@@ -31,11 +37,17 @@ While {f_var_cacheRun} do {
                         if (!_exclude) then {
                                 if (_cached) then {
 
-                                        if (_debug) then {player globalchat format ["f_fnc_cache DBG: Checking group: %1",_x]};
+                                        if (_debug) then {
+                                                _message =  format ["f_fnc_cache DBG: Checking group: %1",_x];
+                                                [_message] call TF47_Helper_fnc_debugCase;
+                                        };
 
                                         if ([leader _x, _range] call f_fnc_nearPlayer) then {
 
-                                                if (_debug) then {player globalchat format ["f_fnc_cache DBG: Decaching: %1",_x]};
+                                                if (_debug) then {
+                                                        _message =  format ["f_fnc_cache DBG: Decaching: %1",_x];
+                                                        [_message] call TF47_Helper_fnc_debugCase;
+                                                        };
 
                                                 _x setvariable ["f_cached", false];
                                                 _x spawn f_fnc_gUncache;
@@ -44,14 +56,20 @@ While {f_var_cacheRun} do {
                                 } else {
                                         if !([leader _x, _range * 1.1] call f_fnc_nearPlayer) then {
 
-                                                if (_debug) then {player globalchat format ["f_fnc_cache DBG: Caching: %1",_x]};
+                                                if (_debug) then {
+                                                        _message = format ["f_fnc_cache DBG: Caching: %1",_x];
+                                                        [_message] call TF47_Helper_fnc_debugCase;
+                                                };
 
                                                 _x setvariable ["f_cached", true];
                                                 [_x] spawn f_fnc_gCache;
                                         };
                                 };
 
-                                if (_debug) then {player globalchat format ["f_fnc_cache DBG: Group is excluded: %1",_x]};
+                                if (_debug) then { 
+                                        _message = format ["f_fnc_cache DBG: Group is excluded: %1",_x];
+                                        [_message] call TF47_Helper_fnc_debugCase;
+                                };
                         };
                 };
         } foreach _groups;

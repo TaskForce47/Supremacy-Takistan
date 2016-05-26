@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_grp","_joinDistance"];
+private ["_grp","_joinDistance","_message"];
 
 // ====================================================================================
 
@@ -37,7 +37,8 @@ if ({alive _x} count (units _grp) == 0) exitWith {
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (f\JIP\f_JIP_nearTargetGroupCheck.sqf): _alive = %1",_alive];
+	_message = format ["DEBUG (f\JIP\f_JIP_nearTargetGroupCheck.sqf): _alive = %1",_alive];
+	[_message] call TF47_Helper_fnc_debugCase;
 };
 
 // ====================================================================================

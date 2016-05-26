@@ -40,5 +40,6 @@ class Helper
 	{
 		file = "functions";
 		class checkForHc {};
+		class debugCase {};
 	};
 };

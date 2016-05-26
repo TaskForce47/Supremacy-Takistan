@@ -10,7 +10,7 @@ if (!isServer && hasInterface) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_men","_str_Men","_handle"];
+private ["_men","_str_Men","_handle","_message"];
 
 // ====================================================================================
 
@@ -20,10 +20,11 @@ private ["_men","_str_Men","_handle"];
 _men = allUnits - playableUnits;
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_var_debugMode > 0) then
 {
 	_str_men = str _men;
-	player sideChat format ["DEBUG (f\removeBody\f_addRemoveBodyEH.sqf): _men = %1",_str_men];
+	_message = format ["DEBUG (f\removeBody\f_addRemoveBodyEH.sqf): _men = %1",_str_men];
+	[_message] call TF47_Helper_fnc_debugCase;
 };
 
 // ====================================================================================

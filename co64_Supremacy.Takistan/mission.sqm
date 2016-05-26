@@ -8,18 +8,18 @@ class EditorData
 	toggles=66;
 	class ItemIDProvider
 	{
-		nextID=3530;
+		nextID=3531;
 	};
 	class MarkerIDProvider
 	{
-		nextID=261;
+		nextID=262;
 	};
 	class Camera
 	{
-		pos[]={8271.9072,298.78522,2122.2461};
-		dir[]={-0.45464784,-0.34680349,-0.8205232};
-		up[]={-0.16813995,0.93787903,-0.30344585};
-		aside[]={-0.87480104,-6.6413486e-007,0.48472524};
+		pos[]={8289.2334,339.03842,2022.8624};
+		dir[]={-0.054704614,-0.41468427,-0.90844774};
+		up[]={-0.024933945,0.90989983,-0.41403279};
+		aside[]={-0.99830943,-5.3052645e-007,0.060118318};
 	};
 };
 binarizationWanted=0;
@@ -151,7 +151,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1531;
+		items=1532;
 		class Item0
 		{
 			dataType="Marker";
@@ -29547,7 +29547,7 @@ class Mission
 			name="patrolpoint_0";
 			text="patrolpoint 0";
 			type="Empty";
-			angle=164.99998;
+			angle=164.99992;
 			id=3273;
 		};
 		class Item1439
@@ -29557,7 +29557,7 @@ class Mission
 			name="patrolpoint_1";
 			text="patrolpoint 1";
 			type="Empty";
-			angle=224.99998;
+			angle=224.99983;
 			id=3274;
 		};
 		class Item1440
@@ -29567,7 +29567,7 @@ class Mission
 			name="patrolpoint_2";
 			text="patrolpoint 2";
 			type="Empty";
-			angle=250.51515;
+			angle=250.51508;
 			id=3275;
 			atlOffset=123.24524;
 		};
@@ -29578,7 +29578,7 @@ class Mission
 			name="patrolpoint_3";
 			text="patrolpoint 3";
 			type="Empty";
-			angle=224.99998;
+			angle=224.99983;
 			id=3276;
 			atlOffset=17.168896;
 		};
@@ -29610,7 +29610,7 @@ class Mission
 			name="patrolpoint_6";
 			text="patrolpoint 6";
 			type="Empty";
-			angle=254.99998;
+			angle=254.99997;
 			id=3279;
 			atlOffset=42.534775;
 		};
@@ -29621,7 +29621,7 @@ class Mission
 			name="patrolpoint_7";
 			text="patrolpoint 7";
 			type="Empty";
-			angle=242.64098;
+			angle=242.64096;
 			id=3280;
 			atlOffset=-280.55133;
 		};
@@ -29653,7 +29653,7 @@ class Mission
 			name="patrolpoint_10";
 			text="patrolpoint 10";
 			type="Empty";
-			angle=349.57175;
+			angle=349.57156;
 			id=3283;
 			atlOffset=93.13208;
 		};
@@ -29664,7 +29664,7 @@ class Mission
 			name="patrolpoint_11";
 			text="patrolpoint 11";
 			type="Empty";
-			angle=164.99998;
+			angle=164.99992;
 			id=3284;
 			atlOffset=3.0279818;
 		};
@@ -32696,6 +32696,14 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1531
+		{
+			dataType="Marker";
+			position[]={7934.5132,296.50443,1913.7091};
+			name="mkr_base";
+			type="flag_NATO";
+			id=3530;
 		};
 	};
 };

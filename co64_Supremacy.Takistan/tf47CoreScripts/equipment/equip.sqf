@@ -59,36 +59,34 @@ if (isNil{_type}) then {} else {
 				clearItemCargoGlobal _object;
 				_object allowDamage false;
 				waitUntil {!isNil "f_var_radios"};
-				if (isServer) then {
-						[_object] spawn {
-						while{true} do {
-							_object = _this select 0;
-								if (f_var_radios == 1) then {
-						        // ACRE 2
-						        _object addItemCargoGlobal ["ACRE_PRC343", 100];
-					    	    _object addItemCargoGlobal ["ACRE_PRC148", 100];
-					       		_object addItemCargoGlobal ["ACRE_PRC152", 100];
-					        	_object addItemCargoGlobal ["ACRE_PRC117F", 100];
-								}; 
-					    		if (f_var_radios == 2) then {  
-					    	    // TFAR
-					    	    _object addItemCargoGlobal ["tf_anprc152", 20];
-					    	    _object addItemCargoGlobal ["tf_rf7800str", 20];
-					    	    _object addItemCargoGlobal ["tf_microdagr", 20];
-					    	    _object addItemCargoGlobal ["tf_rt1523g_sage", 20];
-					    	    _object addItemCargoGlobal ["tf_rt1523g", 20];
-					    		}; 
-					    		if (f_var_radios ==  0) then {  
-					    	    // Vanilla
-					    	    _object addItemCargoGlobal ["ItemRadio", 100];
-					    		};
-					    		if (f_var_debugMode > 0) then {
-					    		[ "Radios added to radiobox", "Equipmentarea"] call TF47_Helper_fnc_debugCase;
-					    		};
-					    		sleep 5000;
-							};
-						};
+				[_object] spawn {
+				while{true} do {
+					_object = _this select 0;
+						if (f_var_radios == 1) then {
+				        // ACRE 2
+				        _object addItemCargoGlobal ["ACRE_PRC343", 100];
+			    	    _object addItemCargoGlobal ["ACRE_PRC148", 100];
+			       		_object addItemCargoGlobal ["ACRE_PRC152", 100];
+			        	_object addItemCargoGlobal ["ACRE_PRC117F", 100];
+						}; 
+			    		if (f_var_radios == 2) then {  
+			    	    // TFAR
+			    	    _object addItemCargoGlobal ["tf_anprc152", 20];
+			    	    _object addItemCargoGlobal ["tf_rf7800str", 20];
+			    	    _object addItemCargoGlobal ["tf_microdagr", 20];
+			    	    _object addItemCargoGlobal ["tf_rt1523g_sage", 20];
+			    	    _object addItemCargoGlobal ["tf_rt1523g", 20];
+			    		}; 
+			    		if (f_var_radios ==  0) then {  
+			    	    // Vanilla
+			    	    _object addItemCargoGlobal ["ItemRadio", 100];
+			    		};
+			    		if (f_var_debugMode > 0) then {
+			    		[ "Radios added to radiobox", "Equipmentarea"] call TF47_Helper_fnc_debugCase;
+			    		};
+			    		sleep 5000;
 					};
+				};
 			};
 			case "medictrunk" : {
 				clearWeaponCargoGlobal _object;

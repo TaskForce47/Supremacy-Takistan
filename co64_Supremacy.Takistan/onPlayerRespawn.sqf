@@ -2,6 +2,7 @@
 
 ["JIP",["Your standard Gear was selected."]] call BIS_fnc_showNotification;
 
+_file = "onPlayerRespawn.sqf";
 _loadout = (player getVariable "f_var_assignGear");
 _slotName = format ["%1", player];
 
@@ -81,14 +82,16 @@ switch true do {
 		_loadout = "pc";
 	};
 	default {
-		diag_log format["Slot: %1 couldnt be machted to a loadout!!!------------", _slotName];
+		_message = format["Slot: %1 couldnt be machted to a loadout!!!------------", _slotName];
+		[_message,_file] call TF47_Helper_fnc_debugCase;		
 	}
 };
 
 // lazy evaluation, just in case f_var_debugMode is not defined
-if ((!isNil "f_var_debugMode") && {f_var_debugMode == 1}) then
+if (!isNil "f_var_debugMode") then
 {
-	player sideChat format["DEBUG (onPlayerRespawn.sqf): Slotname '%1' got loadout: '%2'.",_slotName,_loadout];
+	_message = format["DEBUG (onPlayerRespawn.sqf): Slotname '%1' got loadout: '%2'.",_slotName,_loadout];
+	[_message] call TF47_Helper_fnc_debugCase;
 };
 [_loadout,player] call f_fnc_assignGear;
 */

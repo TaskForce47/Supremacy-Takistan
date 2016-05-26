@@ -151,7 +151,7 @@ if(headlessClientActive && isMultiplayer) then {
 // ======================== TF47 Stuff ===================================
 
 [] call tf47_core_umenu_ft_fnc_enableMenu;
-
+diag_log "U-Menu enabled!";
 waitUntil { isServer || !isNull player };
 cfgTF47 = compile preprocessFileLineNumbers "cfgTF47.sqf";
 private "_pathToScripts";
@@ -165,13 +165,15 @@ tf47_fnc_vehicleOnSpawn     = compileFinal preprocessFileLineNumbers format ["%1
 //"rot_trans_spawn_mark_1" setMarkerText format ["%1playerEvents.sqf", _pathToScripts];;
 
 // client event handler
-//hint "player eevnts";
+diag_log "Player Events init";
 execVM format ["%1playerEvents.sqf", _pathToScripts];
 
 // DB Functionality & Ticket System
+diag_log "Database and Ticket init";
 execVM format ["%1serverEvents.sqf", _pathToScripts];
 
 // Special Markers
+diag_log "Mapmarkers init";
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
 
@@ -184,11 +186,15 @@ if ((paramsArray select 0) != 4) then {
 sleep 0.5;
 
 //start cleanup script
+diag_log "Clean up init";
 [] spawn tf47_fnc_cleanup_init;
 sleep 0.1;
 
 // Vehicle replacement
+diag_log "Vehicle Replacement init";
 vehiclespawnscript = [] execVM "vehiclereplacement.sqf";
 sleep 0.1;
+//No Bushes
+diag_log "Bushdelete init";
 nobushesscript = [] execVM "BASE\nobushes.sqf";
 sleep 0.1;

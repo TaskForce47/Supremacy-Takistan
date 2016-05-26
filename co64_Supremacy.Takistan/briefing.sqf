@@ -14,7 +14,7 @@ if (!isDedicated && (isNull player)) then
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_unitfaction","_message","_file"];
-_file = "briefind.sqf";
+_file = "briefing.sqf";
 waitUntil {!isnil "f_var_debugMode"};
 
 // ====================================================================================

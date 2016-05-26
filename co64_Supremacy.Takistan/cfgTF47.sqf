@@ -114,23 +114,23 @@ _vehicleRestrictionData = [
         // Rotary Transport UH 1Y Griffin
         ["griffin1",                      [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"]]],
 	// Rotary Transport UH 60 L Raven
-        ["raven1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
-        ["raven2",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["raven1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP","UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["raven2",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP","UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
         // Rotary Transport UH 60 M Dustoff
-        ["dustoff",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["dustoff",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP","UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
         // Rotary Transport CH 47 Pelican
-        ["pelican1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["pelican1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP","UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
         
         //FIXED WINGS
         // Fixed Wing Transport MV 22 Goose
-        ["goose1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["goose1",                          [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP","UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
         // Fixed Wing Transport C130J Albatros
-        ["albatros1",                       [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
+        ["albatros1",                       [1, 1,  ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP"],                 ["UnitNATO_TH1_P","UnitNATO_TH1_CP","UnitNATO_TH2_P","UnitNATO_TH2_CP","UnitNATO_TH1_G1","UnitNATO_TH1_G2","UnitNATO_TH2_G1","UnitNATO_TH2_G2"]]],
 
         //Fixed Wing Attack Harrier AV8B GBU 12
         ["wasp1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
         //Fixed Wing Attack Harrier AV8B AGM
-        ["eagle1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],	
+        ["eagle1",                          [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"]]],	
         //Fixed Wing Attack Thunderbird
         ["thunderbird1",                   [1, 1,  ["UnitNATO_AFW1_P","UnitNATO_AFW2_P","UnitNATO_AFW3_P","UnitNATO_AFW4_P"],                 []]],
 

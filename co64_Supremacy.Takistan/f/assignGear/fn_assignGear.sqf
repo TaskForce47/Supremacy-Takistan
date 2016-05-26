@@ -4,8 +4,8 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_message","_faction","_typeofUnit","_unit","_west_factionsss","_east_factions","_ind_factions"];
-
+private ["_file","_message","_faction","_typeofUnit","_unit","_west_factionsss","_east_factions","_ind_factions"];
+_file = "fn_assignGear.sqf";
 _west_factions = ["blu_f","rhs_faction_usarmy_wd","rhs_faction_usarmy_d","rhs_faction_usaf","rhs_faction_usn","rhs_faction_socom","rhs_faction_usmc_wd","rhs_faction_usmc_d","CUP_B_GB","CUP_B_GER","_CUP,_B_CZ","CUP_B_US","CUP_B_CDF","CUP_B_USMC"];
 _east_factions = ["opf_f","rhs_faction_msv","rhs_faction_vdv","rhs_faction_vmf","rhs_faction_vv","rhs_faction_tv","rhs_faction_vpvo","rhs_faction_vvs","rhs_faction_vvs_c","rhs_faction_rva","CUP_O_TK_MILITIA","CUP_O_RU","CUP_O_ChDKZ"];
 _ind_factions =  ["ind_f","rhs_faction_insurgents","CUP_I_TK_GUE","CUP_I_NAPA"];
@@ -60,7 +60,7 @@ _unit setVariable ["f_var_assignGear_done",false,true];
 if (f_var_debugMode > 0) then
 {
 	_message = format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 };
 
 // ====================================================================================
@@ -205,7 +205,7 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 } else {
  	if (f_var_debugMode > 0) then	{
 		_message = format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
-		[_message] call TF47_Helper_fnc_debugCase;
+		[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 

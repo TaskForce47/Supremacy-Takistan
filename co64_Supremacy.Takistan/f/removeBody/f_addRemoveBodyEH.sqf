@@ -10,8 +10,8 @@ if (!isServer && hasInterface) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_men","_str_Men","_handle","_message"];
-
+private ["_men","_str_Men","_handle","_message","_file"];
+_file = "f_addRemoveBodyEH.sqf";
 // ====================================================================================
 
 // SET KEY VARIABLES
@@ -24,7 +24,7 @@ if (f_var_debugMode > 0) then
 {
 	_str_men = str _men;
 	_message = format ["DEBUG (f\removeBody\f_addRemoveBodyEH.sqf): _men = %1",_str_men];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 };
 
 // ====================================================================================

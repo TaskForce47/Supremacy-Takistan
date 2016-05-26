@@ -4,8 +4,8 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_grp","_joinDistance","_message"];
-
+private ["_grp","_joinDistance","_message","_file"];
+_file = "f_JIP_nearTargetGroupCheck.sqf";
 // ====================================================================================
 
 // SET KEY VARIABLES
@@ -38,7 +38,7 @@ if ({alive _x} count (units _grp) == 0) exitWith {
 if (f_var_debugMode == 1) then
 {
 	_message = format ["DEBUG (f\JIP\f_JIP_nearTargetGroupCheck.sqf): _alive = %1",_alive];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 };
 
 // ====================================================================================

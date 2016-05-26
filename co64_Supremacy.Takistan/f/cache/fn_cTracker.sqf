@@ -3,12 +3,14 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_range","_groups","_debug","_message"];
+private ["_range","_groups","_debug","_message","_file"];
+//Filename
+_file = "fn_cTracker.sqf";
 
 _range = _this select 0;
 _groups = allGroups;
 
-_debug = if (f_var_debugMode == 1) then [{true},{false}];
+_debug = if (f_var_debugMode > 1) then [{true},{false}];
 
 // ====================================================================================
 
@@ -19,7 +21,7 @@ While {f_var_cacheRun} do {
 
                 if (_debug) then{
                         _message =  format ["f_fnc_cache DBG: Tracking %1 groups",count _groups];
-                        [_message] call TF47_Helper_fnc_debugCase;
+                        [_message,_file] call TF47_Helper_fnc_debugCase;
                 };
 
                 if (isnull _x) then {
@@ -39,14 +41,14 @@ While {f_var_cacheRun} do {
 
                                         if (_debug) then {
                                                 _message =  format ["f_fnc_cache DBG: Checking group: %1",_x];
-                                                [_message] call TF47_Helper_fnc_debugCase;
+                                                [_message,_file] call TF47_Helper_fnc_debugCase;
                                         };
 
                                         if ([leader _x, _range] call f_fnc_nearPlayer) then {
 
                                                 if (_debug) then {
                                                         _message =  format ["f_fnc_cache DBG: Decaching: %1",_x];
-                                                        [_message] call TF47_Helper_fnc_debugCase;
+                                                        [_message,_file] call TF47_Helper_fnc_debugCase;
                                                         };
 
                                                 _x setvariable ["f_cached", false];
@@ -58,7 +60,7 @@ While {f_var_cacheRun} do {
 
                                                 if (_debug) then {
                                                         _message = format ["f_fnc_cache DBG: Caching: %1",_x];
-                                                        [_message] call TF47_Helper_fnc_debugCase;
+                                                        [_message,_file] call TF47_Helper_fnc_debugCase;
                                                 };
 
                                                 _x setvariable ["f_cached", true];
@@ -68,7 +70,7 @@ While {f_var_cacheRun} do {
 
                                 if (_debug) then { 
                                         _message = format ["f_fnc_cache DBG: Group is excluded: %1",_x];
-                                        [_message] call TF47_Helper_fnc_debugCase;
+                                        [_message,_file] call TF47_Helper_fnc_debugCase;
                                 };
                         };
                 };

@@ -13,8 +13,8 @@ if (!isDedicated && (isNull player)) then
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unitfaction",_message];
-
+private ["_unitfaction","_message","_file"];
+_file = "briefind.sqf";
 waitUntil {!isnil "f_var_debugMode"};
 
 // ====================================================================================
@@ -32,7 +32,7 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 	if (f_var_debugMode > 0) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Player faction: %1",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 
 // ====================================================================================
@@ -49,7 +49,7 @@ if (serverCommandAvailable "#kick") then {
 	if (f_var_debugMode > 0) then
 	{
 		_message =  format ["DEBUG (briefing.sqf): Briefing for host selected.",_unitfaction];
-		[_message] call TF47_Helper_fnc_debugCase;
+		[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -67,7 +67,7 @@ if (_unitfaction == "blu_f") exitwith {
 	if (f_var_debugMode > 0) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -85,7 +85,7 @@ if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
 	if (f_var_debugMode > 0) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -103,7 +103,7 @@ if (_unitfaction in ["opf_f", "rhs_faction_msv"]) exitwith {
 	if (f_var_debugMode > 0) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 // ====================================================================================
@@ -120,7 +120,7 @@ if (_unitfaction == "ind_f") exitwith {
 	if (f_var_debugMode > 0) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -138,7 +138,7 @@ if (_unitfaction == "civ_f") exitwith {
 	if (f_var_debugMode == 1) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -155,7 +155,7 @@ if (_unitfaction == "") exitwith {
 	if (f_var_debugMode > 0) then
 	{
 	_message =  format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -166,4 +166,4 @@ if (_unitfaction == "") exitwith {
 // If the faction of the unit cannot be defined, the script exits with an error.
 
 _message = format ["DEBUG (briefing.sqf): Faction %1 is not defined.",_unitfaction];
-[_message] call TF47_Helper_fnc_debugCase;
+[_message,_file] call TF47_Helper_fnc_debugCase;

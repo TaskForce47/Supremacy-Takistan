@@ -1,7 +1,9 @@
 // F3 - Caching Script Init
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
-
+private ["_file"];
+// Filename
+_file = "fn_cInit.sqf";
 // Check whether the paramater is defined (or caching switched off)) - if not, just exit
 if (isNil "f_param_caching" || {f_param_caching == 0}) exitWith {};
 
@@ -46,9 +48,9 @@ f_var_cacheRun = true;
 [_range] spawn f_fnc_cTracker;
 
 // Start the debug tracker
-if (f_var_debugMode > 1) then {
+if (f_var_debugMode > 0) then {
 	_message = format ["f_fnc_cInit DBG: Starting to track %1 groups, %2 range, %3 sleep",count allGroups,_range,f_var_cacheSleep];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 	
 	[] spawn {
 

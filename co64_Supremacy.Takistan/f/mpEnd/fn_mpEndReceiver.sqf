@@ -4,8 +4,8 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_ending","_state","_message"];
-
+private ["_ending","_state","_message","_file"];
+_file = "f_fnc_mpEndReciever.sqf";
 _ending = _this select 0;
 _state = if (count _this > 1) then {_this select 1} else {true};
 
@@ -21,7 +21,7 @@ if (isServer) then
 	if (f_var_debugMode > 0) then
 	{
 		_message = "DEBUG (f_fnc_mpEndReciever): This is the server.";
-		[_message] call TF47_Helper_fnc_debugCase;
+		[_message,_file] call TF47_Helper_fnc_debugCase;
 	};
 };
 
@@ -29,7 +29,7 @@ if (isServer) then
 if (f_var_debugMode > 0) then
 {
 	_message = format ["DEBUG (f_fnc_mpEndReciever): _ending = %1, _state = %2",_ending,_state];
-	[_message] call TF47_Helper_fnc_debugCase;
+	[_message,_file] call TF47_Helper_fnc_debugCase;
 };
 
 // ====================================================================================

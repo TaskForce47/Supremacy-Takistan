@@ -1,6 +1,6 @@
 //////////////// Exit if not server /////////////////////////////////////////////////////////////////////////////////////////////
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
-
+//if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if (!isServer) exitWith {};
 {([0,0,0] nearestObject _x) hideObjectGlobal true;
 } forEach [
 403120,

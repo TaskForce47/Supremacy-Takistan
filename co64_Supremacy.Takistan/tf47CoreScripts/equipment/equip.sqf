@@ -60,7 +60,7 @@ if (isNil{_type}) then {} else {
 				_object allowDamage false;
 				waitUntil {!isNil "f_var_radios"};
 				[_object] spawn {
-				while{true} do {
+					while{true} do {
 					_object = _this select 0;
 						if (f_var_radios == 1) then {
 				        // ACRE 2

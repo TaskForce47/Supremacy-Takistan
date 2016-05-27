@@ -84,7 +84,7 @@ if (isNil{_type}) then {} else {
 			    		if (f_var_debugMode > 0) then {
 			    		[ "Radios added to radiobox", "Equipmentarea"] call TF47_Helper_fnc_debugCase;
 			    		};
-			    		sleep 5000;
+			    		sleep 3600;
 					};
 				};
 			};
@@ -156,10 +156,10 @@ if (isNil{_type}) then {} else {
 						_object addItemCargoGlobal ["ACE_microDAGR",10];
 						_object addItemCargoGlobal ["ACE_RangeCard",10];
 						_object addItemCargoGlobal ["ACE_Vector",10];
-						sleep 7200;
-						if (f_var_debugMode == 1) then {
+			    		if (f_var_debugMode > 0) then {
 						 	[ "Static Items added to Mortar Box", "Equipmentarea"] call TF47_Helper_fnc_debugCase;
 						 };
+						sleep 3600;
 					};
 				};
 			};

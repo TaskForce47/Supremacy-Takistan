@@ -16,7 +16,8 @@ _debug = if (f_var_debugMode > 1) then [{true},{false}];
 
 // BEGIN THE TRACKING LOOP
 While {f_var_cacheRun} do {
-        {
+        {       
+                _file = "fn_cTracker.sqf";
                 _groups = allGroups;
 
                 if (_debug) then{
@@ -29,7 +30,7 @@ While {f_var_cacheRun} do {
 
                         if (_debug) then{
                                 _message =  format ["f_fnc_cache DBG: Group is null, deleting: %1",_x,count _groups];
-                                [_message] call TF47_Helper_fnc_debugCase;
+                                [_message,_file] call TF47_Helper_fnc_debugCase;
                         };
 
                 } else {

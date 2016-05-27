@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8289.2334,339.03842,2022.8624};
-		dir[]={-0.054704614,-0.41468427,-0.90844774};
-		up[]={-0.024933945,0.90989983,-0.41403279};
-		aside[]={-0.99830943,-5.3052645e-007,0.060118318};
+		pos[]={8255.9014,298.37396,2163.6699};
+		dir[]={0.04824191,-0.57634526,0.8159253};
+		up[]={0.034023553,0.81713742,0.57540363};
+		aside[]={0.9983741,3.3302058e-008,-0.059032843};
 	};
 };
 binarizationWanted=0;
@@ -25486,17 +25486,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8256.2471,296.33197,2167.4561};
-				angles[]={6.2816415,4.9954991,0};
+				position[]={8256.2471,296.33194,2167.4565};
+				angles[]={6.2816491,4.9954991,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="if(isServer)then {equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";};";
 			};
 			id=2249;
 			type="Box_NATO_Ammo_F";
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25518,7 +25519,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1196
@@ -29557,7 +29577,7 @@ class Mission
 			name="patrolpoint_1";
 			text="patrolpoint 1";
 			type="Empty";
-			angle=224.99983;
+			angle=224.99982;
 			id=3274;
 		};
 		class Item1440
@@ -29578,7 +29598,7 @@ class Mission
 			name="patrolpoint_3";
 			text="patrolpoint 3";
 			type="Empty";
-			angle=224.99983;
+			angle=224.99982;
 			id=3276;
 			atlOffset=17.168896;
 		};
@@ -31649,7 +31669,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="if(isServer)then {equipmentarea = [this,""radiobox""] execVM ""tf47CoreScripts\equipment\equip.sqf"";};";
 			};
 			id=3395;
 			type="ACE_Box_Misc";

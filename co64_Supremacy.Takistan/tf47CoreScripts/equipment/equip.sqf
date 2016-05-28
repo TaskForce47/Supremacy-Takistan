@@ -54,6 +54,7 @@ if (isNil{_type}) then {} else {
 					_object enableSimulationGlobal false;
 			};
 			case "radiobox" : {
+				if (!isServer) exitWith {};
 				clearWeaponCargoGlobal _object;
 				clearMagazineCargoGlobal _object;
 				clearItemCargoGlobal _object;
@@ -89,6 +90,7 @@ if (isNil{_type}) then {} else {
 				};
 			};
 			case "medictrunk" : {
+				if (!isServer) exitWith {};
 				clearWeaponCargoGlobal _object;
 				clearMagazineCargoGlobal _object;
 				clearItemCargoGlobal _object;
@@ -127,6 +129,7 @@ if (isNil{_type}) then {} else {
 				};
 			};
 			case "mortarbox" : {
+				if (!isServer) exitWith {};
 				clearWeaponCargoGlobal _object;
 				clearMagazineCargoGlobal _object;
 				clearItemCargoGlobal _object;

@@ -15,10 +15,8 @@ _location = "Mond";
 [_message,_location] call TF47_Helper_fnc_debugCase;
 */
 private ["_message","_debugmsg","_location","_loc"];
-_message = "No Debug Message";
-_location = "No Location transmitted";
-_message = _this select 0;
-_location = _this select 1;
+_message = if (count _this > 1) then { _this select 0; }else{ "No Debug Message";};;
+_location = if (count _this < 1) then { _this select 1; }else{ "No Loacation Message";};
 _debugmsg = format ["%1",_message];
 _loc = format ["%1",_location];
 switch (f_var_debugMode) do { 

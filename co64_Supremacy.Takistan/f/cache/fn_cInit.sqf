@@ -42,7 +42,7 @@ f_cInit = true;
 
 // Define parameters
 _range = f_param_caching;	// The range outside of which to cache units
-f_var_cacheSleep = 6; 		// The time to sleep between checking
+f_var_cacheSleep = 10; 		// The time to sleep between checking
 f_var_cacheRun = true;
 
 [_range] spawn f_fnc_cTracker;
@@ -64,8 +64,8 @@ if (f_var_debugMode > 0) then {
 			_str4 = format ["Activated groups:%1<br/>",{!(_x getvariable "f_cached")} count allGroups];
 			_str5 = format ["Excluded groups:%1<br/>",{(_x getvariable "f_cacheExcl")} count allGroups];
 
-			hintsilent parseText (_str1+_str2+_str3+_str4+_str5);
-			diag_log (_str1+_str2+_str3+_str4+_str5);
+			_message = (_str1+_str2+_str3+_str4+_str5);
+			[_message,"F3 Caching Units"] call TF47_Helper_fnc_debugCase;
 
 			sleep f_var_cacheSleep;
 		};

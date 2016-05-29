@@ -76,6 +76,6 @@ _evileye = "B_UAV_02_CAS_F";
 _basedef_tank = _rhino01;
 _basedef_avenger = "RHS_M6";
 _basedef_static_aa = "RHS_Stinger_AA_pod_D";
-_basedef_static_mg = "RHS_Stinger_AA_pod_D";
+_basedef_static_mg = "RHS_M2StaticMG_D";
 // Missilebox
 _missilebox = "FIR_Baseplate";

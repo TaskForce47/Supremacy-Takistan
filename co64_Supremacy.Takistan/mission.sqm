@@ -129,7 +129,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="co64_Supremacy_v112.Takistan";
+		briefingName="co64_Supremacy_vdev.Takistan";
 		overviewText="[TF47] SUPREMACY";
 		resistanceWest=0;
 		resistanceEast=1;

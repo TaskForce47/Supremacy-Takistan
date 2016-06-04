@@ -28,4 +28,4 @@ for "_amount" from 0 to ([3,7] call BIS_fnc_randomInt) do {
 	[] execVM "Patrols\scripts\delayedcreatePatrol.sqf";
 };
 
-[{[] spawn tf47_fnc_checkPatrol;},300,[]] call CBA_fnc_addPerFrameHandler
+[{[] spawn tf47_fnc_checkPatrol;},30,[]] call CBA_fnc_addPerFrameHandler

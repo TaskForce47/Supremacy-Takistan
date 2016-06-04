@@ -20,7 +20,7 @@ _veh setVariable ["tf47service", true, true];
 	_vehServ15 = 0;
 	_vehServ16 = 0;
 	_vehServ17 = 0;
-	_vehServ15 = 0;
+	_vehServ18 = 0;
 	_vehServ19 = 0;
 	_vehServ99 = 0;
 

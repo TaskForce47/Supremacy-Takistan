@@ -51,7 +51,7 @@ _typeArrays = switch true do {
 	case ((["UnitNATO_DC", _slotName] call BIS_fnc_inString) || (["UnitNATO_CO", _slotName] call BIS_fnc_inString)): {
 		[[["b_hq","Headquarters"]],["GODFATHER","TOPMAN","TOWER"]];
 	};
-	case ((["UnitNATO_A", _slotName] call BIS_fnc_inString) || (["UnitNATO_B", _slotName] call BIS_fnc_inString) || (["UnitNATO_C", _slotName] call BIS_fnc_inString)): {
+	case ((["UnitNATO_A", _slotName] call BIS_fnc_inString) || (["UnitNATO_B", _slotName] call BIS_fnc_inString) || (["UnitNATO_C", _slotName] call BIS_fnc_inString) || (["UnitNATO_ENG", _slotName] call BIS_fnc_inString)): {
 		[[["b_inf","Infantry"],["b_mortar","Mortar"],["b_support","Support"],["b_med", "Medical Support"]],[]];
 	};
 	case (["UnitNATO_ST", _slotName] call BIS_fnc_inString): {

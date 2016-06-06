@@ -4,4 +4,5 @@ class Patrols
 	class createPatrol;
 	class getPatrolMarkers;
 	class checkPatrol;
+	class delayedcreatePatrol;
 };

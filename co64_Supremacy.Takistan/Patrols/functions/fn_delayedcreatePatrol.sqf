@@ -18,5 +18,8 @@ ______________________________________________*/
 private[];
 params[];
 
-sleep ([10,90] call BIS_fnc_randomInt);
+#define patrols
+#include "..\..\config.hpp"
+
+sleep ([patrols_respawn_min,patrols_respawn_max] call BIS_fnc_randomInt);
 [] spawn tf47_fnc_createPatrol;

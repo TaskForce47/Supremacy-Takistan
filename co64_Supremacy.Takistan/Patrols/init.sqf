@@ -1,37 +1,31 @@
 /*
-Author: 
+Author:
 
 	Lucke
 
-Last modified: 
+Last modified:
 
 	23/02/2016
 
 Description:
 
 	[] execVM "Patrols\init.sqf";
-	
+
 Notes:
-	
-	
+
+
 ______________________________________________*/
+
 if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
-private ["_amount","_typs","_temp"];
-params [["_amount", 10],["_typs",[["inf", 1, 600],["wheeld", 2, 1200],["tracked", 4, 1800]]]];
+
+private ["_amount"];
+params [];
 
 Patrols = [];
 PatrolMarkers = [] call tf47_fnc_getPatrolMarkers;
 
-while {_amount != 0 AND (count Patrols) != 5} do {
-	_temp = _typs call BIS_fnc_selectRandom;
-	if (_temp select 1 <= _amount) then {
-	  	_amount = _amount - (_temp select 1);
-	  	[_temp select 0, _temp select 2] execVM "Patrols\delayedcreatePatrol.sqf";
-	};	  	
+for "_amount" from 0 to ([3,7] call BIS_fnc_randomInt) do {
+	[] spawn tf47_fnc_delayedcreatePatrol;
 };
 
-
-while {true} do {
-	sleep 300;
-	[] execVM "Patrols\checkPatrols.sqf"; 
-};
+[{[] spawn tf47_fnc_checkPatrol;},30,[]] call CBA_fnc_addPerFrameHandler

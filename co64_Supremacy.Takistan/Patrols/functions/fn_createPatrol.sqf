@@ -15,83 +15,130 @@ Notes:
 
 
 ______________________________________________*/
-private["_typ","_timer","_start","_end","_startpos","_endpos","_veh","_convoy","_startdir","_group"];
-params["_typ","_timer"];
+private["_start","_end","_startpos","_endpos","_veh","_convoy","_startdir","_group","_inf","_temp"];
+params[];
+
+#define DEBUG_MODE_FULL
+#include "\x\cba\addons\main\script_macros_mission.hpp"
 
 _convoy = [];
-_inf = [];
+
 _start = PatrolMarkers call BIS_fnc_selectRandom;
-PatrolMarkers = PatrolMarkers - [_start];
-_end = PatrolMarkers call BIS_fnc_selectRandom;
-PatrolMarkers = PatrolMarkers - [_end];
 _startpos = getMarkerPos _start;
-_endpos = getMarkerPos _end;
+while {count ([_startpos,allGroups,1000,{(side _x == west)}] call CBA_fnc_getNearest) > 0} do {
+	_start = PatrolMarkers call BIS_fnc_selectRandom;
+	_startpos = getMarkerPos _start;
+};
 _startdir = markerDir _start;
-_group = createGroup east;
+
+_end = PatrolMarkers call BIS_fnc_selectRandom;
+
+while {_start == _end} do {
+	_end = PatrolMarkers call BIS_fnc_selectRandom;
+};
+
+_endpos = getMarkerPos _end;
+_group = createGroup resistance;
 
 switch (tf47_param_vehiclemod) do {
+	//Vanilla
 	case 0 : {
-		switch (_typ) do {
-			case "inf" : {
-				_veh = ["O_MRAP_02_gmg_F", "O_MRAP_02_F", "O_MRAP_02_F",  "O_MRAP_02_hmg_F"];
-			};
-			case "wheeld" : {
-				_veh = ["O_MRAP_02_gmg_F", "O_APC_Wheeled_02_rcws_F", "O_MRAP_02_hmg_F"];
-			};
-			case "tracked" : {
-				_veh = ["O_APC_Tracked_02_cannon_F", "O_APC_Tracked_02_AA_F", "O_APC_Tracked_02_cannon_F"];
-			};
-			default {};
-		};
+		_veh = [
+
+		];
 	};
+	//CUP
 	case 1 : {
-		switch (_typ) do {
-			case "inf" : {
-				_veh = ["CUP_O_UAZ_MG_TKA", "CUP_O_UAZ_Unarmed_TKA", "CUP_O_LR_Transport_TKA", "CUP_O_UAZ_MG_TKA"];
-			};
-			case "wheeld" : {
-				_veh = ["CUP_O_BRDM2_ATGM_TKA", "CUP_O_BTR60_TK", "CUP_O_BRDM2_TKA"];
-			};
-			case "tracked" : {
-				_veh = ["CUP_O_BMP2_TKA", "CUP_O_BMP2_ZU_TKA", "CUP_O_BMP2_TKA"];
-			};
-			default {};
-		};
-
 	};
+	//RHS
 	case 2 : {
-		switch (_typ) do {
-			case "inf" : {
-				_veh = ["rhsgref_cdf_reg_uaz_dshkm", "rhsgref_ins_g_ural_Zu23", "rhsgref_BRDM2_ins_g", "rhsgref_cdf_reg_uaz_dshkm"];
-			};
-			case "wheeld" : {
-				_veh = ["rhsgref_ins_g_btr70", "rhsgref_ins_g_zsu234", "rhsgref_ins_g_btr70"];
-			};
-			case "tracked" : {
-				_veh = ["rhsgref_ins_g_bmp2k", "rhsgref_ins_g_zsu234", "rhsgref_ins_g_bmp2k"];
-			};
-			default {};
-		};
-
+		_veh = [
+			"rhsgref_ins_g_zsu234",
+			"rhsgref_ins_g_btr60",
+			"rhsgref_ins_g_btr70",
+			"rhsgref_ins_g_uaz",
+			"rhsgref_ins_g_uaz_ags",
+			"rhsgref_ins_g_uaz_dshkm_chdkz",
+			"rhsgref_ins_g_uaz_open",
+			"rhsgref_ins_g_uaz_spg9",
+			"rhsgref_ins_g_bmd1",
+			"rhsgref_ins_g_bmd1p",
+			"rhsgref_ins_g_bmd2",
+			"rhsgref_ins_g_bmp1",
+			"rhsgref_ins_g_bmp1d",
+			"rhsgref_ins_g_bmp1k",
+			"rhsgref_ins_g_bmp1p",
+			"rhsgref_ins_g_bmp2e",
+			"rhsgref_ins_g_bmp2",
+			"rhsgref_ins_g_bmp2d",
+			"rhsgref_ins_g_bmp2k",
+			"rhsgref_BRDM2_ins_g",
+			"rhsgref_BRDM2_ATGM_ins_g",
+			"rhsgref_BRDM2UM_ins_g",
+			"rhsgref_BRDM2_HQ_ins_g",
+			"rhsgref_ins_g_t72ba",
+			"rhsgref_ins_g_t72bb",
+			"rhsgref_ins_g_t72bc",
+			"rhsgref_ins_g_BM21",
+			"rhsgref_ins_g_gaz66",
+			"rhsgref_ins_g_gaz66_ammo",
+			"rhsgref_ins_g_gaz66_flat",
+			"rhsgref_ins_g_gaz66o",
+			"rhsgref_ins_g_gaz66o_flat",
+			"rhsgref_ins_g_gaz66_r142",
+			"rhsgref_ins_g_gaz66_zu23",
+			"rhsgref_ins_g_gaz66_ap2",
+			"rhsgref_ins_g_gaz66_repair",
+			"rhsgref_ins_g_ural",
+			"rhsgref_ins_g_ural_open",
+			"rhsgref_ins_g_ural_work",
+			"rhsgref_ins_g_ural_work_open",
+			"rhsgref_ins_g_ural_Zu23"
+		];
+		_inf = [
+			"rhsgref_ins_g_specialist_aa",
+			"rhsgref_ins_g_grenadier_rpg",
+			"rhsgref_ins_g_machinegunner",
+			"rhsgref_ins_g_medic",
+			"rhsgref_ins_g_militiaman_mosin",
+			"rhsgref_ins_g_squadleader",
+			"rhsgref_ins_g_rifleman",
+			"rhsgref_ins_g_rifleman_akm",
+			"rhsgref_ins_g_rifleman_aksu",
+			"rhsgref_ins_g_grenadier",
+			"rhsgref_ins_g_rifleman_RPG26",
+			"rhsgref_ins_g_saboteur",
+			"rhsgref_ins_g_engineer",
+			"rhsgref_ins_g_sniper",
+			"rhsgref_ins_g_spotter"
+		];
 	};
 	default {};
 };
 
-{
-	_convoy = _convoy + [createVehicle[_x,_startpos,[],0,"CAN_COLLIDE"]];
+for "_i" from 0 to ([2,7] call BIS_fnc_randomInt) do {
+	_convoy pushBack (createVehicle[(_veh call BIS_fnc_selectRandom),_startpos,[],0,"CAN_COLLIDE"]);
 	_startpos = _startpos getPos[10, _startdir + 180];
-} forEach _veh;
+};
 
 {
 	_x setDir _startdir;
 	createVehicleCrew _x;
 	crew _x join _group;
+
+	for "_i" from 0 to ([0, (_x emptyPositions "Cargo")] call BIS_fnc_randomInt) do {
+		_temp = _group createUnit [(_inf call BIS_fnc_selectRandom), [0,0,0],[],0,"NONE"];
+		_temp moveInCargo _x;
+		if !(_temp in _x) then {
+			[_temp] call CBA_fnc_deleteEntity;
+		};
+	};
+
 } forEach _convoy;
 
-_group setBehaviour "CARELESS";
-_group setCombatMode "YELLOW";
-_group setSpeedMode "NORMAL";
-//_group move _endpos;
-[_group, _endpos] execVM "Patrols\delayedwaypoint.sqf";
+_group setBehaviour "SAFE";
+_group setCombatMode (["YELLOW","RED"] call BIS_fnc_selectRandom);
+_group setSpeedMode (["LIMITED","NORMAL","FULL"] call BIS_fnc_selectRandom);
+_group move _endpos;
 
-Patrols = Patrols + [[_typ,_timer,_group, _convoy, _inf, _start, _end]];
+Patrols pushBack [_group, _convoy,  _start, _end];

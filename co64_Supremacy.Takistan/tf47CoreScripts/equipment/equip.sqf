@@ -148,6 +148,10 @@ if (isNil{_type}) then {} else {
 							_object addBackpackCargoGlobal ["RHS_Mk19_Gun_Bag",1];
 							_object addBackpackCargoGlobal ["RHS_M2_Gun_Bag", 1];
 							_object addBackpackCargoGlobal ["RHS_M2_Tripod_Bag", 1];
+							_object addBackpackCargoGlobal ["RHS_M2_Gun_Bag", 1];
+							_object addBackpackCargoGlobal ["RHS_M2_Tripod_Bag", 1];
+							_object addBackpackCargoGlobal ["RHS_Tow_Gun_Bag", 1];
+							_object addBackpackCargoGlobal ["RHS_TOW_Tripod_Bag", 1];
 						};
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_HE",20];
 						_object addMagazineCargoGlobal ["ACE_1Rnd_82mm_Mo_Smoke",20];

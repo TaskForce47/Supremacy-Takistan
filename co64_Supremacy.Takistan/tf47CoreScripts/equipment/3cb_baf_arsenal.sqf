@@ -16,10 +16,10 @@ _mod_backpacks = [
 	"B_Parachute",
 	"ACE_TacticalLadder_Pack",
 	"ACE_NonSteerableParachute",
-	
+
 	"B_Mortar_01_support_F",
 	"B_Mortar_01_weapon_F",
-	
+
 	"UK3CB_BAF_B_Bergen_MTP_Engineer_H_A",
 	"UK3CB_BAF_B_Bergen_MTP_Engineer_L_A",
 
@@ -69,12 +69,11 @@ _mod_items = [
 	"UK3CB_BAF_U_HeliPilotCoveralls_RN",
 
 	//VESTS
-	
 	"V_Chestrig_khk",
 	"V_Chestrig_rgr",
 	"V_Rangemaster_belt",
 	"V_TacVestIR_blk",
-	
+
 	"UK3CB_BAF_V_Osprey",
 	"UK3CB_BAF_V_Osprey_Belt_A",
 
@@ -106,7 +105,7 @@ _mod_items = [
 	"UK3CB_BAF_V_Osprey_SL_D",
 
 	"UK3CB_BAF_V_Pilot_A",
-	
+
 	//HEADGEAR
 	"rhsusf_Bowman",
 	"rhsusf_bowman_cap",
@@ -179,11 +178,10 @@ _mod_items = [
 	"G_Bandanna_khk",
 	"G_B_Diving",
 
-
 	//NVGs
 	"rhsusf_ANPVS_14",
 	"rhsusf_ANPVS_15",
-	
+
 	//"ACE_NVG_Wide",
 	//"UK3CB_BAF_HMNVS",
 
@@ -197,7 +195,7 @@ _mod_items = [
 	"ACE_Vector",
 	"ACE_Yardage450",
 	"ACE_MX2A",
-	
+
 	"UK3CB_BAF_Soflam_Laserdesignator",
 	"UK3CB_BAF_Javelin_CLU",
 
@@ -214,14 +212,14 @@ _mod_items = [
 
 	//RADIOS
 	"tf_anprc152",
-	"tf_rf7800str",	
+	"tf_rf7800str",
 
 	//WATCHES
 	"ItemWatch",
 	"tf_microdagr",
 	"ACE_Altimeter",
 
-			//ACE Stuff
+	//ACE Stuff
 	"ACE_RangeCard",
 	"ACE_Kestrel4500",
 	"ACE_EarPlugs",
@@ -263,18 +261,19 @@ _mod_items = [
 	"ACE_HuntIR_monitor",
 	"ACE_Banana",
 	"ToolKit",
-	"MineDetector",	
+	"MineDetector",
 	"ACE_Flashlight_MX991",
 	"ACE_Flashlight_KSF1",
 	"ACE_Flashlight_XL50",
 	"ACE_SpraypaintBlack",
 	"ACE_SpraypaintBlue",
+
 	//"ACE_EntrenchingTool",
 	"ACE_SpraypaintGreen",
 	"ACE_SpraypaintRed",
 	"ACE_Sandbag_empty",
 	"ACE_RangeTable_M119",
-	
+
 	//ATACHMENTS Pistol
 	"muzzle_snds_acp",
 	"optic_MRD",
@@ -295,7 +294,7 @@ _mod_items = [
 	"rhsusf_acc_nt4_black",
 	"rhsusf_acc_nt4_tan",
 	"optic_Holosight",
-	 
+
 	"UK3CB_BAF_Silencer_L115A3",
 	"UK3CB_BAF_Silencer_L115A3",
 	"UK3CB_BAF_Silencer_L85",
@@ -333,8 +332,7 @@ _mod_items = [
 	"tf47_optic_smaw",
 	"tf47_smaw_optic","tf47_optic_smaw",
 	"tf47_smaw_optic",
-	
-	
+
 	"optic_AMS",
 	"optic_LRPS",
 	"optic_KHS_blk",
@@ -347,7 +345,6 @@ _mod_magazines = [
 	"ACE_1Rnd_82mm_Mo_Illum",
 	"ACE_1Rnd_82mm_Mo_HE_Guided",
 	"ACE_1Rnd_82mm_Mo_HE_LaserGuided",
-
 
 	//LAUNCHER AMMO
 	"rhs_fim92_mag",
@@ -369,11 +366,11 @@ _mod_magazines = [
 	"UK3CB_BAF_1Rnd_81mm_Mo_Flare_white",
 	"UK3CB_BAF_1Rnd_81mm_Mo_Smoke_white",
 	"UK3CB_BAF_1Rnd_81mm_Mo_shells",
-	
+
 	"UK3CB_BAF_32Rnd_40mm_G_Box",
 	"UK3CB_BAF_32Rnd_40mm_G_Box",
 	"UK3CB_BAF_100Rnd_127x99_Box",
-		
+
 	//PISTOL AMMO
 	"UK3CB_BAF_17Rnd_9mm",
 
@@ -383,12 +380,12 @@ _mod_magazines = [
 	"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
 	"30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow",
 	"30Rnd_556x45_Stanag",
-	"30Rnd_9x21_Mag", 
-	
+	"30Rnd_9x21_Mag",
+
 	"UK3CB_BAF_150Rnd_762x51_Box",
-	
+
 	"30Rnd_45ACP_Mag_SMG_01",
-	
+
 	"UK3CB_BAF_100Rnd",
 	"UK3CB_BAF_100Rnd_T",
 	"UK3CB_BAF_200Rnd",
@@ -407,8 +404,6 @@ _mod_magazines = [
 	"UK3CB_BAF_30Rnd",
 	"UK3CB_BAF_30Rnd_T",
 	"UK3CB_BAF_30Rnd_9mm",
-
-			
 
 	//ULG Ammo
 	"UGL_FlareCIR_F",
@@ -429,10 +424,16 @@ _mod_magazines = [
 
 	"ACE_HuntIR_M203",
 
-	//Explosives 
+	//Explosives
 	"SatchelCharge_Remote_Mag",
 	"ClaymoreDirectionalMine_Remote_Mag",
 	"DemoCharge_Remote_Mag",
+	"ATMine_Range_Mag",
+	"ClaymoreDirectionalMine_Remote_Mag",
+	"APERSBoundingMine_Range_Mag",
+	"SLAMDirectionalMine_Wire_Mag",
+	"APERSTripMine_Wire_Mag",
+	"APERSMine_Range_Mag",
 
 	//GRENADES
 	"rhs_mag_m67",
@@ -456,14 +457,13 @@ _mod_magazines = [
 	"Chemlight_blue",
 	"B_IR_Grenade",
 
-
 	//LASER BATTERIES
 	"Laserbatteries"
 ];
 _mod_weapons = [
 	//PISTOLS
 	"UK3CB_BAF_L131A1",
-	
+
 	//LAUNCHER
 	"rhs_weap_fim92",
 	"tf47_m3maaws",
@@ -471,7 +471,7 @@ _mod_weapons = [
 	"tf47_at4_heat",
 	"tf47_at4_HEDP",
 	"tf47_at4_HP",
-	
+
 	"UK3CB_BAF_L16",
 	"UK3CB_BAF_Javelin_Slung_Tube",
 
@@ -485,7 +485,7 @@ _mod_weapons = [
 
 	//PRIMARY
 	"SMG_01_F",
-	
+
 	"UK3CB_BAF_L110A2",
 	"UK3CB_BAF_L110A2_FIST",
 	"UK3CB_BAF_L115A3_Desert",

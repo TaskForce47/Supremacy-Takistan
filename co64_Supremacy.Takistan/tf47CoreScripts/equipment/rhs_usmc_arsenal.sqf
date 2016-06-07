@@ -24,7 +24,7 @@ _mod_items = [
 	"U_B_PilotCoveralls",
 	"U_B_HeliPilotCoveralls",
 	"U_B_GhillieSuit",
-	 
+
 	//VESTS
 	"rhsusf_spc",
 	"rhsusf_spc_rifleman",
@@ -39,7 +39,7 @@ _mod_items = [
 	"V_Chestrig_khk",
 	"V_Chestrig_rgr",
 	"V_TacVestIR_blk",
-	 
+
 	//HEADGEAR
 	"rhsusf_ach_helmet_M81",
 	"rhsusf_cvc_green_helmet",
@@ -70,8 +70,8 @@ _mod_items = [
 	"rhs_googles_yellow",
 	"rhs_googles_clear",
 	"rhs_googles_black",
-	 
-	//NVGs 
+
+	//NVGs
 	"rhsusf_ANPVS_14",
 	"rhsusf_ANPVS_15",
 
@@ -84,7 +84,7 @@ _mod_items = [
 	"Leupold_Mk4",
 	"ACE_Vector",
 	"ACE_Yardage450",
- 
+
 	//MAP
 	"ItemMap",
 
@@ -99,7 +99,7 @@ _mod_items = [
 
 
 	//RADIOS
-	"tf_anprc152",					
+	"tf_anprc152",
 	"tf_rf7800str",
 
 
@@ -111,7 +111,7 @@ _mod_items = [
 	//ACE Stuff
 	"ACE_Flashlight_KSF1",
 	"ACE_Flashlight_MX991",
-	"ACE_Flashlight_XL50",         
+	"ACE_Flashlight_XL50",
 	"ACE_RangeCard",
 	"ACE_Kestrel4500",
 	"ACE_EarPlugs",
@@ -154,7 +154,7 @@ _mod_items = [
 	"ACE_Banana",
 	"ToolKit",
 	"MineDetector",
- 
+
 	//ATACHMENTS Pistol
 
 	//ATACHMENTS Rifle
@@ -178,7 +178,7 @@ _mod_items = [
 	"rhsusf_acc_SFMB556",
 	"rhsusf_acc_M2010S",
 
-	 
+
 	//ATTACHMENTS
 	"rhs_weap_optic_smaw",
 	"tf47_optic_smaw",
@@ -203,14 +203,14 @@ _mod_magazines = [
 	"rhs_m136_hp_mag",
 	"rhs_fim92_mag",
 	"rhs_fgm148_magazine_AT",
-		
+
 	//PISTOL AMMO
 	"rhsusf_mag_7x45acp_MHP",
 	"rhsusf_mag_17Rnd_9x19_JHP",
 	"rhsusf_mag_17Rnd_9x19_FMJ",
 	"rhsusf_mag_15Rnd_9x19_JHP",
 	"rhsusf_mag_15Rnd_9x19_FMJ",
-	 
+
 	//RIFLE AMMO
 	"rhsusf_20Rnd_762x51_m118_special_Mag",
 	"rhsusf_20Rnd_762x51_m993_Mag",
@@ -245,7 +245,7 @@ _mod_magazines = [
 	"30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow",
 	"20Rnd_556x45_UW_mag",
 	"30Rnd_556x45_Stanag",
-	"30Rnd_9x21_Mag", 
+	"30Rnd_9x21_Mag",
 
 	//ULG Ammo
 	"ACE_HuntIR_M203",
@@ -271,7 +271,13 @@ _mod_magazines = [
 	"SatchelCharge_Remote_Mag",
 	"ClaymoreDirectionalMine_Remote_Mag",
 	"DemoCharge_Remote_Mag",
-	 
+	"ATMine_Range_Mag",
+	"ClaymoreDirectionalMine_Remote_Mag",
+	"APERSBoundingMine_Range_Mag",
+	"SLAMDirectionalMine_Wire_Mag",
+	"APERSTripMine_Wire_Mag",
+	"APERSMine_Range_Mag",
+
 	//GRENADES
 	"rhs_mag_m67",
 	"ACE_M84",
@@ -293,8 +299,8 @@ _mod_magazines = [
 	"Chemlight_yellow",
 	"Chemlight_blue",
 	"B_IR_Grenade",
-	 
-	 
+
+
 	//LASER BATTERIES
 	"Laserbatteries"
 ];

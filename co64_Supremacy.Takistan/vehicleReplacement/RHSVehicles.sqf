@@ -57,8 +57,8 @@ _gator02 = "RHS_M6"; // veh = [this, 2700, 0, "GATOR-02", "b_mech_inf", "ColorOr
 _butterfly01 ="RHS_MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-01", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _butterfly02 ="RHS_MELB_MH6M"; // veh = [this, 1800, 0, "BUTTERFLY-02", "b_air", "ColorBrown", WEST, "rottrans", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _firefly = "RHS_MELB_AH6M_L"; // veh = [this, 2700, 0, "FIREFLY", "b_air", "ColorOrange", WEST, "rotatk", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_griffin = "RHS_UH1Y_UNARMED_d"; // veh = [this, 2700, 0, "GRIFFIN", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "GRIFFIN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
-_manticore = "RHS_AH1Z"; // veh = [this, 2700, 0, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_griffin = "RHS_UH1Y_d_GS"; // veh = [this, 2700, 0, "GRIFFIN", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "GRIFFIN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+_manticore = "RHS_AH64D_AA"; // veh = [this, 2700, 0, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _pelican = "RHS_CH_47F_light"; // veh = [this, 3600, 0, "PELICAN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "PLECAN", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _dustoff = "RHS_UH60M_MEV2_d"; // veh = [this, 2700, 0, "DUSTOFF", "b_air", "ColorRed", WEST, "rottrans", 30] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "DUSTOFF", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 _raven02 = "RHS_UH60M_d"; // veh = [this, 2700, 0, "RAVEN-02", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";hNil = [this, "RAVEN-02", "b_air", WEST, "ColorBlue"] execVM "tf47CoreScripts\unitMarkerInit.sqf";

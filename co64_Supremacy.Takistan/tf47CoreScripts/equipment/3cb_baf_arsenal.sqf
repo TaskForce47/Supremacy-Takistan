@@ -283,7 +283,9 @@ _mod_items = [
 	//ATACHMENTS Rifle
 	"rhsusf_acc_LEUPOLDMK4",
 	"rhsusf_acc_LEUPOLDMK4_2",
+	"rhsusf_acc_LEUPOLDMK4_2_d",
 	"rhsusf_acc_harris_bipod",
+	"bipod_02_F_hex",
 	"rhsusf_acc_ACOG2_USMC",
 	"rhsusf_acc_ACOG3_USMC",
 	"rhsusf_acc_ACOG_USMC",

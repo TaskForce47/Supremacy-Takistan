@@ -39,7 +39,7 @@ onPreloadFinished {
 if(tf47_param_vehiclemod == 2) then {
 	_nul = [] spawn {
 		waitUntil {sleep 10; !isNil "albatros1"; };
-		albatros1 addAction ["<t color='#FF0000'>Get in C130J</t>", "(_this select 1) moveInCargo (_this select 0)",nil, 1.5, true, true, "", "!(_this in _target)"]; 
+		albatros1 addAction ["<t color='#FF0000'>Get in C130J</t>", "(_this select 1) moveInCargo (_this select 0)",nil, 1.5, true, true, "", "!(_this in _target)"];
 	};
 };
 if (tf47_var_FOBStatus == 2) then
@@ -62,6 +62,7 @@ supplySpawnSign addAction ["<t color='#00FF00'>AntiTank Box</t>", "_this spawn t
 supplySpawnSign addAction ["<t color='#00FF00'>AntiAir Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_WpsLaunch_F","AABox"]];
 supplySpawnSign addAction ["<t color='#00FF00'>Ammo Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_Ammo_F","AmmoBox"]];
 supplySpawnSign addAction ["<t color='#00FF00'>Medical Box</t>", "_this spawn tf47_fnc_spawnThing", ["ACE_medicalSupplyCrate_advanced",""]];
+supplySpawnSign addAction ["<t color='#00FF00'>Explosive Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_AmmoOrd_F",""]];
 
 TF47_UMenu_isEnabled = true;
 

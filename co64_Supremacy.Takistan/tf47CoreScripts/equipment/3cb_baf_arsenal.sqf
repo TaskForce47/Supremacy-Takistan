@@ -272,7 +272,6 @@ _mod_items = [
 	"ACE_SpraypaintGreen",
 	"ACE_SpraypaintRed",
 	"ACE_Sandbag_empty",
-	"ACE_RangeTable_M119",
 
 	//ATACHMENTS Pistol
 	"muzzle_snds_acp",

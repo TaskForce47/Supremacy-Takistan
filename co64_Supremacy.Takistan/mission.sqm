@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=66;
+	toggles=194;
 	class ItemIDProvider
 	{
 		nextID=3540;
@@ -75,6 +75,7 @@ addons[]=
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Modules_F",
 	"A3_Characters_F",
+	"asr_ai3_main",
 	"tf47_launchers",
 	"ace_explosives",
 	"ace_gforces",
@@ -95,7 +96,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=48;
+		items=49;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -307,60 +308,65 @@ class AddonsMetaData
 		};
 		class Item36
 		{
+			className="asr_ai3_main";
+			name="asr_ai3_main";
+		};
+		class Item37
+		{
 			className="tf47_launchers";
 			name="tf47_launchers";
 		};
-		class Item37
+		class Item38
 		{
 			className="ace_explosives";
 			name="ace_explosives";
 		};
-		class Item38
+		class Item39
 		{
 			className="ace_gforces";
 			name="ace_gforces";
 		};
-		class Item39
+		class Item40
 		{
 			className="ACE_Parachute";
 			name="ACE_Parachute";
 		};
-		class Item40
+		class Item41
 		{
 			className="ace_medical";
 			name="ace_medical";
 		};
-		class Item41
+		class Item42
 		{
 			className="cba_xeh";
 			name="cba_xeh";
 		};
-		class Item42
+		class Item43
 		{
 			className="ace_common";
 			name="ace_common";
 		};
-		class Item43
+		class Item44
 		{
 			className="ace_flashsuppressors";
 			name="ace_flashsuppressors";
 		};
-		class Item44
+		class Item45
 		{
 			className="ace_huntir";
 			name="ace_huntir";
 		};
-		class Item45
+		class Item46
 		{
 			className="ace_mx2a";
 			name="ace_mx2a";
 		};
-		class Item46
+		class Item47
 		{
 			className="task_force_radio_items";
 			name="task_force_radio_items";
 		};
-		class Item47
+		class Item48
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and structures";
@@ -633,7 +639,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorOrange";
 			id=18;
-			atlOffset=229.81326;
+			atlOffset=229.81348;
 		};
 		class Item19
 		{
@@ -1077,7 +1083,7 @@ class Mission
 			type="Empty";
 			colorName="ColorRed";
 			id=61;
-			atlOffset=73.382355;
+			atlOffset=73.382446;
 		};
 		class Item62
 		{
@@ -3890,7 +3896,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false;";
+				init="this enableSimulation false; this allowDamage false;";
 			};
 			id=273;
 			type="Land_CamoNetVar_NATO_EP1";
@@ -4141,7 +4147,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulation false;";
+				init="this enableSimulation false;this allowDamage false;";
 			};
 			id=287;
 			type="Land_CamoNetVar_NATO_EP1";
@@ -12160,7 +12166,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="this enableSimulationGlobal false;";
+				init="this enableSimulationGlobal false;this allowDamage false;";
 			};
 			id=844;
 			type="Land_CamoNetVar_NATO_EP1";

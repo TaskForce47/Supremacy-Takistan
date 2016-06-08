@@ -112,7 +112,7 @@ class Params
             title = "$STR_f_param_debugMode";
             values[] = {0,1,2};
             texts[] = {"Off","All","RPT only"};
-            default = 2;
+            default = 0;
             code = "f_var_debugMode = %1";
     };
 

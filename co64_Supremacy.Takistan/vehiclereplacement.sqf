@@ -207,7 +207,7 @@ switch (_mkrtext) do  {
 		};
 	case "_manticore" : 	{
 		manticore1 = [_mkrpos,_mkrdir,_manticore] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [manticore1, _timeondestruction, _timeondesertion, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		spawnveh = [manticore1, _timeondestruction, _timeondesertion, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 35] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		hNil = [manticore1, "MANTICORE", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[manticore1,"manticore1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "manticore1";

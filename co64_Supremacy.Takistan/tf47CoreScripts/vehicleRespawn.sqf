@@ -253,6 +253,10 @@ while {_run} do
             _unit setObjectTexture [0,"\CUP\WheeledVehicles\CUP_WheeledVehicles_Dingo\data\karosse_co.paa"];
         };
 		
+		if(typeOf _unit == "FIR_F16C" || typeOf _unit == "FIR_F15E") then {
+            _unit setVariable ["ITGT_NEW","no",true];
+        };
+		
 		// In Arma 3 brauchen Drohnen eine AI Crew
 		if(_unit isKindOf "UAV") then {
 			createVehicleCrew _unit;

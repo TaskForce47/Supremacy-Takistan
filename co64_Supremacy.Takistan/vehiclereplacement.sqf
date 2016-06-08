@@ -267,6 +267,7 @@ switch (_mkrtext) do  {
 		spawnveh = [wasp1, _timeondestruction, _timeondesertion, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		hNil = [wasp1, "WASP-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[wasp1,"wasp1"],"setVehicleVarname",true] call BIS_fnc_MP;
+		wasp1 setVariable ["ITGT_NEW","no",true];
 		publicVariable "wasp1";
 		};
 	case "_eagle01" : 		{
@@ -274,6 +275,7 @@ switch (_mkrtext) do  {
 		spawnveh = [eagle1, _timeondestruction, _timeondesertion, "EAGLE-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		hNil = [eagle1, "EAGLE-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[eagle1,"eagle1"],"setVehicleVarname",true] call BIS_fnc_MP;
+		wasp1 setVariable ["ITGT_NEW","no",true];
 		publicVariable "eagle1";
 		};
 	case "_thunderbird" :	{
@@ -301,6 +303,7 @@ switch (_mkrtext) do  {
 		(gunner _veh) disableAI "MOVE";
 		(commander _veh) disableAI "MOVE";
 		_veh setFuel 0;
+		_veh lock true;
 	};
 	case "_basedef_avenger":{
 		_veh = [_mkrpos,_mkrdir,_basedef_avenger] call TF47_VehicleReplacement_fnc_replaceVehicle;
@@ -311,6 +314,7 @@ switch (_mkrtext) do  {
 		(gunner _veh) disableAI "MOVE";
 		(commander _veh) disableAI "MOVE";
 		_veh setFuel 0;
+		_veh lock true;
 	};
 	case "_basedef_static_aa":{
 		_veh = [_mkrpos,_mkrdir,_basedef_static_aa] call TF47_VehicleReplacement_fnc_replaceVehicle;
@@ -321,12 +325,14 @@ switch (_mkrtext) do  {
 		(gunner _veh) disableAI "MOVE";
 		(commander _veh) disableAI "MOVE";
 		_veh setFuel 0;
+		_veh lock true;
 	};
 	case "_basedef_static_mg":{
 		_veh = [_mkrpos,_mkrdir,_basedef_static_mg] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		_veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];
 		_veh allowDamage false;
 		createVehicleCrew _veh;
+		_veh lock true;
 	};
 	case "_missilebox":{
 		_veh = [_mkrpos,_mkrdir,_missilebox] call TF47_VehicleReplacement_fnc_replaceVehicle;

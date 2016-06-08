@@ -19,10 +19,10 @@ if(_center in allMapMarkers)then{
 
 switch (_type) do {
 	case "all in radius":{
-		_houseObjects = nearestObjects [_center0, ["building"], _radius];
+		_houseObjects = ((nearestObjects [_center0, ["building"], _radius]) - (nearestObjects [_center0, ["Land_Vez"], _radius]));
 	};
 	case "nearest one":{
-		_houseObjects = nearestObjects [_center0, ["building"], 500];
+		_houseObjects = ((nearestObjects [_center0, ["building"], 500]) - (nearestObjects [_center0, ["Land_Vez"], 500]));
 	};
 };
 

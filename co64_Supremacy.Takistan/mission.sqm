@@ -10557,7 +10557,7 @@ class Mission
 			{
 				skill=0.60000002;
 				fuel=0;
-				init="this enableSimulation false;";
+				init="this enableSimulation false;this allowDamage false;";
 			};
 			id=704;
 			type="Land_CamoNetB_NATO";
@@ -18018,7 +18018,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""tent""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""tent""] execVM ""tf47CoreScripts\equipment\equip.sqf"";this allowDamage false;";
 			};
 			id=1576;
 			type="CamoNet_BLUFOR_big_F";
@@ -30633,7 +30633,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="equipmentarea = [this,""tent""] execVM ""tf47CoreScripts\equipment\equip.sqf"";";
+				init="equipmentarea = [this,""tent""] execVM ""tf47CoreScripts\equipment\equip.sqf"";this allowDamage false;";
 			};
 			id=3332;
 			type="CamoNet_BLUFOR_big_F";

@@ -1,4 +1,5 @@
-if(!isServer) exitwith {};
+// if(!isServer) exitwith {};
+if(true) exitWith {};
 
 trig_rt enablesimulationGlobal false;
 

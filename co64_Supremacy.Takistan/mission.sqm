@@ -96,7 +96,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=49;
+		items=48;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -338,35 +338,30 @@ class AddonsMetaData
 		};
 		class Item42
 		{
-			className="cba_xeh";
-			name="cba_xeh";
-		};
-		class Item43
-		{
 			className="ace_common";
 			name="ace_common";
 		};
-		class Item44
+		class Item43
 		{
 			className="ace_flashsuppressors";
 			name="ace_flashsuppressors";
 		};
-		class Item45
+		class Item44
 		{
 			className="ace_huntir";
 			name="ace_huntir";
 		};
-		class Item46
+		class Item45
 		{
 			className="ace_mx2a";
 			name="ace_mx2a";
 		};
-		class Item47
+		class Item46
 		{
 			className="task_force_radio_items";
 			name="task_force_radio_items";
 		};
-		class Item48
+		class Item47
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and structures";
@@ -1158,7 +1153,7 @@ class Mission
 		class Item69
 		{
 			dataType="Marker";
-			position[]={8146.9321,296.04001,1738.1954};
+			position[]={8168.2896,296.04001,1750.8518};
 			name="callsign_butterfly1";
 			text="BUTTERFLY-01";
 			type="b_air";
@@ -1168,7 +1163,7 @@ class Mission
 		class Item70
 		{
 			dataType="Marker";
-			position[]={8168.2129,296.04001,1750.2255};
+			position[]={8146.7515,296.04001,1738.4974};
 			name="callsign_butterfly2";
 			text="BUTTERFLY-02";
 			type="b_air";
@@ -1491,7 +1486,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7993.4868,296.04001,1664.031};
-			angle=4.8276148;
+			angle=4.8276143;
 			class Attributes
 			{
 				condition="(""helicopter"" countType thislist  > 0) && count (thislist unitsBelowHeight 1) > 0";
@@ -12872,7 +12867,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8146.9277,296.04001,1740.2252};
+				position[]={8168.2852,296.04001,1752.8816};
 				angles[]={0,2.6299746,0};
 			};
 			side="Empty";
@@ -12891,7 +12886,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8168.418,296.04001,1752.3522};
+				position[]={8146.9565,296.04001,1740.6241};
 				angles[]={0,2.6385002,0};
 			};
 			side="Empty";
@@ -22996,7 +22991,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1912;
-					type="B_helicrew_F";
+					type="B_Helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23060,7 +23055,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1913;
-					type="B_helicrew_F";
+					type="B_Helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23277,7 +23272,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1917;
-					type="B_helicrew_F";
+					type="B_Helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23341,7 +23336,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1918;
-					type="B_helicrew_F";
+					type="B_Helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23494,7 +23489,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1921;
-					type="B_helicrew_F";
+					type="B_Helicrew_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24886,7 +24881,7 @@ class Mission
 		class Item1133
 		{
 			dataType="Marker";
-			position[]={8168.0786,296.04001,1752.348};
+			position[]={8146.6172,296.04001,1740.62};
 			name="mkr_spawn_veh_59";
 			text="_butterfly02";
 			type="Empty";
@@ -24896,7 +24891,7 @@ class Mission
 		class Item1134
 		{
 			dataType="Marker";
-			position[]={8146.7393,296.04001,1740.6423};
+			position[]={8168.0967,296.04001,1753.2987};
 			name="mkr_spawn_veh_60";
 			text="_butterfly01";
 			type="Empty";
@@ -25411,6 +25406,7 @@ class Mission
 			{
 			};
 			id=2527;
+			atlOffset=0.091003418;
 		};
 		class Item1173
 		{

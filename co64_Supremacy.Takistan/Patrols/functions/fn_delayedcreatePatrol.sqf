@@ -18,5 +18,5 @@ ______________________________________________*/
 private[];
 params[];
 
-sleep ([90,900] call BIS_fnc_randomInt);
+sleep ([10,90] call BIS_fnc_randomInt);
 [] spawn tf47_fnc_createPatrol;

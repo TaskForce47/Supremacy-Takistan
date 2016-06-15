@@ -317,6 +317,14 @@ class Params
 		code = "tf47_param_mainEnemyCount = %1";
 	};
 
+	class tf47_param_reinforcementStrength
+	{
+		title = "Strength of main AO reinforcements";
+		values[] = {1000,80,40,20,10};
+		texts[] = {"Disabled","Low","Medium","High","Ultra"};
+		default = 40;
+		code = "tf47_param_reinforcementStrength = %1";
+	};
 };
 
 // ============================================================================================
@@ -481,6 +489,16 @@ class CfgFunctions
 			class checkFOBlocal;
 			class static;
 			class spawnThing;
+			class reinforcements;
+			class reinforcementsHeliArmed;
+			class reinforcementsHeliPara;
+			class reinforcementsHeliLand;
+			class reinforcementsJetArmed;
+			class reinforcementsLandArmed;
+			class reinforcementsLandInf;
+			class reinforcementsLandAA;
+			class reinforcementsLandAT;
+			class cargoToPara;
 		};
 		#include "SIDEscripts\Missions\Missions.hpp"
 		#include "Patrols\functions\functions.hpp"

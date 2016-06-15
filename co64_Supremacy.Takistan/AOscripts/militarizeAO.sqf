@@ -510,7 +510,24 @@ trig_rt setpos (getpos _log_pos);
 
 //////////////// Spawn new IED's /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		[round (random 3)] call tf47_fnc_spawnIED;
+		[round (random 12)] call tf47_fnc_spawnIED;
+
+//////////////// reinforcement init /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		_enemyUnits = [];
+
+		{
+			if (!(side leader _x == playerSide) && ((leader _x) distance (getMarkerPos "ao_mkr1") < 800)) then				//find all enemy leaders in AO
+			{
+				{
+					_enemyUnits pushBack _x;
+				} forEach units _x;
+			};
+		} forEach allGroups;
+
+		tf47_var_mainEnemyCount = count _enemyUnits;
+
+		TF47_var_reinforcementHandle = [{[] spawn tf47_fnc_reinforcements;}, 30, []] call CBA_fnc_addPerFrameHandler;
 
 
 //////////////// create trigger at the ao ////////////////////////////////////////////////////////////////////////////////////////			

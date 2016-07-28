@@ -9,7 +9,16 @@ parameter: [AOCenter, mindist, maxdist, number, missionType]
 */
 
 private ["_AOCenter","_minDist","_maxDist","_number","_pos","_unit","_group","_missionType","_spotter","_sniper","_sniper2"];
-params ["_AOCenter","_minDist","_maxDist","_number","_missionType"];
+
+
+params ["_AOCenter","_minDist","_maxDist","_number","_missionType","_missionHandle"];
+
+_AOCenter = param [0,[0,0,0]];
+_minDist= param [1,400];
+_maxDist= param [2,1000];
+_number= param [3,2];
+_missionType= param [4,1];
+_missionHandle= param [5,0];
 
 _spotter = "";
 _sniper = "";
@@ -55,7 +64,7 @@ for [{_i=1},{_i<=_number},{_i=_i+1}] do
 
 	if (_missionType == 1) then
 	{
-		tf47_var_AOUnits pushBack _unit;
+		(tf47_supremacy_main_var_AOUnits select _missionHandle) pushBack _unit;
 	};
 
 	[_unit, [0.5,0.5,0.2,0.9,0.8,1,0.8,0.5,0.5,0.3]] call LV_ACskills;

@@ -1,0 +1,18 @@
+/*
+*  return the position of the given main objective handle, return [0,0,0] if handle is not valid
+*/
+
+#include "AO_cfg.sqf"
+
+private["_mainHandle","_mainPositions"];
+
+_mainHandle = param [0,0];
+
+if (_mainHandle < count tf47_supremacy_main_var_AOCollection) then
+{
+	_mainPosition  = getPos ((tf47_supremacy_main_var_AOCollection select _mainHandle) select TF47_SUPREMACY_MAIN_AOCOLLECTION_SELECT_LOGISTICMODULE);
+} else {
+	_mainPosition = [0,0,0];
+};
+
+_mainPosition;

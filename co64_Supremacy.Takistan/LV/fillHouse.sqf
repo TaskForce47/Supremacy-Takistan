@@ -51,6 +51,8 @@ _milGroup = if (count _this > 7) then { _this select 7;} else {nil}; if(!isNil("
 _customInit = if (count _this > 8) then { _this select 8;} else {nil}; if(!isNil("_customInit"))then{if(_customInit == "nil0")then{_customInit = nil;};};
 _grpId = if (count _this > 9) then { _this select 9;} else {nil};	 
 _missionType = if (count _this > 11) then { _this select 10; }else{0;}; 
+_missionHandle = param [13, 0]; 
+
 
 if(isNil("LV_ACskills"))then{LV_ACskills = compile preprocessFile "LV\LV_functions\LV_fnc_ACskills.sqf";};
 if(isNil("LV_vehicleInit"))then{LV_vehicleInit = compile preprocessFile "LV\LV_functions\LV_fnc_vehicleInit.sqf";};
@@ -105,7 +107,7 @@ switch (_sideOption) do {
         _menArray = _greenMenArray;
     }; 
 };
-
+(tf47_supremacy_main_var_AOGroups select _missionHandle) pushBack _milGroup;
 if(_center in allMapMarkers)then{
 		_center0 = getMarkerPos _center;
 	}else{
@@ -154,7 +156,7 @@ while{_i2 < _rat}do{
 
 	if (_missionType == 1) then
 	{
-		tf47_var_AOUnits pushBack _unit;
+		 (tf47_supremacy_main_var_AOUnits select _missionHandle) pushBack _unit;
 	};
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};

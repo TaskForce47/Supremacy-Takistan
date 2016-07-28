@@ -113,40 +113,18 @@ BaseTransport = compile preprocessFile "Base\BaseTransport.sqf";
 headlessClientActive = if(isNil "headlessClient") then {False} else {True};
 publicVariable "headlessClientActive";
 
-// Spawn units on the HC if hes active
-// otherwise spawn him on the server
+// Spawn units on HC if active, otherwise the server will take over that.
+if(([] call TF47_Helper_fnc_checkForHc)) then {
 
-if(headlessClientActive && isMultiplayer) then {
-    if(!isServer && !hasInterface) then {
-		tf47_var_iedTracker = [];
-		tf47_var_mainCount = 0;
-
-		tf47_var_AOCollection = [
-							"timurkulay"/*,"chadarakht"*/,"gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
-							"rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
-
-		tf47_var_AOObjects = [];
-        diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
-		[] execVM "AOscripts\AOstart.sqf";
-		sleep 0.1;
-		[] execVM "SIDEscripts\SIDEstart.sqf";
-		sleep 0.1;
-		[] execVM "Patrols\init.sqf";
-		sleep 0.1;
-    };
-} else { 
-    if(isServer) then {
-        diag_log "HeadlessClient: Spawning the AI on the Server!";
-		[] execVM "AOscripts\AOstart.sqf";
-		sleep 0.1;
-		[] execVM "SIDEscripts\SIDEstart.sqf";
-		sleep 0.1;
-		[] execVM "TacAds\jetpatrolinit.sqf";
-		sleep 0.1;
-		[] execVM "Patrols\init.sqf";
-		sleep 0.1;
-    };
+	[] call tf47_supremacy_main_fnc_initMainObjective;
+	[] execVM "SIDEscripts\SIDEstart.sqf";
+	sleep 0.1;
+	[] execVM "TacAds\jetpatrolinit.sqf";
+	sleep 0.1;
+	[] execVM "Patrols\init.sqf";
+	sleep 0.1;
 };
+
 
 // ======================== TF47 Stuff ===================================
 

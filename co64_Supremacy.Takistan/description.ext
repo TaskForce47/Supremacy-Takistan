@@ -13,7 +13,7 @@ class Header
 
 disabledAI = 1;
 
-
+allowFunctionsRecompile = 1;
 // F3 - Loading Screen
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -154,6 +154,15 @@ class Params
 			texts[] = {"Vanilla","CUP-MELB-FIRF15-SAM","RHS-3CB-MELB-FIRF15-FIRF16"};
 			default = 2;
 			code = "tf47_param_vehiclemod = %1";
+	};
+	
+	class tf47_param_useHC
+	{
+			title = "use headless client";
+			values[] = {0,1};
+			texts[] = {"USE_HC","USE_SERVER"};
+			default = 1;
+			code = "tf47_param_useHC = %1";
 	};
 // ============================================================================================
 
@@ -388,7 +397,6 @@ class CfgFunctions
 {
 #include "tf47CoreScripts\umenu\Functions.hpp"
 #include "functions\cfgfunctions.hpp"			// Integrated Sepp Functions
-
 	class F // Defines the "owner"
 	{
 		class common // category
@@ -524,6 +532,10 @@ class CfgFunctions
 	
 		//#include "tf47CoreScripts\UMenu\Functions.hpp"
         //#include "tf47CoreScripts\tf47CfgFunctions.hpp"	
+        #include "AOscripts_new\cfgFunctions_tf47_supremacy_main.hpp"
+		#include "dyncap_new\cfgFunctions_tf47_dynamicCapture.hpp"
+		#include "MissionManager\cfgFunctions_tf47_supremacy_MissionManager.hpp"
+
 };
 
 class CfgRemoteExec
@@ -534,7 +546,7 @@ class CfgRemoteExec
         jip = 1;
         class tf47_fnc_buildFOB
         {
-            allowedTargets=2; // can target anyone (default)
+            allowedTargets=2;
             jip = 0; // sending jip messages is disabled for this function (overrides settings in the Functions class)
         };
         class tf47_fnc_buildFOBlocal
@@ -553,6 +565,16 @@ class CfgRemoteExec
         	jip = 0;
         };
         class tf47_fnc_addAction
+        {
+        	allowedTargets=0;
+        	jip = 0;
+        };
+        class tf47_dyncap_fnc_clientCaptureMonitor
+        {
+        	allowedTargets=0;
+        	jip = 0;
+        };
+        class tf47_supremacy_main_fnc_completeMainObjective
         {
         	allowedTargets=0;
         	jip = 0;

@@ -4,7 +4,7 @@
 #include "AO_cfg.sqf"
 
 private["_mainPositions","_mainHandles"];
-_mainHandles = []:
+_mainHandles = [];
 
 {
 	_mainHandles pushBack _forEachIndex;

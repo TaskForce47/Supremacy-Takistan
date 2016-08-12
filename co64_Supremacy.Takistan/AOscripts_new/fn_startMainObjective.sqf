@@ -69,6 +69,9 @@ sleep 0.1;
 
 nul = [_log_pos,2,true,2,[6,6],_ao_rad,_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\fillHouse.sqf";
 
+/*custom:		nul = [target, side, radius, spawn men, spawn vehicles, still, men ratio, vehicle ratio, 
+							skills, group, custom init, ID,missionType] execVM "LV\militarize.sqf";
+*/
 
 //****patrolls
 //Infantry
@@ -78,29 +81,16 @@ nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_
 //air
 nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
 
-
-/*
-//####patrolls
-//Infantry
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],false,[0,1,20],[2,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-//Vehilces
-nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-//air
-nul = [_log_pos,2,_ao_rad,[true,false],[false,false,true],false,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-*/
-
-
+//**** Standing Vehicles
 nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[7,2],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
+nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
 
-/*
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,0],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_ai_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
-*/
 
 nul = [_log_pos,2,_ao_rad,[true,false],[true,false,false],true,[0,0],[1,1],_ao_pilot_skill_array,nil,nil,nil,1,_AONumber] execVM "LV\militarize.sqf";
 

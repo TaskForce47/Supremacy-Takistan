@@ -117,6 +117,8 @@ publicVariable "headlessClientActive";
 if(([] call TF47_Helper_fnc_checkForHc)) then {
 
 	[] call tf47_supremacy_main_fnc_initMainObjective;
+	[] spawn tf47_supremacy_missionManager_fnc_startMissionManager;
+
 	[] execVM "SIDEscripts\SIDEstart.sqf";
 	sleep 0.1;
 	[] execVM "TacAds\jetpatrolinit.sqf";

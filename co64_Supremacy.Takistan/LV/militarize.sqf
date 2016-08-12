@@ -6,7 +6,7 @@
 		default: 	nul = [this] execVM "LV\militarize.sqf";
 		
 		custom:		nul = [target, side, radius, spawn men, spawn vehicles, still, men ratio, vehicle ratio, 
-							skills, group, custom init, ID] execVM "LV\militarize.sqf";
+							skills, group, custom init, ID,missionType] execVM "LV\militarize.sqf";
 
 		Parameters:
 		
@@ -59,7 +59,8 @@ _skills = if (count _this > 8) then { _this select 8; }else{"default";};
 _milGroup = if (count _this > 9) then { _this select 9; }else{nil;}; if(!isNil("_milGroup"))then{if(_milGroup == "nil0")then{_milGroup = nil;};};
 _customInit = if (count _this > 10) then { _this select 10; }else{nil;}; if(!isNil("_customInit"))then{if(_customInit == "nil0")then{_customInit = nil;};};
 _grpId = if (count _this > 11) then { _this select 11; }else{nil;}; 
-_missionType = if (count _this > 12) then { _this select 12; }else{0;}; 
+_missionType = param [12, 0]; 
+_missionHandle = param [13, 0]; 
 
 if(_cPos in allMapMarkers)then{
 	_centerPos = getMarkerPos _cPos;
@@ -192,7 +193,7 @@ if((_men select 0)||(_men select 1))then{
 
 		if (_missionType == 1) then
 		{
-			tf47_var_AOUnits pushBack _unit;
+			(tf47_supremacy_main_var_AOUnits select _missionHandle) pushBack _unit;
 		};
 
 		if(!_still)then{
@@ -264,9 +265,9 @@ if((_vehicles select 0)||(_vehicles select 1)||(_vehicles select 2))then{
 
 					if (_missionType == 1) then
 					{
-						tf47_var_AOObjects pushBack _vehicle;
+						(tf47_supremacy_main_var_AOUnits select _missionHandle) pushBack _vehicle;
 					};
-
+				
 					_crew = [_vehicle, _milGroup] call BIS_fnc_spawnCrew;
 					_driver = driver _vehicle;
 					if(!_still)then{nul = [_driver,_pos] execVM 'LV\patrol-vE.sqf';};
@@ -276,7 +277,9 @@ if((_vehicles select 0)||(_vehicles select 1)||(_vehicles select 2))then{
 		
 		};
 		 
+		diag_log format["HELP ME: %1", _driver];
 		_vehicle = vehicle _driver;
+		diag_log format["HELP ME: %1, %2", _driver, _vehicle];
         _vehicle allowDamage false;
         
         _allUnitsArray set [(count _allUnitsArray), _vehicle];
@@ -311,6 +314,8 @@ if(!isNil("_grpId"))then{
 	}forEach _this;
 	call compile format["LVgroup%1CI = ['militarize',%2]",_grpId,_thisArray];
 };
+
+(tf47_supremacy_main_var_AOGroups select _missionHandle) pushBack _milGroup;
 
 if(_smokesAndChems)then{
 [_milGroup] spawn {

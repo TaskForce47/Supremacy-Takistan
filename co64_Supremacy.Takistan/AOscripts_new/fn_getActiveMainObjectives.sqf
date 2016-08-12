@@ -4,7 +4,7 @@
 #include "AO_cfg.sqf"
 
 private["_mainPositions","_mainHandles"];
-_mainHandles = []:
+_mainHandles = [];
 
 {
 	if (_x == TF47_MISSION_STATE_ACTIVE) then {

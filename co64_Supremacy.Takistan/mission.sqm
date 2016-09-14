@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8231.082,324.3161,2124.4475};
-		dir[]={-0.036822617,-0.46453264,0.88491035};
-		up[]={-0.019318525,0.88550812,0.46422464};
-		aside[]={0.99923104,-8.0734026e-008,0.041569412};
+		pos[]={8289.7744,400.36456,2147.6318};
+		dir[]={-0.85090798,-0.33286545,-0.40666097};
+		up[]={-0.30043614,0.94293368,-0.14358431};
+		aside[]={-0.43123317,-1.8434366e-006,0.90234905};
 	};
 };
 binarizationWanted=0;
@@ -57,16 +57,16 @@ addons[]=
 	"A3_Structures_F_EPA_Civ_Camping",
 	"A3_Structures_F_Civ_Camping",
 	"ace_sitting",
+	"acex_sitting",
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Modules_F",
 	"A3_Characters_F",
-	"asr_ai3_main",
 	"tf47_launchers",
 	"ace_explosives",
 	"ace_gforces",
-	"ACE_Parachute",
+	"ace_parachute",
 	"A3_Structures_F_Mil_Radar",
 	"ace_medical",
 	"cba_xeh",
@@ -87,7 +87,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=42;
+		items=41;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -98,7 +98,9 @@ class AddonsMetaData
 		class Item1
 		{
 			className="ace_map";
-			name="ace_map";
+			name="ACE3 - Map";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item2
 		{
@@ -120,7 +122,7 @@ class AddonsMetaData
 		class Item5
 		{
 			className="A3_Structures_F";
-			name="Arma 3 Alpha - Buildings and structures";
+			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -214,7 +216,7 @@ class AddonsMetaData
 		class Item22
 		{
 			className="A3_Structures_F_Heli";
-			name="Arma 3 Helicopters - Buildings and structures";
+			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -226,52 +228,58 @@ class AddonsMetaData
 		class Item24
 		{
 			className="A3_Structures_F_Ind";
-			name="Arma 3 Alpha - Industry complexes";
+			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
 		class Item25
 		{
 			className="ace_cargo";
-			name="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item26
 		{
 			className="A3_Supplies_F_Heli";
-			name="Arma 3 Helicopters - Ammoboxes and supplies";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
 		class Item27
 		{
 			className="ace_sitting";
-			name="ace_sitting";
+			name="ACE3 - Sitting";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item28
 		{
+			className="acex_sitting";
+			name="acex_sitting";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item29
+		{
 			className="A3_Structures_F_EPC";
-			name="Arma 3 Win Episode - Buildings and structures";
+			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
-		};
-		class Item31
-		{
-			className="asr_ai3_main";
-			name="asr_ai3_main";
 		};
 		class Item32
 		{
@@ -281,49 +289,56 @@ class AddonsMetaData
 		class Item33
 		{
 			className="ace_explosives";
-			name="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item34
 		{
-			className="ace_gforces";
-			name="ace_gforces";
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item35
 		{
-			className="ACE_Parachute";
-			name="ACE_Parachute";
+			className="ace_medical";
+			name="ACE3 - Medical";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item36
 		{
-			className="ace_medical";
-			name="ace_medical";
+			className="ace_dragging";
+			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item37
 		{
-			className="ace_dragging";
-			name="ace_dragging";
-		};
-		class Item38
-		{
 			className="task_force_radio_items";
 			name="task_force_radio_items";
+			author="[TF]Nkey";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
 		};
-		class Item39
+		class Item38
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item40
+		class Item39
 		{
 			className="ace_interaction";
-			name="ace_interaction";
+			name="ACE3 - Interaction";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
-		class Item41
+		class Item40
 		{
 			className="A3_Boat_F";
-			name="Arma 3 Alpha - Boats and submersibles";
+			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};

@@ -8,18 +8,18 @@ class EditorData
 	toggles=578;
 	class ItemIDProvider
 	{
-		nextID=3803;
+		nextID=3836;
 	};
 	class MarkerIDProvider
 	{
-		nextID=263;
+		nextID=266;
 	};
 	class Camera
 	{
-		pos[]={8289.7744,400.36456,2147.6318};
-		dir[]={-0.85090798,-0.33286545,-0.40666097};
-		up[]={-0.30043614,0.94293368,-0.14358431};
-		aside[]={-0.43123317,-1.8434366e-006,0.90234905};
+		pos[]={8022.0283,350.23239,1902.5358};
+		dir[]={-0.052677929,-0.70944411,0.70279181};
+		up[]={-0.053027757,0.70476109,0.70745993};
+		aside[]={0.99720198,-9.3132257e-009,0.074745312};
 	};
 };
 binarizationWanted=0;
@@ -81,13 +81,14 @@ addons[]=
 	"A3_Structures_F_Heli_Ind_Machines",
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Structures_F_Ind_WindPowerPlant",
-	"A3_Boat_F_Boat_Transport_01"
+	"A3_Boat_F_Boat_Transport_01",
+	"rhsusf_c_troops"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=42;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -342,6 +343,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item41
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 	};
 };
 randomSeed=14170574;
@@ -400,6 +408,9 @@ class Mission
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2011;
 		month=8;
 		day=18;
@@ -410,7 +421,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1500;
+		items=1508;
 		class Item0
 		{
 			dataType="Marker";
@@ -481,24 +492,26 @@ class Mission
 		class Item7
 		{
 			dataType="Marker";
-			position[]={8093.2266,296.04001,1714.2745};
+			position[]={8093.2271,2.4722976e+027,1714.275};
 			name="callsign_raven2";
-			text="RAVEN-02";
+			text="MERLIN";
 			type="b_air";
 			colorName="ColorBlack";
-			angle=1.0267136;
+			angle=1.0269998;
 			id=7;
+			atlOffset=2.4722976e+027;
 		};
 		class Item8
 		{
 			dataType="Marker";
-			position[]={8030.5815,296.04001,1680.3811};
+			position[]={8030.582,-4.9628732e-030,1680.381};
 			name="callsign_goose1";
-			text="GOOSE";
+			text="SEAGULL";
 			type="b_air";
 			colorName="ColorBlack";
-			angle=181.65968;
+			angle=181.65996;
 			id=8;
+			atlOffset=-296.04001;
 		};
 		class Item9
 		{
@@ -667,12 +680,13 @@ class Mission
 		class Item24
 		{
 			dataType="Marker";
-			position[]={7972.0093,296.03186,1651.1669};
+			position[]={7972.0088,-2.6243046e-029,1651.167};
 			name="callsign_griffin1";
-			text="GRIFFIN";
+			text="CAT";
 			type="b_air";
 			colorName="ColorBlack";
 			id=24;
+			atlOffset=-296.03186;
 		};
 		class Item25
 		{
@@ -1181,7 +1195,7 @@ class Mission
 		class Item75
 		{
 			dataType="Marker";
-			position[]={7982.1738,296.04001,1969.5869};
+			position[]={8035.3096,296.04001,1951.8219};
 			name="mkr_base_fob";
 			text="FOB Containers";
 			type="n_maint";
@@ -1211,7 +1225,7 @@ class Mission
 		class Item78
 		{
 			dataType="Marker";
-			position[]={8109.5532,296.04001,2032.4951};
+			position[]={8108.958,296.04001,2032.3594};
 			name="callsign_rhino2";
 			text="RHINO-01";
 			type="b_armor";
@@ -1251,52 +1265,57 @@ class Mission
 		class Item82
 		{
 			dataType="Marker";
-			position[]={8113.9224,296.04001,2054.5513};
+			position[]={8113.9219,1.8315546e+034,2054.551};
 			name="callsign_tiger1";
 			text="TIGER-01";
-			type="b_mech_inf";
+			type="Empty";
 			colorName="ColorBlack";
 			id=88;
+			atlOffset=1.8315546e+034;
 		};
 		class Item83
 		{
 			dataType="Marker";
-			position[]={8117.1602,296.04001,2048.8948};
+			position[]={8117.1602,-4.5528288e-038,2048.895};
 			name="callsign_tiger2";
 			text="TIGER-02";
-			type="b_mech_inf";
+			type="Empty";
 			colorName="ColorBlack";
 			id=89;
+			atlOffset=-296.04001;
 		};
 		class Item84
 		{
 			dataType="Marker";
-			position[]={8120.7651,296.04001,2043.0468};
+			position[]={8120.7651,0,2043.047};
 			name="callsign_tiger3";
 			text="TIGER-03";
-			type="b_mech_inf";
+			type="Empty";
 			colorName="ColorBlack";
 			id=90;
+			atlOffset=-296.04001;
 		};
 		class Item85
 		{
 			dataType="Marker";
-			position[]={8124.4263,296.04001,2037.6764};
+			position[]={8053.4839,1.3120221e+010,1958.1185};
 			name="callsign_gator1";
-			text="GATOR-01";
-			type="b_mech_inf";
+			text="SCORPION-01";
+			type="b_art";
 			colorName="ColorBlack";
 			id=91;
+			atlOffset=1.3120221e+010;
 		};
 		class Item86
 		{
 			dataType="Marker";
-			position[]={8127.3774,296.04001,2032.7007};
+			position[]={8066.2827,0.086761475,1961.9148};
 			name="callsign_gator2";
-			text="GATOR-02";
-			type="b_mech_inf";
+			text="SCORPION-02";
+			type="b_art";
 			colorName="ColorBlack";
 			id=92;
+			atlOffset=-296.15063;
 		};
 		class Item87
 		{
@@ -13284,7 +13303,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8018.8462,297.13638,1967.1371};
+				position[]={8020.5518,297.13638,1968.1226};
 				angles[]={0,5.7595863,0};
 			};
 			side="Empty";
@@ -13302,7 +13321,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8005.1802,297.13638,1959.2948};
+				position[]={8008.248,297.13638,1961.0243};
 				angles[]={0,5.7595863,0};
 			};
 			side="Empty";
@@ -13320,11 +13339,10 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7991.8296,297.48276,1951.5754};
+				position[]={7986.98,297.39886,1949.3018};
 				angles[]={0,5.7595863,6.2502375};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -13332,6 +13350,7 @@ class Mission
 			};
 			id=937;
 			type="Base_WarfareBBarrier10xTall";
+			atlOffset=0.26248169;
 		};
 		class Item738
 		{
@@ -15945,7 +15964,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7986.8721,297.39288,1961.3759};
+				position[]={8033.9365,297.39288,1947.8569};
 				angles[]={0,5.014348,0};
 			};
 			side="Empty";
@@ -15964,7 +15983,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7980.2383,297.39288,1971.8688};
+				position[]={8042.4604,297.39291,1952.7954};
 				angles[]={0,5.014348,0};
 			};
 			side="Empty";
@@ -15977,13 +15996,14 @@ class Mission
 			};
 			id=1586;
 			type="Land_Cargo10_military_green_F";
+			atlOffset=-0.28067017;
 		};
 		class Item872
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7983.6177,297.39288,1966.7865};
+				position[]={8038.5684,297.39288,1949.7618};
 				angles[]={0,5.014348,0};
 			};
 			side="Empty";
@@ -15996,6 +16016,7 @@ class Mission
 			};
 			id=1587;
 			type="Land_Cargo10_military_green_F";
+			atlOffset=-0.075012207;
 		};
 		class Item873
 		{
@@ -16810,7 +16831,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8247,296.04144,2136.05};
-						angles[]={0,1.1182443,0};
+						angles[]={0,1.1182499,0};
 					};
 					side="West";
 					flags=6;
@@ -16818,7 +16839,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""co"",this] call f_fnc_assignGear;";
+						init="[""co"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_CO";
 						description="US Ground Forces Commander ***GODFATHER***";
 						isPlayable=1;
@@ -16828,25 +16849,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -16865,7 +16867,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -16882,7 +16922,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_CO_M";
 						description="US  Platoon Medic *** XO  *** ";
 						isPlayable=1;
@@ -16893,25 +16933,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -16929,7 +16950,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -16937,8 +16996,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8248.7383,296.04144,2132.4475};
-						angles[]={0,1.1403997,0};
+						position[]={8248.7383,296.04144,2132.447};
+						angles[]={0,1.140398,0};
 					};
 					side="West";
 					flags=4;
@@ -16946,7 +17005,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""dc"",this] call f_fnc_assignGear;";
+						init="[""dc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_DC";
 						description="US JTAC  ***TOPMAN***";
 						isPlayable=1;
@@ -16957,25 +17016,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -16993,7 +17033,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -17001,8 +17079,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8249.6074,296.04144,2130.6462};
-						angles[]={0,1.1359024,0};
+						position[]={8249.6074,296.04144,2130.646};
+						angles[]={0,1.1358951,0};
 					};
 					side="West";
 					flags=4;
@@ -17010,7 +17088,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""uav"",this] call f_fnc_assignGear;";
+						init="[""uav"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_DC_D";
 						description="US  Air Base Commander***TOWER*** ";
 						isPlayable=1;
@@ -17021,25 +17099,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17057,7 +17116,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -17090,8 +17187,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8252.6621,296.04144,2138.6729};
-						angles[]={0,4.2845116,0};
+						position[]={8252.6621,296.04144,2138.6731};
+						angles[]={0,4.2845039,0};
 					};
 					side="West";
 					flags=6;
@@ -17099,7 +17196,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""dc"",this] call f_fnc_assignGear;";
+						init="[""dc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ASL_SL";
 						description="US Alpha Squad Leader";
 						isPlayable=1;
@@ -17110,25 +17207,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17146,7 +17224,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -17154,8 +17270,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8253.5488,296.04144,2136.8804};
-						angles[]={0,4.2823648,0};
+						position[]={8253.5488,296.04144,2136.8801};
+						angles[]={0,4.2823572,0};
 					};
 					side="West";
 					flags=4;
@@ -17163,7 +17279,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ASL_M";
 						description="US Alpha Medic";
 						isPlayable=1;
@@ -17174,25 +17290,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17210,7 +17307,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -17243,8 +17378,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8255.3506,296.04144,2140.0039};
-						angles[]={0,4.2458563,0};
+						position[]={8255.3506,296.04144,2140.0042};
+						angles[]={0,4.2458625,0};
 					};
 					side="West";
 					flags=6;
@@ -17252,7 +17387,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A1_FTL";
 						description="US Alpha 1 Fireteam Leader";
 						isPlayable=1;
@@ -17263,25 +17398,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17299,7 +17415,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -17307,15 +17461,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8256.2383,296.04144,2138.2114};
-						angles[]={0,4.2730932,0};
+						position[]={8256.2383,296.04144,2138.2109};
+						angles[]={0,4.2730894,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""ar"",this] call f_fnc_assignGear;";
+						init="[""ar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A1_AR";
 						description="US Alpha 1 Automatic Rifleman";
 						isPlayable=1;
@@ -17326,25 +17480,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17362,7 +17497,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -17370,15 +17543,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8258.0303,296.04144,2139.0986};
-						angles[]={0,4.2752066,0};
+						position[]={8258.0303,296.04144,2139.0991};
+						angles[]={0,4.2752013,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""aar"",this] call f_fnc_assignGear;";
+						init="[""aar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A1_AAR";
 						description="US Alpha 1 Assistant Automatic Rifleman";
 						isPlayable=1;
@@ -17389,25 +17562,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17425,7 +17579,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -17434,14 +17626,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8257.1426,296.04144,2140.8911};
-						angles[]={0,4.2666502,0};
+						angles[]={0,4.2666492,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""cfr"",this] call f_fnc_assignGear;";
+						init="[""cfr"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A1_CFR";
 						description="US Alpha 1 Combat First Responder";
 						isPlayable=1;
@@ -17452,25 +17644,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17488,7 +17661,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -17522,7 +17733,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8259.8311,296.04144,2142.2222};
-						angles[]={0,4.2446384,0};
+						angles[]={0,4.2446408,0};
 					};
 					side="West";
 					flags=6;
@@ -17530,7 +17741,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A2_FTL";
 						description="US Alpha 2 Fireteam Leader";
 						isPlayable=1;
@@ -17540,25 +17751,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -17577,7 +17769,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -17593,7 +17823,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""matg"",this] call f_fnc_assignGear;";
+						init="[""matg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A2_ATG";
 						description="US Alpha 2 Anti Tank Gunner";
 						isPlayable=1;
@@ -17604,25 +17834,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17640,7 +17851,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -17648,15 +17897,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8262.5107,296.04144,2141.3169};
-						angles[]={0,4.2446384,0};
+						position[]={8262.5107,296.04144,2141.3171};
+						angles[]={0,4.2446408,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""matag"",this] call f_fnc_assignGear;";
+						init="[""matag"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A2_AATG";
 						description="US Alpha 2 Assistant Anti Tank Gunner";
 						isPlayable=1;
@@ -17667,25 +17916,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17703,7 +17933,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -17711,15 +17979,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8260.7188,296.04144,2140.4297};
-						angles[]={0,4.2446384,0};
+						position[]={8260.7188,296.04144,2140.4299};
+						angles[]={0,4.2446408,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""gren"",this] call f_fnc_assignGear;";
+						init="[""gren"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A2_G";
 						description="US Alpha 2 Grenadier";
 						isPlayable=1;
@@ -17730,25 +17998,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17766,7 +18015,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -17799,8 +18086,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8264.3125,296.04144,2144.4404};
-						angles[]={0,4.227869,0};
+						position[]={8264.3135,296.04144,2144.4399};
+						angles[]={0,4.2278681,0};
 					};
 					side="West";
 					flags=6;
@@ -17808,7 +18095,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A3_FTL";
 						description="US Alpha 3 Fireteam Leader";
 						isPlayable=1;
@@ -17819,25 +18106,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17855,7 +18123,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -17864,14 +18170,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8265.2002,296.04144,2142.6479};
-						angles[]={0,4.2375746,0};
+						angles[]={0,4.2375722,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""ar"",this] call f_fnc_assignGear;";
+						init="[""ar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A3_AR";
 						description="US Alpha 3 Automatic Rifleman";
 						isPlayable=1;
@@ -17882,25 +18188,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17918,7 +18205,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -17927,14 +18252,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8266.9922,296.04144,2143.5352};
-						angles[]={0,4.2276535,0};
+						angles[]={0,4.2276587,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""aar"",this] call f_fnc_assignGear;";
+						init="[""aar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A3_AAR";
 						description="US Alpha 3 Assistant Automatic Rifleman";
 						isPlayable=1;
@@ -17945,25 +18270,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -17981,7 +18287,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -17989,15 +18333,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8266.1045,296.04144,2145.3276};
-						angles[]={0,4.2493687,0};
+						position[]={8266.1035,296.04144,2145.3281};
+						angles[]={0,4.2493706,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""rat"",this] call f_fnc_assignGear;";
+						init="[""rat"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_A3_AT";
 						description="US Alpha 3 Rifleman (AT)";
 						isPlayable=1;
@@ -18008,25 +18352,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18044,7 +18369,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -18077,8 +18440,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8250.8877,296.04144,2142.2576};
-						angles[]={0,4.2552586,0};
+						position[]={8250.8877,296.04144,2142.2581};
+						angles[]={0,4.2552524,0};
 					};
 					side="West";
 					flags=6;
@@ -18086,7 +18449,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""dc"",this] call f_fnc_assignGear;";
+						init="[""dc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_BSL_SL";
 						description="US Bravo Squad Leader";
 						isPlayable=1;
@@ -18097,25 +18460,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18133,7 +18477,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -18141,8 +18523,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8251.7744,296.04144,2140.4653};
-						angles[]={0,4.2862644,0};
+						position[]={8251.7744,296.04144,2140.4651};
+						angles[]={0,4.2862668,0};
 					};
 					side="West";
 					flags=4;
@@ -18150,7 +18532,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_BSL_M";
 						description="US Bravo Medic";
 						isPlayable=1;
@@ -18161,25 +18543,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18197,7 +18560,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -18230,8 +18631,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8253.5762,296.04144,2143.5886};
-						angles[]={0,4.2456694,0};
+						position[]={8253.5762,296.04144,2143.5891};
+						angles[]={0,4.2456703,0};
 					};
 					side="West";
 					flags=6;
@@ -18239,7 +18640,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B1_FTL";
 						description="US Bravo 1 Fireteam Leader";
 						isPlayable=1;
@@ -18250,25 +18651,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18286,7 +18668,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -18295,14 +18715,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8254.4629,296.04144,2141.7961};
-						angles[]={0,4.2719774,0};
+						angles[]={0,4.2719727,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""ar"",this] call f_fnc_assignGear;";
+						init="[""ar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B1_AR";
 						description="US Bravo 1 Automatic Rifleman";
 						isPlayable=1;
@@ -18313,25 +18733,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18349,7 +18750,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -18357,15 +18796,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8256.2559,296.04144,2142.6836};
-						angles[]={0,4.2561407,0};
+						position[]={8256.2559,296.04144,2142.6841};
+						angles[]={0,4.2561421,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""aar"",this] call f_fnc_assignGear;";
+						init="[""aar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B1_AAR";
 						description="US Bravo 1 Assistant Automatic Rifleman";
 						isPlayable=1;
@@ -18376,25 +18815,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18412,7 +18832,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -18420,15 +18878,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8255.3682,296.04144,2144.4758};
-						angles[]={0,4.2638826,0};
+						position[]={8255.3682,296.04144,2144.4761};
+						angles[]={0,4.2638741,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""cfr"",this] call f_fnc_assignGear;";
+						init="[""cfr"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B1_CFR";
 						description="US Bravo 1 Combat First Responder";
 						isPlayable=1;
@@ -18439,25 +18897,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18475,7 +18914,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -18508,8 +18985,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8258.0566,296.04144,2145.8069};
-						angles[]={0,4.2812805,0};
+						position[]={8258.0566,296.04144,2145.8071};
+						angles[]={0,4.2812753,0};
 					};
 					side="West";
 					flags=6;
@@ -18517,7 +18994,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B2_FTL";
 						description="US Bravo 2 Fireteam Leader";
 						isPlayable=1;
@@ -18528,25 +19005,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18564,7 +19022,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -18572,15 +19068,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8260.7363,296.04144,2144.9019};
-						angles[]={0,4.2453012,0};
+						position[]={8260.7363,296.04144,2144.9021};
+						angles[]={0,4.2453041,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""matag"",this] call f_fnc_assignGear;";
+						init="[""matag"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B2_AATG";
 						description="US Bravo 2 Assistant Anti Tank Gunner";
 						isPlayable=1;
@@ -18591,25 +19087,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18627,7 +19104,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -18636,14 +19151,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8259.8496,296.04144,2146.6941};
-						angles[]={0,4.2870846,0};
+						angles[]={0,4.287087,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""matg"",this] call f_fnc_assignGear;";
+						init="[""matg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B2__ATG";
 						description="US Bravo 2 Anti Tank Gunner";
 						isPlayable=1;
@@ -18654,25 +19169,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18690,7 +19186,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -18698,15 +19232,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8258.9443,296.04144,2144.0144};
-						angles[]={0,4.2686892,0};
+						position[]={8258.9443,296.04144,2144.0142};
+						angles[]={0,4.2686915,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""gren"",this] call f_fnc_assignGear;";
+						init="[""gren"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B2_G";
 						description="US Bravo 2 Grenadier";
 						isPlayable=1;
@@ -18717,25 +19251,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18753,7 +19268,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -18787,7 +19340,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8262.5381,296.04144,2148.0251};
-						angles[]={0,4.2203646,0};
+						angles[]={0,4.2203631,0};
 					};
 					side="West";
 					flags=6;
@@ -18795,7 +19348,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B3_FTL";
 						description="US Bravo 3 Fireteam Leader";
 						isPlayable=1;
@@ -18806,25 +19359,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18842,7 +19376,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -18850,15 +19422,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8263.4248,296.04144,2146.2327};
-						angles[]={0,4.2552404,0};
+						position[]={8263.4248,296.04144,2146.2332};
+						angles[]={0,4.2552352,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""ar"",this] call f_fnc_assignGear;";
+						init="[""ar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B3_AR";
 						description="US Bravo 3 Automatic Rifleman";
 						isPlayable=1;
@@ -18869,25 +19441,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18905,7 +19458,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -18913,15 +19504,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8264.3301,296.04144,2148.9124};
-						angles[]={0,4.2732944,0};
+						position[]={8264.3301,296.04144,2148.9121};
+						angles[]={0,4.2732987,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""aar"",this] call f_fnc_assignGear;";
+						init="[""aar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B3_AAR";
 						description="US Bravo 3 Assistant Automatic Rifleman";
 						isPlayable=1;
@@ -18932,25 +19523,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -18968,7 +19540,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -18977,14 +19587,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8265.2178,296.04144,2147.1201};
-						angles[]={0,4.2724447,0};
+						angles[]={0,4.2724438,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""rat"",this] call f_fnc_assignGear;";
+						init="[""rat"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_B3_AT";
 						description="US Bravo 3 Rifleman (AT)";
 						isPlayable=1;
@@ -18995,25 +19605,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19031,7 +19622,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -19064,8 +19693,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8249.1123,296.04144,2145.8425};
-						angles[]={0,4.2424049,0};
+						position[]={8249.1123,296.04144,2145.842};
+						angles[]={0,4.2424068,0};
 					};
 					side="West";
 					flags=6;
@@ -19073,7 +19702,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""dc"",this] call f_fnc_assignGear;";
+						init="[""dc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_CSL_SL";
 						description="US Charlie Squad Leader";
 						isPlayable=1;
@@ -19083,25 +19712,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -19120,7 +19730,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -19137,7 +19785,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_CSL_M";
 						description="US Charlie Medic";
 						isPlayable=1;
@@ -19147,25 +19795,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -19184,7 +19813,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -19217,8 +19884,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8251.8018,296.04144,2147.1733};
-						angles[]={0,4.2449665,0};
+						position[]={8251.8018,296.04144,2147.1731};
+						angles[]={0,4.2449722,0};
 					};
 					side="West";
 					flags=6;
@@ -19226,7 +19893,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C1_FTL";
 						description="US Charlie 1 Fireteam Leader";
 						isPlayable=1;
@@ -19237,25 +19904,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19273,7 +19921,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -19282,14 +19968,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8252.6885,296.04144,2145.3811};
-						angles[]={0,4.2444067,0};
+						angles[]={0,4.2444139,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""ar"",this] call f_fnc_assignGear;";
+						init="[""ar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C1_AR";
 						description="US Charlie 1 Automatic Rifleman";
 						isPlayable=1;
@@ -19300,25 +19986,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19336,7 +20003,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -19344,15 +20049,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8254.4814,296.04144,2146.2683};
-						angles[]={0,4.2456598,0};
+						position[]={8254.4814,296.04144,2146.2681};
+						angles[]={0,4.2456532,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""aar"",this] call f_fnc_assignGear;";
+						init="[""aar"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C1_AAR";
 						description="US Charlie 1 Assistant Automatic Rifleman";
 						isPlayable=1;
@@ -19363,25 +20068,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19399,7 +20085,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -19407,15 +20131,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8253.5938,296.04144,2148.0608};
-						angles[]={0,4.2693624,0};
+						position[]={8253.5938,296.04144,2148.061};
+						angles[]={0,4.2693543,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.63141268;
-						init="[""cfr"",this] call f_fnc_assignGear;";
+						init="[""cfr"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C1_CFR";
 						description="US Charlie 1 Combat First Responder";
 						isPlayable=1;
@@ -19426,25 +20150,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19462,7 +20167,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -19495,8 +20238,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8256.2822,296.04144,2149.3916};
-						angles[]={0,4.2459564,0};
+						position[]={8256.2822,296.04144,2149.3921};
+						angles[]={0,4.2459497,0};
 					};
 					side="West";
 					flags=6;
@@ -19504,7 +20247,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""ftl"",this] call f_fnc_assignGear;";
+						init="[""ftl"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C2_FTL";
 						description="US Charlie 2 Fireteam Leader";
 						isPlayable=1;
@@ -19515,25 +20258,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19551,7 +20275,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -19559,15 +20321,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8258.9619,296.04144,2148.4866};
-						angles[]={0,4.2329025,0};
+						position[]={8258.9619,296.04144,2148.4871};
+						angles[]={0,4.2328944,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""matag"",this] call f_fnc_assignGear;";
+						init="[""matag"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C2_AATG";
 						description="US Charlie 2 Assistant Anti Tank Gunner";
 						isPlayable=1;
@@ -19578,25 +20340,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19614,7 +20357,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -19623,14 +20404,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8258.0742,296.04144,2150.2791};
-						angles[]={0,4.2571669,0};
+						angles[]={0,4.2571721,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""matg"",this] call f_fnc_assignGear;";
+						init="[""matg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C2_ATG";
 						description="US Charlie 2 Anti Tank Gunner";
 						isPlayable=1;
@@ -19641,25 +20422,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19677,7 +20439,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -19685,15 +20485,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8257.1699,296.04144,2147.5994};
-						angles[]={0,4.2828999,0};
+						position[]={8257.1699,296.04144,2147.5991};
+						angles[]={0,4.2828984,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""gren"",this] call f_fnc_assignGear;";
+						init="[""gren"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_C2_G";
 						description="US Charlie 2 Grenadier";
 						isPlayable=1;
@@ -19704,25 +20504,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -19740,7 +20521,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -19773,8 +20592,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8260.7637,296.04144,2151.6099};
-						angles[]={0,4.2731133,0};
+						position[]={8260.7637,296.04144,2151.6101};
+						angles[]={0,4.2731071,0};
 					};
 					side="West";
 					flags=6;
@@ -19782,7 +20601,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""engm"",this] call f_fnc_assignGear;";
+						init="[""engm"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ENG1_FTL";
 						description="US Engineers  Fireteam Leader (Repair)";
 						isPlayable=1;
@@ -19825,11 +20644,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -19848,7 +20686,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -19856,15 +20694,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8261.6504,296.04144,2149.8176};
-						angles[]={0,4.2555456,0};
+						position[]={8261.6504,296.04144,2149.8181};
+						angles[]={0,4.255549,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""engm"",this] call f_fnc_assignGear;";
+						init="[""engm"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ENG1_A1";
 						description="US Engineers (Repair)";
 						isPlayable=1;
@@ -19907,11 +20745,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -19930,7 +20787,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -19938,15 +20795,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8263.4434,296.04144,2150.7048};
-						angles[]={0,4.2424507,0};
+						position[]={8263.4434,296.04144,2150.7051};
+						angles[]={0,4.2424588,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""eng"",this] call f_fnc_assignGear;";
+						init="[""eng"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ENG3_A3";
 						description="US Engineers (Demo)";
 						isPlayable=1;
@@ -19989,11 +20846,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -20012,7 +20888,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -20020,7 +20896,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8262.5557,296.04144,2152.4973};
+						position[]={8262.5557,296.04144,2152.4971};
 						angles[]={0,4.2617273,0};
 					};
 					side="West";
@@ -20028,7 +20904,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""eng"",this] call f_fnc_assignGear;";
+						init="[""eng"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ENG1_A2";
 						description="US Engineers  Specialist (Demo)";
 						isPlayable=1;
@@ -20071,11 +20947,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -20094,7 +20989,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -20127,8 +21022,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8247.0283,296.04144,2150.1204};
-						angles[]={0,4.2339258,0};
+						position[]={8247.0283,296.04144,2150.1201};
+						angles[]={0,4.2339244,0};
 					};
 					side="West";
 					flags=6;
@@ -20136,7 +21031,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""sp"",this] call f_fnc_assignGear; ";
+						init="[""sp"",this] call f_fnc_assignGear; nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ST1_SP";
 						description="US Sniper Team 1 Spotter (Leader)";
 						isPlayable=1;
@@ -20147,25 +21042,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20183,7 +21059,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -20192,7 +21106,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8247.7822,296.04144,2148.531};
-						angles[]={0,4.238101,0};
+						angles[]={0,4.2380958,0};
 					};
 					side="West";
 					flags=4;
@@ -20200,7 +21114,7 @@ class Mission
 					{
 						health=0.99000001;
 						skill=0.60000002;
-						init="[""sn"",this] call f_fnc_assignGear; ";
+						init="[""sn"",this] call f_fnc_assignGear; nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_ST1_SN";
 						description="US Sniper Team 1 Sniper";
 						isPlayable=1;
@@ -20211,25 +21125,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20247,7 +21142,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -20280,8 +21213,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8257.5684,296.04144,2135.5227};
-						angles[]={0,4.2387781,0};
+						position[]={8257.5684,296.04144,2135.5229};
+						angles[]={0,4.2387762,0};
 					};
 					side="West";
 					flags=6;
@@ -20289,7 +21222,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
+						init="[""vc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_IFV1_C";
 						description="US IFV 1 Commander";
 						isPlayable=1;
@@ -20300,25 +21233,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20336,7 +21250,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -20345,7 +21297,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8260,296.04144,2137.05};
-						angles[]={0,4.2394714,0};
+						angles[]={0,4.2394748,0};
 					};
 					side="West";
 					flags=4;
@@ -20353,7 +21305,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""vg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_IFV1_G";
 						description="US IFV 1 Gunner";
 						isPlayable=1;
@@ -20364,25 +21316,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20400,7 +21333,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -20408,15 +21379,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8254.8799,296.04144,2134.1919};
-						angles[]={0,4.2645588,0};
+						position[]={8254.8799,296.04144,2134.1921};
+						angles[]={0,4.264555,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""vd"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_IFV1_D";
 						description="US IFV 1 Driver (Repair)";
 						isPlayable=1;
@@ -20459,11 +21430,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -20482,7 +21472,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -20515,8 +21505,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8260.2305,296.04144,2130.1455};
-						angles[]={0,4.247282,0};
+						position[]={8260.2305,296.04144,2130.145};
+						angles[]={0,4.2472763,0};
 					};
 					side="West";
 					flags=6;
@@ -20524,7 +21514,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
+						init="[""vc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TNK1_C";
 						description="US Tank 1 Commander";
 						isPlayable=1;
@@ -20535,25 +21525,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20571,7 +21542,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -20579,8 +21588,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8262.9189,296.04144,2131.4766};
-						angles[]={0,4.247282,0};
+						position[]={8262.9189,296.04144,2131.4771};
+						angles[]={0,4.2472763,0};
 					};
 					side="West";
 					flags=4;
@@ -20588,7 +21597,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""vg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TNK1_G";
 						description="US Tank 1 Gunner";
 						isPlayable=1;
@@ -20599,25 +21608,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20635,7 +21625,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -20643,15 +21671,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8257.542,296.04144,2128.8147};
-						angles[]={0,4.247282,0};
+						position[]={8257.542,296.04144,2128.8149};
+						angles[]={0,4.2472763,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""vd"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TNK1_D";
 						description="US Tank 1 Driver (Repair)";
 						isPlayable=1;
@@ -20694,11 +21722,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -20717,7 +21764,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -20750,8 +21797,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8266.1123,296.04144,2130.8423};
-						angles[]={0,4.2301292,0};
+						position[]={8266.1123,296.04144,2130.842};
+						angles[]={0,4.2301369,0};
 					};
 					side="West";
 					flags=6;
@@ -20759,7 +21806,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH1_P";
 						description="US Transport 1 Pilot";
 						isPlayable=1;
@@ -20770,25 +21817,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20806,7 +21834,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -20814,8 +21880,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8267.9043,296.04144,2131.7297};
-						angles[]={0,4.2550163,0};
+						position[]={8267.9043,296.04144,2131.73};
+						angles[]={0,4.2550082,0};
 					};
 					side="West";
 					flags=4;
@@ -20823,7 +21889,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH1_CP";
 						description="US Transport 1 Co-Pilot";
 						isPlayable=1;
@@ -20834,25 +21900,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20870,7 +21917,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -20878,8 +21963,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8265.2246,296.04144,2132.6348};
-						angles[]={0,4.216485,0};
+						position[]={8265.2246,296.04144,2132.635};
+						angles[]={0,4.2164888,0};
 					};
 					side="West";
 					flags=4;
@@ -20887,7 +21972,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pcc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH1_G1";
 						description="US Transport 1 Crew Chief";
 						isPlayable=1;
@@ -20898,25 +21983,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20934,7 +22000,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -20943,7 +22047,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8267.0176,296.04144,2133.522};
-						angles[]={0,4.2564135,0};
+						angles[]={0,4.2564216,0};
 					};
 					side="West";
 					flags=4;
@@ -20951,7 +22055,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH1_G2";
 						description="US Transport 1 Gunner";
 						isPlayable=1;
@@ -20962,25 +22066,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -20998,7 +22083,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -21032,7 +22155,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8267,296.04144,2129.05};
-						angles[]={0,4.2402849,0};
+						angles[]={0,4.2402773,0};
 					};
 					side="West";
 					flags=6;
@@ -21040,7 +22163,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH2_P";
 						description="US Transport 2 Pilot";
 						isPlayable=1;
@@ -21051,25 +22174,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -21087,7 +22191,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -21095,8 +22237,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8267.8867,296.04144,2127.2576};
-						angles[]={0,4.2558069,0};
+						position[]={8267.8867,296.04144,2127.2581};
+						angles[]={0,4.2558107,0};
 					};
 					side="West";
 					flags=4;
@@ -21104,7 +22246,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH2_CP";
 						description="US Transport 2 Co-Pilot";
 						isPlayable=1;
@@ -21115,25 +22257,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -21151,7 +22274,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -21159,8 +22320,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8269.6797,296.04144,2128.1448};
-						angles[]={0,4.2480364,0};
+						position[]={8269.6797,296.04144,2128.145};
+						angles[]={0,4.248044,0};
 					};
 					side="West";
 					flags=4;
@@ -21168,7 +22329,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pcc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH2_G1";
 						description="US Transport 2 Crew Chief";
 						isPlayable=1;
@@ -21179,25 +22340,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -21215,7 +22357,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item3
@@ -21223,8 +22403,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8268.792,296.04144,2129.9373};
-						angles[]={0,4.2213526,0};
+						position[]={8268.792,296.04144,2129.937};
+						angles[]={0,4.2213578,0};
 					};
 					side="West";
 					flags=4;
@@ -21232,7 +22412,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TH2_G2";
 						description="US Transport 2 Gunner";
 						isPlayable=1;
@@ -21243,25 +22423,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -21279,7 +22440,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item4
@@ -21313,7 +22512,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8264.3555,296.04144,2138.8992};
-						angles[]={0,4.265564,0};
+						angles[]={0,4.2655673,0};
 					};
 					side="West";
 					flags=6;
@@ -21321,7 +22520,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_AH1_P";
 						description="US Attack Rotary Wing 1 Pilot";
 						isPlayable=1;
@@ -21332,25 +22531,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -21368,7 +22548,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -21377,7 +22595,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8265.2432,296.04144,2137.1069};
-						angles[]={0,4.2463245,0};
+						angles[]={0,4.2463164,0};
 					};
 					side="West";
 					flags=4;
@@ -21385,7 +22603,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pcc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_AH1_CP";
 						description="US Attack Rotary Wing 1 Gunner ";
 						isPlayable=1;
@@ -21396,25 +22614,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -21432,7 +22631,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -21465,8 +22702,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8266.1299,296.04144,2135.3145};
-						angles[]={0,4.2336369,0};
+						position[]={8266.1299,296.04144,2135.314};
+						angles[]={0,4.2336454,0};
 					};
 					side="West";
 					flags=6;
@@ -21474,7 +22711,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_AFW1_P";
 						description="US Attack Fixed Wing Pilot";
 						isPlayable=1;
@@ -21484,25 +22721,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -21521,7 +22739,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -21554,7 +22810,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8263.4502,296.04144,2136.2195};
+						position[]={8263.4502,296.04144,2136.219};
 						angles[]={0,4.2659864,0};
 					};
 					side="West";
@@ -21563,7 +22819,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_AFW2_P";
 						description="US Attack Fixed Wing Pilot";
 						isPlayable=1;
@@ -21573,25 +22829,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -21610,7 +22847,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -22969,7 +24244,7 @@ class Mission
 		class Item1040
 		{
 			dataType="Marker";
-			position[]={8123.7832,296.04001,2037.5609};
+			position[]={8052.8403,296.39978,1958.0032};
 			name="mkr_spawn_veh_73";
 			text="_gator01";
 			type="Empty";
@@ -22979,12 +24254,13 @@ class Mission
 		class Item1041
 		{
 			dataType="Marker";
-			position[]={8127.3311,296.04001,2032.7125};
+			position[]={8066.2363,296.12677,1961.927};
 			name="mkr_spawn_veh_74";
 			text="_gator02";
 			type="Empty";
 			angle=270;
 			id=2147;
+			atlOffset=-0.11434937;
 		};
 		class Item1042
 		{
@@ -23251,7 +24527,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="this allowDamage false;";
+						init="this allowDamage false;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="MissionObserver";
 						description="MissionObserver";
 						isPlayable=1;
@@ -23262,25 +24538,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -23299,7 +24556,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -27444,7 +28739,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8262.5635,296.04144,2138.012};
-						angles[]={0,4.2429218,0};
+						angles[]={0,4.2429304,0};
 					};
 					side="West";
 					flags=6;
@@ -27452,7 +28747,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_AFW3_P";
 						description="US Attack Fixed Wing Pilot";
 						isPlayable=1;
@@ -27462,25 +28757,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -27499,7 +28775,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -27532,8 +28846,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8264.3379,296.04144,2134.4272};
-						angles[]={0,4.2304821,0};
+						position[]={8264.3379,296.04144,2134.427};
+						angles[]={0,4.2304864,0};
 					};
 					side="West";
 					flags=6;
@@ -27541,7 +28855,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pp"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_AFW4_P";
 						description="US Attack Fixed Wing Pilot";
 						isPlayable=1;
@@ -27551,25 +28865,6 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -27588,7 +28883,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -28235,7 +29568,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
+						init="[""vc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TNK1_C_1";
 						description="US Tank 2 Commander";
 						isPlayable=1;
@@ -28246,25 +29579,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -28282,7 +29596,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -28291,7 +29643,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8264.25,296.04144,2128.7881};
-						angles[]={0,4.2561865,0};
+						angles[]={0,4.2561946,0};
 					};
 					side="West";
 					flags=4;
@@ -28299,7 +29651,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""vg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TNK1_G_1";
 						description="US Tank 2 Gunner";
 						isPlayable=1;
@@ -28310,25 +29662,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -28346,7 +29679,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -28355,14 +29726,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8258.873,296.04144,2126.126};
-						angles[]={0,4.269105,0};
+						angles[]={0,4.2691102,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""vd"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_TNK2_D";
 						description="US Tank 2 Driver (Repair)";
 						isPlayable=1;
@@ -28405,11 +29776,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -28428,7 +29818,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -28461,8 +29851,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8258.8994,296.04144,2132.8342};
-						angles[]={0,4.232851,0};
+						position[]={8258.8994,296.04144,2132.834};
+						angles[]={0,4.2328424,0};
 					};
 					side="West";
 					flags=6;
@@ -28470,7 +29860,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
+						init="[""vc"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_IFV2_C";
 						description="US IFV 2 Commander";
 						isPlayable=1;
@@ -28481,25 +29871,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -28517,7 +29888,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -28525,8 +29934,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8261.5879,296.04144,2134.1653};
-						angles[]={0,4.2763338,0};
+						position[]={8261.5879,296.04144,2134.165};
+						angles[]={0,4.2763362,0};
 					};
 					side="West";
 					flags=4;
@@ -28534,7 +29943,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""vg"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_IFV2_G";
 						description="US IFV 2 Gunner";
 						isPlayable=1;
@@ -28545,25 +29954,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -28581,7 +29971,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -28589,15 +30017,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8256.2109,296.04144,2131.5032};
-						angles[]={0,4.2513752,0};
+						position[]={8256.2109,296.04144,2131.5029};
+						angles[]={0,4.2513776,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""vd"",this] call f_fnc_assignGear;nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
 						name="UnitNATO_IFV2_D";
 						description="US IFV 2 Driver (Repair)";
 						isPlayable=1;
@@ -28640,11 +30068,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=-1;
 								};
 							};
 						};
 						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -28663,7 +30110,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -32659,6 +34106,349 @@ class Mission
 			text="_drone";
 			type="Empty";
 			id=3390;
+		};
+		class Item1500
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8272.6973,296.04144,2139.5771};
+						angles[]={0,4.1386642,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
+						name="arty1";
+						description="Artillery Officer";
+						isPlayable=1;
+					};
+					id=3814;
+					type="rhsusf_army_ocp_officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8275.2256,296.04144,2140.104};
+						angles[]={0,4.1219268,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
+						name="arty3";
+						description="Artillery Gunner";
+						isPlayable=1;
+					};
+					id=3816;
+					type="rhsusf_army_ocp_rifleman_10th";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8274.0566,296.04144,2141.8601};
+						angles[]={0,4.1219268,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
+						name="arty2";
+						description="Artillery Gunner";
+						isPlayable=1;
+					};
+					id=3807;
+					type="rhsusf_army_ocp_rifleman_10th";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8276.208,296.04144,2138.7461};
+						angles[]={0,4.1219268,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
+						name="arty4";
+						description="Artillery Gunner";
+						isPlayable=1;
+					};
+					id=3818;
+					type="rhsusf_army_ocp_rifleman_10th";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8276.8115,296.04144,2137.6331};
+						angles[]={0,4.1219268,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="nul = [this] execVM ""tf47CoreScripts\infantryInit.sqf"";";
+						name="arty5";
+						description="Artillery Gunner";
+						isPlayable=1;
+					};
+					id=3820;
+					type="rhsusf_army_ocp_rifleman_10th";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=3806;
+		};
+		class Item1501
+		{
+			dataType="Marker";
+			position[]={8057.8301,1.9715032e+034,1964.6067};
+			name="marker_263";
+			text="Artillery";
+			type="b_art";
+			id=3827;
+			atlOffset=1.9715032e+034;
+		};
+		class Item1502
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7973.0898,297.30789,1980.6573};
+				angles[]={0.006394445,2.6179938,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+			};
+			id=3829;
+			type="Misc_Cargo1B_military";
+		};
+		class Item1503
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7967.6675,297.51263,1977.0826};
+				angles[]={0,2.6179938,6.2049475};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+			};
+			id=3830;
+			type="Misc_Cargo1B_military";
+			atlOffset=0.20474243;
+		};
+		class Item1504
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7981.0293,297.30789,1968.2822};
+				angles[]={0.006394445,2.6179938,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+			};
+			id=3831;
+			type="Misc_Cargo1B_military";
+		};
+		class Item1505
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7975.6069,297.51263,1964.7075};
+				angles[]={0,2.6179938,6.2049475};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init=" null = this execVM ""tf47CoreScripts\saveBuilding.sqf"";";
+			};
+			id=3832;
+			type="Misc_Cargo1B_military";
+			atlOffset=0.20474243;
+		};
+		class Item1506
+		{
+			dataType="Marker";
+			position[]={8042.1421,5.2186792e+014,1965.144};
+			name="marker_265";
+			text="Rotary Wing Loading Zone";
+			type="b_support";
+			id=3833;
+			atlOffset=5.2186792e+014;
+		};
+		class Item1507
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8009.5117,296.04001,1934.3739};
+				angles[]={0,5.7923422,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3835;
+			type="Land_HelipadCircle_F";
 		};
 	};
 };

@@ -123,6 +123,8 @@ switch (_mkrtext) do  {
 	case "_hmmwv_toc" :{
 		tochmmwv = [_mkrpos,_mkrdir,_hmmwv_toc] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		spawnveh = [tochmmwv, _timeondestruction, _timeondesertion, "TOC", "mil_dot", "ColorBLUFOR", WEST, "", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		[[tochmmwv,"tochmmwv"],"setVehicleVarname",true] call BIS_fnc_MP;
+		publicVariable "tochmmwv";
 		};
 	case "_rhino01" : {
 		rhino1 = [_mkrpos,_mkrdir,_rhino01] call TF47_VehicleReplacement_fnc_replaceVehicle; 
@@ -154,33 +156,40 @@ switch (_mkrtext) do  {
 		[[frog1,"frog1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "frog1";
 		};
+		
 	case "_tiger01" : 		{
+		/*
 		tiger1 = [_mkrpos,_mkrdir,_tiger01] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		spawnveh = [tiger1, _timeondestruction, _timeondesertion, "TIGER-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[tiger1,"tiger1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "tiger1";
+		*/
 		};
 	case "_tiger02" :		{
+	/*
 		tiger2 = [_mkrpos,_mkrdir,_tiger02] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		spawnveh = [tiger2, _timeondestruction, _timeondesertion, "TIGER-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		tiger2 setVehicleVarName "tiger2";
 		publicVariable "tiger2";
+		*/
 		};
 	case "_tiger03" : 		{
+		/*
 		tiger3 = [_mkrpos,_mkrdir,_tiger03] call TF47_VehicleReplacement_fnc_replaceVehicle; 
 		spawnveh = [tiger3, _timeondestruction, _timeondesertion, "TIGER-03", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[tiger3,"tiger3"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "tiger3";
+		*/
 		};
 	case "_gator01" : 		{
 		gator1 = [_mkrpos,_mkrdir,_gator01] call TF47_VehicleReplacement_fnc_replaceVehicle; 
-		spawnveh = [gator1, _timeondestruction, _timeondesertion, "GATOR-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		spawnveh = [gator1, _timeondestruction, _timeondesertion, "SCORPION-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[gator1,"gator1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "gator1";
 		};
 	case "_gator02" : 		{
 		gator2 = [_mkrpos,_mkrdir,_gator02] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [gator2, _timeondestruction, _timeondesertion, "GATOR-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		spawnveh = [gator2, _timeondestruction, _timeondesertion, "SCORPION-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[gator2,"gator2"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "gator2";
 		};
@@ -214,8 +223,8 @@ switch (_mkrtext) do  {
 		};
 	case "_griffin" : 		{
 		griffin1 = [_mkrpos,_mkrdir,_griffin] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [griffin1, _timeondestruction, _timeondesertion, "GRIFFIN", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [griffin1, "GRIFFIN", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [griffin1, _timeondestruction, _timeondesertion, "CAT", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [griffin1, "CAT", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[griffin1,"griffin1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "griffin1";
 		};
@@ -228,8 +237,8 @@ switch (_mkrtext) do  {
 		};
 	case "_raven02" : 		{
 		raven2 = [_mkrpos,_mkrdir,_raven02] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [raven2, _timeondestruction, _timeondesertion, "RAVEN-02", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [raven2, "RAVEN-02", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [raven2, _timeondestruction, _timeondesertion, "MERLIN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [raven2, "MERLIN", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[raven2,"raven2"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "raven2";
 		};
@@ -250,8 +259,8 @@ switch (_mkrtext) do  {
 		};
 	case "_goose" : 		{
 		goose1 = [_mkrpos,_mkrdir,_goose] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [goose1, _timeondestruction, _timeondesertion, "GOOSE", "b_air", "ColorBrown", WEST, "rottrans", 30] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [goose1, "GOOSE", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [goose1, _timeondestruction, _timeondesertion, "SEAGULL", "b_air", "ColorBrown", WEST, "rottrans", 30] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [goose1, "SEAGULL", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[goose1,"goose1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "goose1";
 		};

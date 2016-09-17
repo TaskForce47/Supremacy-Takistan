@@ -1264,7 +1264,7 @@ class ACE_Settings {
 		    typeName = "SCALAR";
 		    force = 1;
 		};
-		class ace_sitting_enable {
+		class acex_sitting_enable {
 		    value = 1;
 		    typeName = "BOOL";
 		    force = 1;

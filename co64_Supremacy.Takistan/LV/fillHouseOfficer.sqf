@@ -154,6 +154,7 @@ while{_i2 < _rat}do{
     _unitType = _menArray select (floor(random(count _menArray)));
 	_unit = _milGroup createUnit [_unitType, _newPos, [], 0, "NONE"]; 
 	_unit setpos _newPos;  
+	_unit disableAI "MOVE";
 	
 	if(typeName _skills != "STRING")then{_skls = [_unit,_skills] call LV_ACskills;};
 

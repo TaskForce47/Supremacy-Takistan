@@ -7,4 +7,5 @@ class Side
 	class lalezar;
 	class woods;
     class convoy;
+	class nukeHelo;
 };

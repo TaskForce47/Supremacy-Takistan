@@ -60,6 +60,8 @@ CapVeh1 setVectorUp [0,0,1];
 CapVeh1 setHit ["motor", 1];
 CapVeh1Alive = true;									
 
+[] remoteExec ["fn_nukeHello", 0, true];
+
 //////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 
 ["tsk2", true, ["Find the Attack Helicopter captured by enemy troops bring it to the marker at the Base or destroy it, then find and capture the missing pilot held as hostage and return him to the flag at the Base.","Side Mission: Rescue the Pilot","Side Mission"],getPos _side_log_pos, "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
@@ -75,6 +77,7 @@ nul = [_side_log_pos,1,false,1,[1,0],50,"default",nil,"pilot1 = this; removeAllW
 nul = [_side_log_pos,2,true,2,[2,2],_side_rad,_side_ai_skill_array,nil,nil,nil] execVM "LV\fillHouse.sqf";
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],false,[10,0],[0,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
 nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0],_side_ai_skill_array,nil,nil,nil] execVM "LV\militarize.sqf";
+
 
 
 //////////////// create marker for HeliReturnPoint ////////////////////////////////////////////////////////////////////////////////////////

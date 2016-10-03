@@ -183,13 +183,13 @@ switch (_mkrtext) do  {
 		};
 	case "_gator01" : 		{
 		gator1 = [_mkrpos,_mkrdir,_gator01] call TF47_VehicleReplacement_fnc_replaceVehicle; 
-		spawnveh = [gator1, _timeondestruction, _timeondesertion, "SCORPION-01", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		spawnveh = [gator1, _timeondestruction, _timeondesertion, "SCORPION-01", "b_art", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[gator1,"gator1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "gator1";
 		};
 	case "_gator02" : 		{
 		gator2 = [_mkrpos,_mkrdir,_gator02] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [gator2, _timeondestruction, _timeondesertion, "SCORPION-02", "b_mech_inf", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		spawnveh = [gator2, _timeondestruction, _timeondesertion, "SCORPION-02", "b_art", "ColorOrange", WEST, "larmor", 15] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		[[gator2,"gator2"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "gator2";
 		};

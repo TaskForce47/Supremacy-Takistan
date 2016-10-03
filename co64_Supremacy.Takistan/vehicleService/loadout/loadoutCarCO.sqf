@@ -23,7 +23,7 @@ _veh addItemCargoGlobal ["ACE_quikclot",10];
 _veh addItemCargoGlobal ["ACE_tourniquet",3];
 _veh addItemCargoGlobal ["ACE_personalAidKit",2];
 _veh addItemCargoGlobal ["ACE_packingBandage",15];
-_veh addItemCargoGlobal ["TF47_firstAidKit",4];
+// _veh addItemCargoGlobal ["TF47_firstAidKit",4];
 //Injectors
 _veh addItemCargoGlobal ["ACE_morphine",10];
 _veh addItemCargoGlobal ["ACE_atropine",10];

@@ -54,6 +54,9 @@ _null = [] execVM "tf47CoreScripts\safezone.sqf"; 										// spawn protection
 // tyre spawn
 tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Wheel</t>", "tf47CoreScripts\helper\spawnTyre.sqf", "ACE_Wheel"];
 tyreSpawnSign addAction ["<t color='#00FF00'>Spawn Spare Track</t>", "tf47CoreScripts\helper\spawnTyre.sqf", "ACE_Track"];
+// tyre spawn
+tyreSpawnSign2 addAction ["<t color='#00FF00'>Spawn Spare Wheel</t>", "tf47CoreScripts\helper\spawnTyre2.sqf", "ACE_Wheel"];
+tyreSpawnSign2 addAction ["<t color='#00FF00'>Spawn Spare Track</t>", "tf47CoreScripts\helper\spawnTyre2.sqf", "ACE_Track"];
 
 // supply box spawn
 supplySpawnSign addAction ["<t color='#00FF00'>Empty Box</t>", "_this spawn tf47_fnc_spawnThing", ["Box_NATO_Ammo_F","emptyBox"]];

@@ -22,7 +22,14 @@ if (_veh == _drv) then {
 		_veh vehicleChat "Das Fahrzeug kann nicht respawnen da es beschädigt ist - This Vehicle can't respawn because it is damaged.";
 
 		} else {
-			[_veh, "respawn.sqf", 2] call BIS_fnc_MP;
+				_veh setVariable ["vehServiceActive", true, true];
+_veh setVariable ["debugRespawn", true, true];
+
+// Pull out Units, remove Fuel and lock Vehicle
+_veh vehicleChat "Das Fahrzeug wird in 5 Minuten respawnen - This Vehicle will respawn in 5 Minutes.";
+
+		
+			[[[_veh], "vehicleService\respawn.sqf"], "BIS_fnc_execVM" , 2] call BIS_fnc_MP;
 		};
 				
 	};

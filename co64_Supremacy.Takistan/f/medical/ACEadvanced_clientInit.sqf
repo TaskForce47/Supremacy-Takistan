@@ -11,7 +11,7 @@ _typeOfUnit = player getVariable "f_var_assignGear";
 
 
 // Remove pre-assigned medical items
-{player removeItems _x} forEach ["ACE_Maptools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_Flashlight_XL50","ACE_EarPlugs","ACE_personalAidKit","ACE_tourniquet","ACE_elasticBandage","ACE_adenosine","ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_packingBandage","ACE_fieldDressing","ACE_salineIV_250","ACE_quikclot","ACE_surgicalKit","ACE_salineIV_500","TF47_firstAidKit"];
+{player removeItems _x} forEach ["ACE_Maptools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_Flashlight_XL50","ACE_EarPlugs","ACE_personalAidKit","ACE_tourniquet","ACE_elasticBandage","ACE_adenosine","ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_packingBandage","ACE_fieldDressing","ACE_salineIV_250","ACE_quikclot","ACE_surgicalKit","ACE_salineIV_500"];
 
 // Add basic items to all units in 3 Line System
 player addItemToUniform "ACE_EarPlugs";
@@ -27,7 +27,7 @@ player addItemtoUniform "ACE_IR_Strobe_Item"; // Add IR Strobe
 player addItemtoUniform "ACE_CableTie"; // Add Cable Ties
 player addItemToUniform "ACE_Flashlight_XL50"; // Add ACE Flashlights
 // Vest
-player addItemToVest "TF47_firstAidKit"; // add this one to Vest
+// player addItemToVest "TF47_firstAidKit"; // add this one to Vest
 
 if (_typeOfUnit == "m") then
 {
@@ -53,7 +53,7 @@ if (_typeOfUnit == "m") then
 		(unitBackpack player) addItemCargoGlobal ["ACE_adenosine",   4];
 		(unitBackpack player) addItemCargoGlobal ["ACE_salineIV_500", 10];
 		(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit", 1];
-		(unitBackpack player) addItemCargoGlobal ["TF47_firstAidKit", 2];
+		// (unitBackpack player) addItemCargoGlobal ["TF47_firstAidKit", 2];
 	};
 };
 if (_typeOfUnit == "cfr") then
@@ -80,7 +80,7 @@ if (_typeOfUnit == "cfr") then
 		(unitBackpack player) addItemCargoGlobal ["ACE_adenosine",   4];
 		(unitBackpack player) addItemCargoGlobal ["ACE_salineIV_500", 5];
 		(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit", 1];
-		(unitBackpack player) addItemCargoGlobal ["TF47_FirstAidKit", 2];
+		// (unitBackpack player) addItemCargoGlobal ["TF47_FirstAidKit", 2];
 	};
 };
 

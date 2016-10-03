@@ -120,7 +120,7 @@ if (isNil{_type}) then {} else {
 						_object addItemCargoGlobal ["ACE_elasticBandage",50];
 						_object addItemCargoGlobal ["ACE_packingBandage",50];
 						_object addItemCargoGlobal ["ACE_fieldDressing",50];
-						_object addItemCargoGlobal ["TF47_firstAidKit",50];
+						// _object addItemCargoGlobal ["TF47_firstAidKit",50];
 						sleep 3600;
 						if (f_var_debugMode > 0) then {
 						 	[ "Medical Items added to Medical Trunk", "Equipmentarea"] call TF47_Helper_fnc_debugCase;

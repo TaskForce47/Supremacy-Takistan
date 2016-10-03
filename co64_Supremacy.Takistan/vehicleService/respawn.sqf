@@ -1,13 +1,12 @@
 
 _veh = _this select 0;
 
-
-_veh setVariable ["vehServiceActive", true, true];
-_veh setVariable ["debugRespawn", true, true];
-
-// Pull out Units, remove Fuel and lock Vehicle
-_veh vehicleChat "Das Fahrzeug wird in 5 Minuten respawnen - This Vehicle will respawn in 5 Minutes.";
 sleep 5;
+
+diag_log str _veh;
+
+diag_log "--------------- dasdasd --------------------";
+
 
 _crw = crew _veh;
 {

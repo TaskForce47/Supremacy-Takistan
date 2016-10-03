@@ -21,7 +21,7 @@ _veh addItemCargoGlobal ["ACE_salineIV_500",15];
 _veh addItemCargoGlobal ["ACE_bloodIV_250",15];
 _veh addItemCargoGlobal ["ACE_plasmaIV_250",15];
 _veh addItemCargoGlobal ["ACE_salineIV_250",15];
-_veh addItemCargoGlobal ["TF47_firstAidKit",10;
+// _veh addItemCargoGlobal ["TF47_firstAidKit",10;
 //Injectors
 _veh addItemCargoGlobal ["ACE_morphine",10];
 _veh addItemCargoGlobal ["ACE_atropine",10];

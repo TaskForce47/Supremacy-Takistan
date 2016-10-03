@@ -525,4 +525,5 @@ _mod_weapons = [
 	"rhs_weap_m4a1_grip",
 	"rhs_weap_m4a1_m203",
 	"rhs_weap_m4a1_m320",
-	"SMG_01_F"];
+	"SMG_01_F"
+];

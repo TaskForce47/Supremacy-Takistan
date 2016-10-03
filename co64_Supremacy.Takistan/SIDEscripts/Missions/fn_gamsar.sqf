@@ -60,7 +60,7 @@ CapVeh1 setVectorUp [0,0,1];
 CapVeh1 setHit ["motor", 1];
 CapVeh1Alive = true;									
 
-[] remoteExec ["fn_nukeHello", 0, true];
+[CapVeh1] remoteExec ["tf47_fnc_nukeHelo", 0, true];
 
 //////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
 
@@ -99,32 +99,19 @@ heli_side_trig2 setTriggerStatements ["!alive pilot1", "0 = execVM ""SIDEscripts
 								[""Sidemission_failed""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
 								[""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops bring it to the marker at the Base or destroy it, then find and capture the missing pilot held as hostage and return him to the flag at the Base.','Side Mission: Rescue the Pilot',""Side Mission""],getPos _side_log_pos, ""FAILED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 								[[CapVeh1,pilot1]] spawn tf47_fnc_cleanside;
-								deletevehicle heli_side_trig; deletevehicle heli_side_trig3; deletevehicle heli_side_trig4; deletevehicle thisTrigger" , ""];
-
-heli_side_trig3 = createTrigger 		["EmptyDetector", [8222.997,1776.622,0]];   
-heli_side_trig3 setTriggerArea 		[20, 20, 0, false];  
-heli_side_trig3 setTriggerActivation ["Any", "present", true];   
-heli_side_trig3 setTriggerStatements ["(CapVeh1 in thislist) && ((count (crew CapVeh1)) == 0)", 
-								"[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent; deleteMarker ""HeliReturn""; deletevehicle CapVeh1;
-                                [heliside_hintText2] remoteExec [""SEPP_fnc_globalHint"",0,false]" , ""];
-                                
-heli_side_trig4 = createTrigger 		["EmptyDetector", getPos D_FLAG_BASE];  
-heli_side_trig4 setTriggerArea 		[5, 5, 0, false];  
-heli_side_trig4 setTriggerActivation ["Any", "present", true];   
-heli_side_trig4 setTriggerStatements ["pilot1 in thislist", 
-								"[heliside_hintText1] remoteExec [""SEPP_fnc_globalHint"",0,false]; deletevehicle heli_side_trig2" , ""];
+								deletevehicle heli_side_trig; deletevehicle thisTrigger" , ""];
                                 
 heli_side_trig = createTrigger 		["EmptyDetector", getPos D_FLAG_BASE];   
 heli_side_trig setTriggerArea 		[5, 5, 0, false];  
 heli_side_trig setTriggerActivation ["Any", "present", true];   
-heli_side_trig setTriggerStatements ["(triggeractivated heli_side_trig4) && (!alive CapVeh1)", 
+heli_side_trig setTriggerStatements ["(pilot1 in thislist) && (!alive CapVeh1)", 
 								"0 = execVM ""SIDEscripts\militarizeSideWest.sqf""; 
 								[side_endText] remoteExec [""SEPP_fnc_globalHint"",0,false]; 
 								[""Sidemission_complete""] remoteExec [""SEPP_fnc_globalsound"",0,false]; 
 								[""tsk2"", true, ['Find the Attack Helicopter captured by enemy troops bring it to the marker at the Base or destroy it, then find and capture the missing pilot held as hostage and return him to the flag at the Base.','Side Mission: Rescue the Pilot',""Side Mission""],getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
-								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
+								[""tf47_changetickets"", [WEST, 5, 5]] call CBA_fnc_globalEvent;
 								[[CapVeh1,pilot1]] spawn tf47_fnc_cleanside;
-								deletevehicle heli_side_trig2; deletevehicle heli_side_trig3; deletevehicle heli_side_trig4; deletevehicle thisTrigger" , ""];
+								deletevehicle heli_side_trig2; deletevehicle thisTrigger" , ""];
                                 
 //////////////// makes pilot handcuffed ///////////////////////////////////////////////////////////////////////////////////////////////////
 sleep 1;

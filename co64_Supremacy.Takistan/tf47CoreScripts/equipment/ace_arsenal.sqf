@@ -50,9 +50,9 @@ _ace_items = [
 "ACE_tourniquet",
 "ACE_elasticBandage",
 "ACE_packingBandage",
-"ACE_fieldDressing",
+"ACE_fieldDressing"
 /* TF47Medical Items*/
-"TF47_firstAidKit"
+//"TF47_firstAidKit"
 ];
 _ace_magazines = [
 // GL Magazine

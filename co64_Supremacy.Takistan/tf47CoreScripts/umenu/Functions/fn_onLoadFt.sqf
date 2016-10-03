@@ -46,7 +46,7 @@ _typeArrays = switch true do {
 		[[["b_air","Helicopter (Attack)"]],["MANTICORE","FIREFLY"]];
 	};	
 	case (["UnitNATO_AFW", _slotName] call BIS_fnc_inString): {
-		[[["b_plane","Plane (Attack)"]],["THUNDERBIRD","WASP","EAGLE"]];
+		[[["b_plane","Plane (Attack)"]],["THUNDERBIRD","HAWK","EAGLE"]];
 	};	
 	case ((["UnitNATO_DC", _slotName] call BIS_fnc_inString) || (["UnitNATO_CO", _slotName] call BIS_fnc_inString)): {
 		[[["b_hq","Headquarters"]],["GODFATHER","TOPMAN","TOWER"]];

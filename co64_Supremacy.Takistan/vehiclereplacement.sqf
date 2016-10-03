@@ -216,7 +216,7 @@ switch (_mkrtext) do  {
 		};
 	case "_manticore" : 	{
 		manticore1 = [_mkrpos,_mkrdir,_manticore] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [manticore1, _timeondestruction, _timeondesertion, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 35] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		spawnveh = [manticore1, _timeondestruction, _timeondesertion, "MANTICORE", "b_air", "ColorOrange", WEST, "rotatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 		hNil = [manticore1, "MANTICORE", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[manticore1,"manticore1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "manticore1";
@@ -273,18 +273,18 @@ switch (_mkrtext) do  {
 		};
 	case "_wasp01" : 		{
 		wasp1 = [_mkrpos,_mkrdir,_wasp01] call TF47_VehicleReplacement_fnc_replaceVehicle; 
-		spawnveh = [wasp1, _timeondestruction, _timeondesertion, "WASP-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [wasp1, "WASP-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [wasp1, _timeondestruction, _timeondesertion, "HAWK", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [wasp1, "HAWK", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[wasp1,"wasp1"],"setVehicleVarname",true] call BIS_fnc_MP;
-		wasp1 setVariable ["ITGT_NEW","no",true];
+		// wasp1 setVariable ["ITGT_NEW","no",true];
 		publicVariable "wasp1";
 		};
 	case "_eagle01" : 		{
 		eagle1 = [_mkrpos,_mkrdir,_eagle01] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [eagle1, _timeondestruction, _timeondesertion, "EAGLE-01", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [eagle1, "EAGLE-01", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [eagle1, _timeondestruction, _timeondesertion, "EAGLE", "b_plane", "ColorOrange", WEST, "fixatk", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [eagle1, "EAGLE", "b_plane", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[eagle1,"eagle1"],"setVehicleVarname",true] call BIS_fnc_MP;
-		wasp1 setVariable ["ITGT_NEW","no",true];
+		// wasp1 setVariable ["ITGT_NEW","no",true];
 		publicVariable "eagle1";
 		};
 	case "_thunderbird" :	{
@@ -346,6 +346,8 @@ switch (_mkrtext) do  {
 	case "_missilebox":{
 		_veh = [_mkrpos,_mkrdir,_missilebox] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		_veh allowDamage false;
+		_veh setVehicleLock "LOCKED"; 
+		_veh setFuel 0;
 		_veh enableSimulationGlobal false;
 	};
 	case "_nlaw":{

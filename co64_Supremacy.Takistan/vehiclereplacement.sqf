@@ -314,17 +314,17 @@ switch (_mkrtext) do  {
 		_veh setFuel 0;
 		_veh lock true;
 	};
-	case "_basedef_avenger":{
-		_veh = [_mkrpos,_mkrdir,_basedef_avenger] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		_veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];
-		_veh allowDamage false;
-		createVehicleCrew _veh;
-		(driver _veh) disableAI "MOVE";
-		(gunner _veh) disableAI "MOVE";
-		(commander _veh) disableAI "MOVE";
-		_veh setFuel 0;
-		_veh lock true;
-	};
+	// case "_basedef_avenger":{
+		// _veh = [_mkrpos,_mkrdir,_basedef_avenger] call TF47_VehicleReplacement_fnc_replaceVehicle;
+		// _veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];
+		// _veh allowDamage false;
+		// createVehicleCrew _veh;
+		// (driver _veh) disableAI "MOVE";
+		// (gunner _veh) disableAI "MOVE";
+		// (commander _veh) disableAI "MOVE";
+		// _veh setFuel 0;
+		// _veh lock true;
+	// };
 	case "_basedef_static_aa":{
 		_veh = [_mkrpos,_mkrdir,_basedef_static_aa] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		_veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];

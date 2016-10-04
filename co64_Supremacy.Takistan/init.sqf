@@ -177,12 +177,6 @@ diag_log "Mapmarkers init";
 execVM format ["%1mapMarkerInit.sqf", _pathToScripts];
 
 
-if ((paramsArray select 0) != 4) then {
-	// define the global sand parameter array
-	//[fog,overcast,use ppEfx,allow rain,force wind,vary fog,use wind audio,EFX strength]
-	MKY_arSandEFX = [0,"",true,false,true,true,true,1];
-	// init the EFX scripts
-};
 sleep 0.5;
 
 //start cleanup script

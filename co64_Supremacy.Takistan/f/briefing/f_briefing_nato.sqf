@@ -25,10 +25,6 @@ Made with F3 (http://www.ferstaberinde.com/f3/en/)
 <br/>
 http://www.armaholic.com/page.php?id=29690
 <br/>
-* MKY Sandstorm Script by m0nkey
-<br/>
-	http://www.armaholic.com/page.php?id=30151
-<br/>
 * Light Switch Script by sevevnationdusty
 <br/>
 	http://www.armaholic.com/page.php?id=24239

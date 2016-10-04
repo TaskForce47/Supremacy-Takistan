@@ -86,20 +86,10 @@ _side_trig setTriggerStatements ["!alive cache1",
 								getPos _side_log_pos, ""SUCCEEDED"", 1, true, true,"""",true] call BIS_fnc_setTask; 
 								[""tf47_changetickets"", [WEST, 2, 5]] call CBA_fnc_globalEvent;
 								[[cache1]] spawn tf47_fnc_cleanside;
-                                trig_sandstorm setpos [0,0,0];
 								deletevehicle thisTrigger" , ""];
 
 //////////////// moves sandstorm trigger to side ///////////////////////////////////////////////////////////////////////////		
 sleep 1;
-trig_sandstorm setpos (getpos cache1);
 
-/*
-sleep 1;
-
-_side_trig2 = createTrigger 				["EmptyDetector", getPos _side_log_pos];   
-_side_trig2 setTriggerArea 					[500, 500, 0, false];  
-_side_trig2 setTriggerActivation 			["any", "present", true];   
-_side_trig2 setTriggerStatements 			["player in thislist", "0 = [[1,1,100],"""",true] execVM ""MKY\MKY_Sand_Snow_Init.sqf""; " , "0 = [] call MKY_fnc_Exit_Sand;"];
-*/
 
 [_side_log_pos,_side_rad,_side_name]

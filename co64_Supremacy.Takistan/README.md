@@ -27,8 +27,6 @@ Version | Date | Notes
 	http://www.armaholic.com/page.php?id=19832
 * DynCap for Arma 3 by Celludriel
 	http://www.armaholic.com/page.php?id=29690
-* MKY Sandstorm Script by m0nkey
-	http://www.armaholic.com/page.php?id=30151
 * Light Switch Script by sevevnationdusty
 	http://www.armaholic.com/page.php?id=24239
 * F3 Mission Framework ( see full readme below )

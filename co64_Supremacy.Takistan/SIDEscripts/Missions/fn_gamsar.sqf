@@ -80,11 +80,6 @@ nul = [_side_log_pos,2,_side_rad,[true,false],[true,false,false],true,[0,0],[1,0
 
 
 
-//////////////// create marker for HeliReturnPoint ////////////////////////////////////////////////////////////////////////////////////////
-	
-_markerreturn    = createMarker ["HeliReturn",     [8222.997,1776.622,0]]; //Loy Manara Airfield
-"HeliReturn" setMarkerType "hd_end";
-"HeliReturn" setMarkerText "Return Helicopter Here";
 
 //////////////// create triggers at side mission ////////////////////////////////////////////////////////////////////////////////////////			
 

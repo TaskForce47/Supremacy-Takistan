@@ -41,7 +41,7 @@ _ambulance = "rhsusf_m113d_usarmy_medical";
 _refuel = "B_Truck_01_Fuel_F"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _reammo = "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _repair = "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d"; // veh = [this, 2700, 7200, "Fuel2", "mil_dot", "ColorBlue", WEST, "", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-_transport = "rhsusf_M977A4_BKIT_usarmy_d"; // veh = [this, 2700, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 8] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+_transport = "rhsusf_M977A4_BKIT_M2_usarmy_d"; // veh = [this, 2700, 7200, " ", "mil_dot", "ColorBlue", WEST, "", 8] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 //Tanks
 _rhino01 = "rhsusf_m1a2sep1tuskiid_usarmy"; // veh = [this, 3600, 0, "RHINO-01", "b_mech_inf", "ColorOrange", WEST, "harmor", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
 _rhino02 = "rhsusf_m1a1aim_tuski_d"; // veh = [this, 3600, 0, "RHINO-02", "b_mech_inf", "ColorOrange", WEST, "harmor", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";

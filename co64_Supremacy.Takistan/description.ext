@@ -291,16 +291,6 @@ class Params
 // F3 - End of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
-
-   class MKY_EFX
-	{
-		title = "Sand Particle EFX strength";
-		values[] = {0,1,2,3,4};
-		texts[] = {"Random","Light","Moderate","Heavy","Disabled"};
-		default = 1;
-	};
-
-
 	class tf47_param_mainCount
 	{
 		title = "Amount of mains until mission is finished";

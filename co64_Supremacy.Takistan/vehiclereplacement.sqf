@@ -223,8 +223,8 @@ switch (_mkrtext) do  {
 		};
 	case "_griffin" : 		{
 		griffin1 = [_mkrpos,_mkrdir,_griffin] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [griffin1, _timeondestruction, _timeondesertion, "CAT", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [griffin1, "CAT", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [griffin1, _timeondestruction, _timeondesertion, "CROW", "b_air", "ColorBrown", WEST, "rottrans", 25] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [griffin1, "CROW", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[griffin1,"griffin1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "griffin1";
 		};
@@ -237,8 +237,8 @@ switch (_mkrtext) do  {
 		};
 	case "_raven02" : 		{
 		raven2 = [_mkrpos,_mkrdir,_raven02] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [raven2, _timeondestruction, _timeondesertion, "MERLIN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [raven2, "MERLIN", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [raven2, _timeondestruction, _timeondesertion, "DUCK", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [raven2, "DUCK", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[raven2,"raven2"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "raven2";
 		};
@@ -314,7 +314,7 @@ switch (_mkrtext) do  {
 		_veh setFuel 0;
 		_veh lock true;
 	};
-	// case "_basedef_avenger":{
+	 case "_basedef_avenger":{
 		// _veh = [_mkrpos,_mkrdir,_basedef_avenger] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		// _veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];
 		// _veh allowDamage false;
@@ -324,7 +324,7 @@ switch (_mkrtext) do  {
 		// (commander _veh) disableAI "MOVE";
 		// _veh setFuel 0;
 		// _veh lock true;
-	// };
+	 };
 	case "_basedef_static_aa":{
 		_veh = [_mkrpos,_mkrdir,_basedef_static_aa] call TF47_VehicleReplacement_fnc_replaceVehicle;
 		_veh addeventhandler ["fired", {(_this select 0) setvehicleammo 1}];

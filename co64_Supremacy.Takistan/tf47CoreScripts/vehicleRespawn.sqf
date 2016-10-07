@@ -34,7 +34,12 @@ if(isNil "cfgTF47") then { cfgTF47 = compile preprocessFileLineNumbers "cfgTF47.
 private ["_pathToScripts","_markertext"];
 call cfgTF47;
 
+
+
 // Define variables
+
+_despawnPreventionMarkers = despawnPreventionMarkers;
+
 _unit = _this select 0;
 _delay = if (count _this > 1) then {_this select 1} else {30};
 _unit setVariable ["respawnDelay", _delay, true];
@@ -153,7 +158,7 @@ while {_run} do
 		if(_spwndist < 300) then { _preventDespawn = true; };
 
 		// Despawn Prevention Markers (see cfgTF47.sqf)
-		/*
+		
 		{
 			_marker = _x select 0;
 			_dist = _x select 1;
@@ -163,7 +168,7 @@ while {_run} do
 				if (_mdist < _dist) then { _preventDespawn = true; };
 			};
 		} forEach _despawnPreventionMarkers;
-		*/
+		
 		// Check Despawn
 		_crewalive = {alive _x} count crew _unit;
 		if (!_preventDespawn and (!_dead) and (_crewalive <= 0)) then {

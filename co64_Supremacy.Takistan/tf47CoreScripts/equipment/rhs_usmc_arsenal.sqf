@@ -15,7 +15,13 @@ _mod_backpacks = [
 	"B_Kitbag_rgr",
 	"B_Parachute",
 	"ACE_TacticalLadder_Pack",
-	"ACE_NonSteerableParachute"
+	"ACE_NonSteerableParachute",
+	"tfw_ilbe_coy",
+	"tfw_ilbe_blade_coy",
+	"tfw_ilbe_dd_coy",
+	"tfw_ilbe_d",
+	"tfw_ilbe_blade_d",
+	"tfw_ilbe_dd_d"
 ];
 _mod_items = [
 	//UNIFORM

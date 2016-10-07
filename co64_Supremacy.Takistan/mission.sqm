@@ -8,7 +8,7 @@ class EditorData
 	toggles=578;
 	class ItemIDProvider
 	{
-		nextID=3963;
+		nextID=3964;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8188.8574,316.28268,2234.9692};
-		dir[]={-0.35306478,-0.77743214,-0.52060884};
-		up[]={-0.43636665,0.62893617,-0.64344096};
-		aside[]={-0.82765895,-4.4167973e-007,0.56129992};
+		pos[]={8194.8516,321.23618,1971.5532};
+		dir[]={-0.49357495,-0.31929797,0.80897677};
+		up[]={-0.1663059,0.94765329,0.27257696};
+		aside[]={0.85366166,3.6519486e-007,0.52083802};
 	};
 };
 binarizationWanted=0;
@@ -658,14 +658,14 @@ class Mission
 		class Item7
 		{
 			dataType="Marker";
-			position[]={8093.2271,2.4722976e+027,1714.275};
+			position[]={8093.2271,4.8744527e+023,1714.275};
 			name="callsign_raven2";
-			text="MERLIN";
+			text="DUCK";
 			type="b_air";
 			colorName="ColorBlack";
 			angle=1.0269998;
 			id=7;
-			atlOffset=2.4722976e+027;
+			atlOffset=4.8744527e+023;
 		};
 		class Item8
 		{
@@ -838,23 +838,24 @@ class Mission
 		class Item23
 		{
 			dataType="Marker";
-			position[]={8113.6279,296.04001,1724.472};
+			position[]={8113.6279,4.8744527e+023,1724.472};
 			name="callsign_raven1";
-			text="RAVEN-01";
+			text="RAVEN";
 			type="b_air";
 			colorName="ColorBlack";
 			id=23;
+			atlOffset=4.8744527e+023;
 		};
 		class Item24
 		{
 			dataType="Marker";
-			position[]={7972.0088,-2.6243046e-029,1651.167};
+			position[]={7972.0088,7.6741539e+023,1651.167};
 			name="callsign_griffin1";
-			text="CAT";
+			text="CROW";
 			type="b_air";
 			colorName="ColorBlack";
 			id=24;
-			atlOffset=-296.03186;
+			atlOffset=7.6741539e+023;
 		};
 		class Item25
 		{
@@ -1496,7 +1497,7 @@ class Mission
 		class Item88
 		{
 			dataType="Marker";
-			position[]={7977.668,296.04001,1813.176};
+			position[]={8089.0884,296.04001,1876.1201};
 			name="despawn_prev02";
 			type="Empty";
 			id=94;
@@ -4599,6 +4600,7 @@ class Mission
 			};
 			id=324;
 			type="Land_Misc_Cargo1E_EP1";
+			atlOffset=0.087341309;
 		};
 		class Item263
 		{
@@ -4616,6 +4618,7 @@ class Mission
 			};
 			id=325;
 			type="Misc_cargo_cont_net2";
+			atlOffset=0.087341309;
 		};
 		class Item264
 		{
@@ -4651,6 +4654,7 @@ class Mission
 			};
 			id=327;
 			type="Land_Misc_Cargo1E_EP1";
+			atlOffset=0.087341309;
 		};
 		class Item266
 		{
@@ -5154,6 +5158,7 @@ class Mission
 			};
 			id=356;
 			type="Misc_cargo_cont_small";
+			atlOffset=0.087341309;
 		};
 		class Item295
 		{
@@ -5171,6 +5176,7 @@ class Mission
 			};
 			id=357;
 			type="Misc_cargo_cont_net3";
+			atlOffset=0.087341309;
 		};
 		class Item296
 		{
@@ -5221,6 +5227,7 @@ class Mission
 			};
 			id=360;
 			type="PowGen_Big_EP1";
+			atlOffset=0.087341309;
 		};
 		class Item299
 		{
@@ -5390,6 +5397,7 @@ class Mission
 			};
 			id=370;
 			type="Land_Box_AmmoOld_F";
+			atlOffset=0.087341309;
 		};
 		class Item309
 		{
@@ -5407,6 +5415,7 @@ class Mission
 			};
 			id=371;
 			type="Land_Box_AmmoOld_F";
+			atlOffset=0.087341309;
 		};
 		class Item310
 		{
@@ -7730,6 +7739,7 @@ class Mission
 			};
 			id=561;
 			type="Land_Pallet_MilBoxes_F";
+			atlOffset=0.087341309;
 		};
 		class Item433
 		{
@@ -24366,7 +24376,7 @@ class Mission
 		class Item1045
 		{
 			dataType="Marker";
-			position[]={8167.0786,296.04001,2010.7437};
+			position[]={8151.8398,296.12756,2036.4974};
 			name="mkr_spawn_veh_90";
 			text="_evileye";
 			type="Empty";
@@ -24765,7 +24775,7 @@ class Mission
 		class Item1062
 		{
 			dataType="Marker";
-			position[]={8166.9004,296.04001,2006.9017};
+			position[]={8151.5098,296.12756,2036.6174};
 			name="callsign_evileye";
 			text="EVILEYE";
 			type="b_air";
@@ -39382,7 +39392,7 @@ class Mission
 			name="mkr_spawn_veh_96";
 			text="_basedef_static_aa";
 			type="Empty";
-			angle=287.23914;
+			angle=287.23901;
 			id=3956;
 			atlOffset=-2.7124634;
 		};

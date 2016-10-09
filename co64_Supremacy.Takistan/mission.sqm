@@ -8,7 +8,7 @@ class EditorData
 	toggles=578;
 	class ItemIDProvider
 	{
-		nextID=3964;
+		nextID=3973;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8194.8516,321.23618,1971.5532};
+		pos[]={8219.5967,348.79422,1921.0653};
 		dir[]={-0.49357495,-0.31929797,0.80897677};
 		up[]={-0.1663059,0.94765329,0.27257696};
 		aside[]={0.85366166,3.6519486e-007,0.52083802};
@@ -103,13 +103,20 @@ addons[]=
 	"ace_repair",
 	"ace_medical_menu",
 	"rhsusf_c_HEMTT_A4",
-	"at_phalanx_missile"
+	"at_phalanx_missile",
+	"rhsusf_c_weapons",
+	"rhs_c_weapons",
+	"rhsgref_c_weapons",
+	"UK3CB_BAF_Equipment_Backpacks",
+	"tfw_radios_ilbe",
+	"XLA_FixedArsenal",
+	"A3_Drones_F_Weapons_F_Gamma_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=63;
+		items=70;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -516,6 +523,52 @@ class AddonsMetaData
 			className="at_phalanx_missile";
 			name="at_phalanx_missile";
 		};
+		class Item63
+		{
+			className="rhsusf_c_weapons";
+			name="RHSUSF Weapons & Accessories";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item64
+		{
+			className="rhs_c_weapons";
+			name="AFRF Weapons Pack";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item65
+		{
+			className="rhsgref_c_weapons";
+			name="GREF Weapons";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item66
+		{
+			className="UK3CB_BAF_Equipment_Backpacks";
+			name="3CB BAF Equipment - Backpacks";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item67
+		{
+			className="tfw_radios_ilbe";
+			name="tfw_radios_ilbe";
+			author="Raspu";
+		};
+		class Item68
+		{
+			className="XLA_FixedArsenal";
+			name="XLA_FixedArsenal";
+		};
+		class Item69
+		{
+			className="A3_Drones_F";
+			name="Arma 3 Beta - Drones";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=14170574;
@@ -587,7 +640,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1600;
+		items=1607;
 		class Item0
 		{
 			dataType="Marker";
@@ -4600,7 +4653,6 @@ class Mission
 			};
 			id=324;
 			type="Land_Misc_Cargo1E_EP1";
-			atlOffset=0.087341309;
 		};
 		class Item263
 		{
@@ -4618,7 +4670,6 @@ class Mission
 			};
 			id=325;
 			type="Misc_cargo_cont_net2";
-			atlOffset=0.087341309;
 		};
 		class Item264
 		{
@@ -4654,7 +4705,6 @@ class Mission
 			};
 			id=327;
 			type="Land_Misc_Cargo1E_EP1";
-			atlOffset=0.087341309;
 		};
 		class Item266
 		{
@@ -5158,7 +5208,6 @@ class Mission
 			};
 			id=356;
 			type="Misc_cargo_cont_small";
-			atlOffset=0.087341309;
 		};
 		class Item295
 		{
@@ -5176,7 +5225,6 @@ class Mission
 			};
 			id=357;
 			type="Misc_cargo_cont_net3";
-			atlOffset=0.087341309;
 		};
 		class Item296
 		{
@@ -5227,7 +5275,6 @@ class Mission
 			};
 			id=360;
 			type="PowGen_Big_EP1";
-			atlOffset=0.087341309;
 		};
 		class Item299
 		{
@@ -5397,7 +5444,6 @@ class Mission
 			};
 			id=370;
 			type="Land_Box_AmmoOld_F";
-			atlOffset=0.087341309;
 		};
 		class Item309
 		{
@@ -5415,7 +5461,6 @@ class Mission
 			};
 			id=371;
 			type="Land_Box_AmmoOld_F";
-			atlOffset=0.087341309;
 		};
 		class Item310
 		{
@@ -7739,7 +7784,6 @@ class Mission
 			};
 			id=561;
 			type="Land_Pallet_MilBoxes_F";
-			atlOffset=0.087341309;
 		};
 		class Item433
 		{
@@ -24382,6 +24426,7 @@ class Mission
 			type="Empty";
 			angle=148.125;
 			id=2247;
+			atlOffset=0.00021362305;
 		};
 		class Item1046
 		{
@@ -24782,6 +24827,7 @@ class Mission
 			colorName="ColorKhaki";
 			angle=1.0269998;
 			id=2653;
+			atlOffset=0.00021362305;
 		};
 		class Item1063
 		{
@@ -39502,6 +39548,118 @@ class Mission
 			id=3962;
 			type="Land_fort_rampart_EP1";
 			atlOffset=0.86166382;
+		};
+		class Item1600
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={446.99564,548.16425,-141.5126};
+				angles[]={6.1591377,0,0.39717135};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3966;
+			type="rhsusf_mags_crate";
+		};
+		class Item1601
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={440.72806,547.8866,-119.55142};
+				angles[]={6.1390934,0,0.4043082};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3967;
+			type="rhs_weapon_crate";
+		};
+		class Item1602
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={466.26117,555.84644,-127.47066};
+				angles[]={6.1398973,0,0.33292025};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3968;
+			type="rhsgref_weapons_crate";
+		};
+		class Item1603
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={426.94992,544.54852,-100.57526};
+				angles[]={6.1058307,0,0.41823971};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3969;
+			type="tf_mr3000_rhs";
+		};
+		class Item1604
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={417.48981,542.94873,-90.119934};
+				angles[]={6.0753326,0,0.30733594};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3970;
+			type="UK3CB_BAF_B_Kitbag_DPMW";
+		};
+		class Item1605
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={417.98767,538.73621,-112.52441};
+				angles[]={6.106143,0,0.32236269};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3971;
+			type="tfw_ilbe_wd";
+		};
+		class Item1606
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={408.52765,530.87909,-139.90936};
+				angles[]={6.1236258,0,0.3080366};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3972;
+			type="I_UAV_01_backpack_F";
 		};
 	};
 };

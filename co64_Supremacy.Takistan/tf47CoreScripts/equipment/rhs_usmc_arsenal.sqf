@@ -160,6 +160,8 @@ _mod_items = [
 	"ACE_Banana",
 	"ToolKit",
 	"MineDetector",
+	
+	"tfw_rf3080",
 
 	//ATACHMENTS Pistol
 

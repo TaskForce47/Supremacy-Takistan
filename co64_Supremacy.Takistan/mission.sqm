@@ -8,7 +8,7 @@ class EditorData
 	toggles=578;
 	class ItemIDProvider
 	{
-		nextID=3973;
+		nextID=3975;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8219.5967,348.79422,1921.0653};
-		dir[]={-0.49357495,-0.31929797,0.80897677};
-		up[]={-0.1663059,0.94765329,0.27257696};
-		aside[]={0.85366166,3.6519486e-007,0.52083802};
+		pos[]={8245.6416,340.59146,2065.9998};
+		dir[]={-0.17419176,-0.724343,0.66708273};
+		up[]={-0.18300916,0.68943828,0.70084733};
+		aside[]={0.96756542,4.2771717e-007,0.25265485};
 	};
 };
 binarizationWanted=0;
@@ -640,7 +640,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1607;
+		items=1608;
 		class Item0
 		{
 			dataType="Marker";
@@ -39660,6 +39660,153 @@ class Mission
 			};
 			id=3972;
 			type="I_UAV_01_backpack_F";
+		};
+		class Item1607
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2214.95,372.81723,-239.554};
+			};
+			id=3974;
+			type="tfar_ModuleTaskForceRadioEnforceUsage";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password";
+					expression="_this setVariable ['radio_channel_password',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="India65";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio";
+					expression="_this setVariable ['RiflemanRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name";
+					expression="_this setVariable ['radio_channel_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Radio Communication - Public I";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side";
+					expression="_this setVariable ['same_sw_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio";
+					expression="_this setVariable ['TeamLeaderRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_lr_frequencies_for_side";
+					expression="_this setVariable ['same_lr_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_terrain_interception_coefficient";
+					expression="_this setVariable ['terrain_interception_coefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				nAttributes=7;
+			};
 		};
 	};
 };

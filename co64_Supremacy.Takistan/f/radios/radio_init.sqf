@@ -10,6 +10,8 @@
 // Wait for parameter to be initialised
 waitUntil{!isNil "f_var_radios"};
 
+if(true) exitWith {};
+
 // If any radio system selected
 if(f_var_radios != 0) then {
 	

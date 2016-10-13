@@ -112,37 +112,73 @@ BaseTransport = compile preprocessFile "Base\BaseTransport.sqf";
 // ======================== Mission init ================================
 headlessClientActive = if(isNil "headlessClient") then {False} else {True};
 publicVariable "headlessClientActive";
-
+if(headlessClientActive) then {
+	waitUntil {((!isNil "headlessClient2") && (!isNil "headlessClient3"))};
+};
 // Spawn units on the HC if hes active
 // otherwise spawn him on the server
+if(!isServer && !hasInterface) then {
+	if ((hcOwner getVariable ["tf47_sup_hc1_ownerID", -1]) == -1) then {
+		hcOwner setVariable ["tf47_sup_hc1_ownerID", clientOwner, true];
+	} else {
+		if ((hcOwner getVariable ["tf47_sup_hc2_ownerID", -1]) == -1) then {
+			hcOwner setVariable ["tf47_sup_hc2_ownerID", clientOwner, true];
+		} else {
+			if ((hcOwner getVariable ["tf47_sup_hc3_ownerID", -1]) == -1) then {
+				hcOwner setVariable ["tf47_sup_hc3_ownerID", clientOwner, true];
+			} else {
+				diag_log "[Supremacy] No more HCs pls ty";
+			};
+		};
+	};
+};
 
 if(headlessClientActive && isMultiplayer) then {
     if(!isServer && !hasInterface) then {
 		tf47_var_iedTracker = [];
 		tf47_var_mainCount = 0;
 
-		tf47_var_AOCollection = [
-							"timurkulay"/*,"chadarakht"*/,"gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
-							"rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukurkalay","chaman","sakhe"];
+		tf47_var_AOCollection = [[log_timurkulay,"Timurkulay"],[log_gamarud,"Gamarud"],[log_gamsar,"Garmsar"],[log_imarat,"Imarat"],
+								 [log_zavarak,"Zavarak"],[log_karachinar,"Karachinar"],[log_ravanay,"Ravanay"],[log_nagara,"Nagara"],
+								 [log_shamali,"Shamali"],[log_rasman,"Rasman"],[log_bastam,"Bastam"],[log_falar,"Falar"],[log_mulladost,"Mulladost"],
+								 [log_nur,"Nur"],[log_feruz, "Feruz Abad"],[log_jilavur,"Jilavur"],[log_chak,"Chak Chak"],[log_landay,"Landay"],[log_shukukurlay,"Shukukurlay"],
+								 [log_chaman,"Chaman"],[log_sakhe,"Sakhe"]];	
+		diag_log "------------------ AO Checks -----------------------";										
+		{
+			if(((getPos (_x select 0)) distance [0,0,0]) == 0) then {
+				diag_log format['[Supremacy] Error at AO "%1" ',(_x select 1)];
+			} else {
+				diag_log format['[Supremacy] Check passed for AO "%1" ',(_x select 1)];
+			};
+		} forEach tf47_var_AOCollection;						 
+		sleep 1;
 
 		tf47_var_AOObjects = [];
-        diag_log "HeadlessClient: Spawning the AI on the HeadlessClient!";
-		[] execVM "AOscripts\AOstart.sqf";
-		sleep 0.1;
-		[] execVM "SIDEscripts\SIDEstart.sqf";
-		sleep 0.1;
-		[] execVM "Patrols\init.sqf";
-		sleep 0.1;
+        diag_log "[Supremacy] HeadlessClient: Spawning the AI on the HeadlessClient!";
+		if(clientOwner == (hcOwner getVariable ["tf47_sup_hc1_ownerID", -1])) then {
+			[] execVM "AOscripts\AOstart.sqf";
+			sleep 0.1;
+		} else {
+			if(clientOwner == (hcOwner getVariable ["tf47_sup_hc2_ownerID", -1])) then {
+				[] execVM "SIDEscripts\SIDEstart.sqf";
+				sleep 0.1;
+			} else {
+				if(clientOwner == (hcOwner getVariable ["tf47_sup_hc2_ownerID", -1])) then {
+					[] execVM "Patrols\init.sqf";
+					sleep 0.1;
+				};
+			};
+		};
     };
 } else { 
     if(isServer) then {
-        diag_log "HeadlessClient: Spawning the AI on the Server!";
+        diag_log "[Supremacy] HeadlessClient: Spawning the AI on the Server!";
 		[] execVM "AOscripts\AOstart.sqf";
 		sleep 0.1;
 		[] execVM "SIDEscripts\SIDEstart.sqf";
 		sleep 0.1;
-		[] execVM "TacAds\jetpatrolinit.sqf";
-		sleep 0.1;
+		// [] execVM "TacAds\jetpatrolinit.sqf";
+		// sleep 0.1;
 		[] execVM "Patrols\init.sqf";
 		sleep 0.1;
     };

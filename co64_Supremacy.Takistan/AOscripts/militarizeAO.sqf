@@ -6,7 +6,7 @@
 
 
 //////////////// Exit if not server /////////////////////////////////////////////////////////////////////////////////////////////
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([1] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 
 //////////////// Mission Ending /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,8 +58,15 @@ _newAO = _oldAO;
 while {_oldAO distance _newAO < 3000} do
 {
 	_ao_select = tf47_var_AOCollection call BIS_fnc_selectRandom;
-	_newAO = call compile format["log_%1", _ao_select];
+	// _newAO = call compile format["log_%1", _ao_select];
+	_newAO = (_ao_select select 0);
 };
+
+_aoName = _ao_select select 1;
+_aoPos = _ao_select select 0;
+
+_ao_name = _aoName;
+_log_pos = _aoPos;	
 
 tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
 
@@ -88,241 +95,21 @@ tf47_var_AOCollection = tf47_var_AOCollection - [_ao_select];
         deleteMarker "BunkerMarker2";
 		sleep 0.1;
         deleteMarker "BunkerMarker3";
-		sleep 30;	
+		sleep 10;	
 
-diag_log format ["New Main Mission in: %1", _ao_select];
+diag_log format ["[Supremacy] New Main Mission in: %1", _aoName];
 
-//////////////// AO is timurkulay ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "timurkulay") then {
-									_log_pos   			= log_timurkulay;
-									//_ao_rad    			= 200;
-									//_mkr_text  		=
-									_ao_name   		= "Timurkulay";
-									//_ao_array_member 	= "timurkulay";
-									
-									sleep 1;
-									
-};
+//////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
 
-//////////////// AO is chadarakht ////////////////////////////////////////////////////////////////////////////////////////////////		
-/*if ( _ao_select == "chadarakht") then {
-									_log_pos   			= log_chadarakht;
-									//_ao_rad    			= 300;
-									//_mkr_text 	 	=
-									_ao_name   			= "Chadarakht";
-									//_ao_array_member 	= "chadarakht";
-									
-									sleep 1;
-									
-};
-*/
-//////////////// AO is gamarud ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "gamarud") then {
-									_log_pos   			= log_gamarud;
-									//_ao_rad    			= 200;
-									_ao_name   		= "Gamarud";
-									sleep 1;
-									
-};
+//////////////// moves a visible marker to the ao //////////////////////////////////////////////////////////////////////////		
 
-//////////////// AO is gamsar ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "gamsar") then {
-									_log_pos   			= log_gamsar;
-									//_ao_rad    			= 350;
-									_ao_name   		= "Garmsar";								
-									sleep 1;
-									
-};
+		"ao_mkr1" setmarkerpos getpos _log_pos;
 
-//////////////// AO is imarat ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "imarat") then {
-									_log_pos   			= log_imarat;
-									//_ao_rad    			= 150;
-									//_mkr_text  		=
-									_ao_name   		= "Imarat";
-									//_ao_array_member 	= "imarat";
-									
-									sleep 1;
-									
-};
-
-//////////////// AO is zavarak ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "zavarak") then {
-									_log_pos   			= log_zavarak;
-									//_ao_rad    			= 250;
-									//_mkr_text 	 	=
-									_ao_name   			= "Zavarak";
-									//_ao_array_member 	= "zavarak";
-									
-									sleep 1;
-									
-};
-
-//////////////// AO is karachinar ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "karachinar") then {
-									_log_pos   			= log_karachinar;
-									//_ao_rad    			= 250;
-									_ao_name   			= "Karachinar";
-									sleep 1;
-									
-};
-
-//////////////// AO is ravanay ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "ravanay") then {
-									_log_pos   			= log_ravanay;
-									//_ao_rad    			= 200;
-									_ao_name   			= "Ravanay";								
-									sleep 1;
-									
-};
-
-//////////////// AO is nagara ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "nagara") then {
-									_log_pos   			= log_nagara;
-									//_ao_rad    			= 200;
-									//_mkr_text  		=
-									_ao_name   		= "Nagara";
-									//_ao_array_member 	= "nagara";
-									
-									sleep 1;
-									
-};
-
-//////////////// AO is shamali ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "shamali") then {
-									_log_pos   			= log_shamali;
-									//_ao_rad    			= 150;
-									//_mkr_text 	 	=
-									_ao_name   			= "Shamali";
-									//_ao_array_member 	= "shamali";
-									
-									sleep 1;
-									
-};
-
-//////////////// AO is airfield ////////////////////////////////////////////////////////////////////////////////////////////////		
-/*
-if ( _ao_select == "airfield") then {
-									_log_pos   			= log_airfield;
-									//_ao_rad    			= 300;
-									_ao_name   			= "Rasman Airfield";
-									sleep 1;
-									
-};
-*/
-//////////////// AO is rasman ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "rasman") then {
-									_log_pos   			= log_rasman;
-									//_ao_rad    			= 250;
-									_ao_name   			= "Rasman";								
-									sleep 1;
-									
-};
-
-//////////////// AO is bastam ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "bastam") then {
-									_log_pos   			= log_bastam;
-									//_ao_rad    			= 200;
-									_ao_name   			= "Bastam";
-									sleep 1;
-									
-};
-
-//////////////// AO is falar ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "falar") then {
-									_log_pos   			= log_falar;
-									//_ao_rad    			= 250;
-									_ao_name   			= "Falar";								
-									sleep 1;
-									
-};
-
-//////////////// AO is mulladost ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "mulladost") then {
-									_log_pos   			= log_mulladost;
-									//_ao_rad    			= 200;
-									_ao_name   			= "Mulladost";
-									sleep 1;
-									
-};
-
-//////////////// AO is nur ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "nur") then {
-									_log_pos   			= log_nur;
-									//_ao_rad    			= 350;
-									_ao_name   			= "Nur";								
-									sleep 1;
-									
-};
-
-//////////////// AO is Feruz Abad ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "feruz") then {
-									_log_pos   			= log_feruz;
-									//_ao_rad    			= 250;
-									//_mkr_text  		=
-									_ao_name   			= "Feruz Abad";
-									//_ao_array_member 	= "feruz";
-									
-									sleep 1;
-									
-};
-
-//////////////// AO is Jilavur ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "jilavur") then {
-									_log_pos   			= log_jilavur;
-									//_ao_rad    			= 150;
-									//_mkr_text 	 	=
-									_ao_name   			= "Jilavur";
-									//_ao_array_member 	= "jilavur";
-									
-									sleep 1;
-									
-};
-
-//////////////// AO is Chak Chak ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "chak") then {
-									_log_pos   			= log_chak;
-									//_ao_rad    			= 300;
-									_ao_name   			= "Chak Chak";
-									sleep 1;
-									
-};
-
-//////////////// AO is landay ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "landay") then {
-									_log_pos   			= log_landay;
-									//_ao_rad    			= 200;
-									_ao_name   			= "Landay";								
-									sleep 1;
-									
-};
-
-//////////////// AO is shukurkalay ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "shukukurlay") then {
-									_log_pos   			= log_shukukurlay;
-									//_ao_rad    			= 300;
-									_ao_name   			= "Shukukurlay";
-									sleep 1;
-									
-};
-
-//////////////// AO is chaman ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "chaman") then {
-									_log_pos   			= log_chaman;
-									//_ao_rad    			= 200;
-									_ao_name   			= "Chaman";							
-									sleep 1;
-									
-};
-
-//////////////// AO is sakhe ////////////////////////////////////////////////////////////////////////////////////////////////		
-if ( _ao_select == "sakhe") then {
-									_log_pos   			= log_sakhe;
-									//_ao_rad    			= 350;
-									_ao_name   			= "Sakhe";								
-									sleep 1;
-									
-};
+//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
+		
+["tsk1", true, ["Seize the Village held by hostile forces","Seize the AO","Main Mission"],getMarkerPos "ao_mkr1", "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
+		
+//////////////// Hint for completed Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 //////////////// Spawn Enemy AI in AO ////////////////////////////////////////////////////////////////////////////////////	
 
@@ -342,17 +129,6 @@ if ( _ao_select == "sakhe") then {
 		
 		nul = [_log_pos] spawn tf47_fnc_static;		
 
-//////////////// creates a visible marker for the ao //////////////////////////////////////////////////////////////////////////		
-
-//////////////// moves a visible marker to the ao //////////////////////////////////////////////////////////////////////////		
-
-		"ao_mkr1" setmarkerpos getpos _log_pos;
-
-//////////////// creates a task/show notification for the ao ///////////////////////////////////////////////////////////////////////////////////////		
-		
-["tsk1", true, ["Seize the Village held by hostile forces","Seize the AO","Main Mission"],getMarkerPos "ao_mkr1", "ASSIGNED", 1, true, true,"",true] call BIS_fnc_setTask;
-		
-//////////////// Hint for completed Main Mission /////////////////////////////////////////////////////////////////////////////////////////// 
 
 ao_endText = format
 	[
@@ -543,4 +319,4 @@ trig_rt setpos (getpos _log_pos);
    			[] spawn tf47_fnc_buildSubstation;
 		};
 
-diag_log format ["Main Mission in %1 initialised", _ao_select];
+diag_log format ["[Supremacy] Main Mission in %1 initialised", _aoName];

@@ -1,6 +1,6 @@
 diag_log format ["Calling dynServerCaptureMonitor.sqf"];
 
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([1] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 _captureObject = _this select 0;
 _radius = _this select 1;

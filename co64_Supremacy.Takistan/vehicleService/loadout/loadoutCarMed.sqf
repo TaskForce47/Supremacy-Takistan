@@ -6,26 +6,26 @@ clearWeaponCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;	
 
 //Medic
-_veh addItemCargoGlobal ["ACE_fieldDressing",15];
-_veh addItemCargoGlobal ["ACE_elasticBandage",15];
-_veh addItemCargoGlobal ["ACE_quikclot",15];
-_veh addItemCargoGlobal ["ACE_tourniquet",8];
-_veh addItemCargoGlobal ["ACE_personalAidKit",10];
-_veh addItemCargoGlobal ["ACE_packingBandage",15];
-_veh addItemCargoGlobal ["ACE_bloodIV",15];
-_veh addItemCargoGlobal ["ACE_plasmaIV",15];
-_veh addItemCargoGlobal ["ACE_salineIV",15];
-_veh addItemCargoGlobal ["ACE_bloodIV_500",15];
-_veh addItemCargoGlobal ["ACE_plasmaIV_500",15];
-_veh addItemCargoGlobal ["ACE_salineIV_500",15];
-_veh addItemCargoGlobal ["ACE_bloodIV_250",15];
-_veh addItemCargoGlobal ["ACE_plasmaIV_250",15];
-_veh addItemCargoGlobal ["ACE_salineIV_250",15];
+_veh addItemCargoGlobal ["ACE_fieldDressing",50];
+_veh addItemCargoGlobal ["ACE_elasticBandage",50];
+_veh addItemCargoGlobal ["ACE_quikclot",100];
+_veh addItemCargoGlobal ["ACE_tourniquet",20];
+_veh addItemCargoGlobal ["ACE_personalAidKit",50];
+_veh addItemCargoGlobal ["ACE_packingBandage",50];
+_veh addItemCargoGlobal ["ACE_bloodIV",50];
+_veh addItemCargoGlobal ["ACE_plasmaIV",50];
+_veh addItemCargoGlobal ["ACE_salineIV",50];
+_veh addItemCargoGlobal ["ACE_bloodIV_500",25];
+_veh addItemCargoGlobal ["ACE_plasmaIV_500",25];
+_veh addItemCargoGlobal ["ACE_salineIV_500",25];
+_veh addItemCargoGlobal ["ACE_bloodIV_250",25];
+_veh addItemCargoGlobal ["ACE_plasmaIV_250",25];
+_veh addItemCargoGlobal ["ACE_salineIV_250",25];
 // _veh addItemCargoGlobal ["TF47_firstAidKit",10;
 //Injectors
-_veh addItemCargoGlobal ["ACE_morphine",10];
-_veh addItemCargoGlobal ["ACE_atropine",10];
-_veh addItemCargoGlobal ["ACE_epinephrine",10];
+_veh addItemCargoGlobal ["ACE_morphine",50];
+_veh addItemCargoGlobal ["ACE_atropine",50];
+_veh addItemCargoGlobal ["ACE_epinephrine",50];
 _veh addMagazineCargoGlobal ["SmokeShell",20];
 _veh addMagazineCargoGlobal ["SmokeShellGreen",10];
 _veh addMagazineCargoGlobal ["SmokeShellRed",10];
@@ -33,12 +33,13 @@ _veh addMagazineCargoGlobal ["SmokeShellBLue",5];
 
 // Radios
 switch (f_var_radios) do {
+	case 1: {
 	// ACRE 2
 		_veh addWeaponCargoGlobal ["ACRE_PRC117F",1];
 	};
 	// TFR
 	case 2: {
-		_veh addWeaponCargoGlobal ["tf_rt1523g",1];
+		_veh addBackpackCargoGlobal ["tf_rt1523g",1];
 	};
 };
 

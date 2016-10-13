@@ -7,9 +7,21 @@ tf47_var_iedTracker = [];
 
 tf47_var_mainCount = 0;
 
-tf47_var_AOCollection = [
-				    "timurkulay"/*,"chadarakht"*/,"gamarud","gamsar","imarat","zavarak","karachinar","ravanay","nagara","shamali",/*"airfield",*/
-				    "rasman","bastam","falar","mulladost","nur","feruz", "jilavur","chak","landay","shukukurlay","chaman","sakhe"];
+		tf47_var_AOCollection = [[log_timurkulay,"Timurkulay"],[log_gamarud,"Gamarud"],[log_gamsar,"Garmsar"],[log_imarat,"Imarat"],
+								 [log_zavarak,"Zavarak"],[log_karachinar,"Karachinar"],[log_ravanay,"Ravanay"],[log_nagara,"Nagara"],
+								 [log_shamali,"Shamali"],[log_rasman,"Rasman"],[log_bastam,"Bastam"],[log_falar,"Falar"],[log_mulladost,"Mulladost"],
+								 [log_nur,"Nur"],[log_feruz, "Feruz Abad"],[log_jilavur,"Jilavur"],[log_chak,"Chak Chak"],[log_landay,"Landay"],[log_shukukurlay,"Shukukurlay"],
+								 [log_chaman,"Chaman"],[log_sakhe,"Sakhe"]];						
+
+diag_log "------------------ AO Checks -----------------------";										
+{
+	if(((getPos (_x select 0)) distance [0,0,0]) == 0) then {
+		diag_log format['[Supremacy] Error at AO "%1" ',(_x select 1)];
+	} else {
+		diag_log format['[Supremacy] Check passed for AO "%1" ',(_x select 1)];
+	};
+} forEach tf47_var_AOCollection;
+									
 
 tf47_var_AOObjects = [];
 tf47_var_AOUnits = [];

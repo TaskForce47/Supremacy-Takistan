@@ -1,4 +1,4 @@
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([2] call TF47_Helper_fnc_checkForHc)) exitwith {};
 // ===========================SideMission Selector =====================================
 // =========originally by Wartheatre  adjusted by 4Lucke================================
 private ["_missionsarray","_mission","_sidemission"];

@@ -7,7 +7,7 @@
 //*range/delay = range in meters / max delay in secs (if used style 1, units will dissapear after moving *range from *syncedUnit) OR
 //												 	 (if used style 2, units will die after random *delay)
 //*flee direction = 0-360 (direction where ai will forfeit if style 1 is used) DEFAULT: nil (away from syncedUnit)
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([2] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private ["_i","_i2","_style","_syncedUnit","_range","_unit","_dir","_nPos","_handle","_grp","_fleeDir"];
 _handle = _this select 0;
 _style = _this select 1;

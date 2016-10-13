@@ -16,7 +16,7 @@ Notes:
 
 ______________________________________________*/
 
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([3] call TF47_Helper_fnc_checkForHc)) exitwith {};
 
 private ["_amount"];
 params [];

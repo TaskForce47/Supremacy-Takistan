@@ -47,7 +47,7 @@
 	
 	EXAMPLE: 	nul = [player,false,2,3,false,true,player,"random",1000,true,false,8,0.75,[false,true,false,true],nil,nil,33,false] execVM "LV\reinforcementChopper.sqf";
 */
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([2] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private ["_BLUmen3","_mp","_smoke","_INDchoppers","_BLUchoppers","_OPFchoppers","_OPFarrays","_BLUarrays","_INDgrp","_INDhq","_INDmen","_OPFmen2","_BLUmen2","_captive","_patrol","_heliT","_chopperTypes","_chopperType","_setInit2","_setInit","_c0","_customInit","_tPos","_exactPos","_skls","_skills","_grpSize","_cycle","_precise","_man2","_direction","_distance","_targetM","_i2","_heliPad","_targetPos","_side","_targetMarker","_BLUmen","_OPFmen","_men","_hq","_grp1","_grp2","_man1","_man","_dir","_range","_pos","_heli","_vehSpots","_i","_wp1"];
 
 //Extra options:

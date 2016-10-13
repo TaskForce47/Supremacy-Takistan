@@ -3,7 +3,7 @@
 //  range = min range from players where bodies dissapear, Default: 300
 //  players = array of players, Default: playableUnits
 
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([2] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private["_players","_deleteThese","_range","_grp"];
 _range = if(count _this > 0)then{_this select 0;} else {0};
 _players = if(count _this > 1)then{_this select 1;} else {playableUnits};

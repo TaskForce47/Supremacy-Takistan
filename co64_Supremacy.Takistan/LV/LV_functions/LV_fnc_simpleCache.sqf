@@ -15,7 +15,7 @@
 	nul = [[13,14],[playerUnit1],500,true,false] execVM "LV\LV_functions\LV_fnc_simpleCache.sqf";
 
 */
-if(!([] call TF47_Helper_fnc_checkForHc)) exitwith {};
+if(!([2] call TF47_Helper_fnc_checkForHc)) exitwith {};
 private ["_mp","_i","_cPos","_inRange","_aliveCount","_grp","_center","_scriptParams","_id","_ids","_units","_distance","_amountArr","_script","_params","_vehicleAmount","_vehicleArr","_excludeSingleHeliPilot","_inRangeUnits","_pilotCandidate"];
 
 //Additional settings:

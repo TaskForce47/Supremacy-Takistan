@@ -230,8 +230,8 @@ switch (_mkrtext) do  {
 		};
 	case "_raven01" : 		{
 		raven1 = [_mkrpos,_mkrdir,_raven01] call TF47_VehicleReplacement_fnc_replaceVehicle;
-		spawnveh = [raven1, _timeondestruction, _timeondesertion, "RAVEN-01", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
-		hNil = [raven1, "RAVEN-01", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
+		spawnveh = [raven1, _timeondestruction, _timeondesertion, "RAVEN", "b_air", "ColorBrown", WEST, "rottrans", 20] execVM "tf47CoreScripts\vehicleRespawn.sqf";
+		hNil = [raven1, "RAVEN", "b_air", WEST, "ColorBLUFOR"] execVM "tf47CoreScripts\unitMarkerInit.sqf";
 		[[raven1,"raven1"],"setVehicleVarname",true] call BIS_fnc_MP;
 		publicVariable "raven1";
 		};

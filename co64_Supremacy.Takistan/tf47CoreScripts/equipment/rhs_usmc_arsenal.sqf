@@ -161,7 +161,7 @@ _mod_items = [
 	"ToolKit",
 	"MineDetector",
 	
-	"tfw_rf3080",
+	"tfw_rf3080Item",
 
 	//ATACHMENTS Pistol
 

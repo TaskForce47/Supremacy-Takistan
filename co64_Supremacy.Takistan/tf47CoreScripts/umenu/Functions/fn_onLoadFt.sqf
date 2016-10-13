@@ -58,13 +58,13 @@ _typeArrays = switch true do {
 		[[["b_recon","Recon"]],[]];
 	};
 	case (["UnitNATO_IFV", _slotName] call BIS_fnc_inString): {
-		[[["b_mech_inf","IFV"]],["TIGER-01","TIGER-02","TIGER-03","GATOR-01","GATOR-02"]];
+		[[["b_mech_inf","IFV"]],["LION-01","LION-02","FROG-01"]];
 	};
 	case (["UnitNATO_TNK", _slotName] call BIS_fnc_inString): {
-		[[["b_armor","Tank"]],["RHINO-01","RHINO-02","LION-01","LION-02","FROG-01"]];
+		[[["b_armor","Tank"]],["RHINO-01","RHINO-02"]];
 	};
 	case (["UnitNATO_TH", _slotName] call BIS_fnc_inString): {
-		[[["b_air","Helicopter (Trans.)"],["b_plane","Plane (Trans.)"]],["RAVEN-01","RAVEN-02","DUSTOFF","BUTTERFLY-01","BUTTERFLY-02","PELICAN","CAT","SEAGULL","ALBATROS"]];
+		[[["b_air","Helicopter (Trans.)"],["b_plane","Plane (Trans.)"]],["RAVEN","DUCK","DUSTOFF","BUTTERFLY-01","BUTTERFLY-02","PELICAN","CROW","SEAGULL","ALBATROS"]];
 	};
 	case (["arty", _slotName] call BIS_fnc_inString): {
 		[[["b_art","Artillery"]],["SCORPION"]];
